@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <style>
+  .teaser-right {
+  float: right;
+  width: 45%;
+  margin: 3% 0 0 0
+}
+div {
+    display: inline-block;
+}
+
+.form-section{
+    display: inline-block;
+}
+#calltoaction-form {
+  background: #f2f2f2;
+  padding-bottom: 10px;
+  width: 800px;
+  position: right;
+  bottom: 0
+}
+.container {
+  text-align: center;
+  margin: auto;
+  width:50%;
+  padding: 16px;
+}
+.form {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 3px solid green;
+}
+    .login{
+    border-width: 2px;
+    border-style: solid;
+    border-color: #76C5CE;
+  margin: auto;
+  width:100%;
+  padding: 16px;
+    }
+    .campo_preenchimento{
+    border-width: 2px;
+    border-style: solid;
+    border-color: #76C5CE;
+  margin: auto;
+  width: 80%;
+  padding: 1px;
+    }
+    .button{
+      margin: auto;
+  width:30%;
+  align: right;
+  padding: 16px;
+    }
+    </style>
+</head>
+<body>
+<div id="calltoaction-form" class="teaser-form" width="max" background="blue">
+
+  <div class="form-title">
+    <h3>Cadastro Domiciliar</h3>
+  </div>
+  <form id="contact_form" action="_contact-us.php" method="post">
+    <div id="Cadastro_domiciliar">
+    <div>
+      <label>CNS do PRofissional</label></br>
+      <input id="CNS" class="campo_preenchimento" type="text" placeholder="Digite o CNS">
+    </div>
+      <div>
+      <label>CBO</label></br>
+      <input id="CBO" class="campo_preenchimento" type="text" placeholder="Digite o CBO">
+    </div>
+    <div>
+      <label>CNES</label></br>
+      <input id="CNES" class="campo_preenchimento" type="text" placeholder="Digite o CNES">
+    </div>
+      <div>
+      <label>INE</label></br>
+      <input id="INE" class="campo_preenchimento" type="text" placeholder="Digite o INE">
+    </div>
+      <div>
+      <label>Data</label></br>
+      <input id="data_preenchimento" class="campo_preenchimento" type="date" placeholder="dd/mm/aaaa">
+    </div>
+    </div>
+  </form></br>
+  <div  style="display: inline-block;">
+  <div style="width: 50%">
+    <div id="End_Localdepermanencia">
+    <a>Endereço/Local de Permanência</a></br>
+      <div id="linha1">
+      <div >
+      <label>CEP</label></br>
+      <input id="CEP" class="campo_preenchimento" type="number" placeholder="00000-000">
+    </div>
+    <div>
+      <label>Município</label></br>
+      <input id="Municipio" class="campo_preenchimento" type="text" placeholder="Guarulhos">
+    </div>
+      <div>
+      <label>UF</label></br>
+      <input list="UFs" name="browser" id="browser" class="campo_preenchimento" placeholder="SP">
+      <datalist id="UFs">
+        <option value="SP">
+        <option value="RJ">
+        <option value="MG">
+        <option value="PR">
+        <option value="SC">
+    </div>
+      <div>
+      <label>Tipo imóvel</label></br>
+      <input id="tipo_imovel" class="campo_preenchimento" type="text" placeholder="00">
+    </div>
+        </div>
+      <div id="linha2">
+      <div >
+      <label>Bairro</label></br>
+      <input id="Bairro" class="campo_preenchimento" type="text" placeholder="">
+    </div>
+    <div>
+      <label>Tipo de Logradouro</label></br>
+      <input id="Logradouro" class="campo_preenchimento" type="text" placeholder="">
+    </div>
+      <div>
+      <label>Nome do Logradouro</label></br>
+      <input id="email" class="campo_preenchimento" type="text" placeholder="">
+    </div>
+      <div>
+      <label>Microárea</label></br>
+      <input id="email" class="campo_preenchimento" type="text" placeholder="">
+    </div>
+        <div>
+      <label>FA</label></br>
+      <input id="email" class="campo_preenchimento" type="text" placeholder="">
+    </div>
+        </div>
+      <div id="linha3">
+      <div >
+      <label>Número</label></br>
+      <input id="email" class="campo_preenchimento" type="text" placeholder="">
+    </div>
+    <div style="display=inline-block;">
+      <input id="email" class="campo_preenchimento" style="display=inline-block;" type="Checkbox" placeholder="">
+      <label style="display=inline-block;">Sem número</label></br>
+    </div>
+      <div>
+      <label>Ponto de Referência</label></br>
+      <input id="email" class="campo_preenchimento" type="text" placeholder="">
+    </div>
+
+        </div>
+
+      </div>
+  <div  style="display: inline-block;">
+  <div id="Telefone para contato" style="Width:50%">
+    
+      <a>Telefone para contato</a></br> 
+      <div id="linha1" style="display=block;">
+      <div>
+      <label>Residencial</label></br>
+      <input id="email" class="campo_preenchimento" type="text" placeholder="">
+    </div></br>
+    <div>
+      <label>Município</label></br>
+      <input id="email" class="campo_preenchimento" type="text" placeholder="">
+    </div>
+        </div>
+
+      </div>
+  <div id="Animais no domicílio" style="Width:50%">
+    <a>Animais no domicílio</a><input id="email" class="campo_preenchimento" type="checkbox">
+      <div id="linha1">
+      <div style="=block;">
+      <label>Quais?</label>
+        <a>a</a></A><input id="Gato" class="campo_preenchimento" type="checkbox" placeholder="">
+        <input id="Cachorro" class="campo_preenchimento" type="checkbox" placeholder="">
+        <input id="Pássaro" class="campo_preenchimento" type="checkbox" placeholder="">
+        <input id="Outros" class="campo_preenchimento" type="checkbox" placeholder="">
+    </div>
+
+        </div>
+      <div id="linha2">
+        <div>
+          <label>Quantos?</label></br>
+          <input id="email" class="campo_preenchimento" type="text">
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+<div style="width: 50%;" id="Condições de Moradia">
+    <a>Condições de Moradia</a></br>
+      <div id="linha1">
+      <div >
+      <label>Situação de Moradia/posse da Terra</label></br>
+        <input list="browsers" name="browser" id="browser" class="campo_preenchimento">
+      <datalist id="browsers">
+    <option value="1">
+    <option value="2">
+    <option value="3">
+    <option value="4">
+    <option value="5">
+  </datalist>
+      </div>
+    <div>
+      <label>Endereço/Local de Permanência</label></br>
+        <input list="browsers" name="browser" id="browser" class="campo_preenchimento">
+      <datalist id="browsers">
+    <option value="1">
+    <option value="2">
+    <option value="3">
+    <option value="4">
+    <option value="5">
+  </datalist>
+      </div>
+    </div>
+    <div id="linha2">
+      <div >
+      <label>Localização</label></br>
+        <input list="browsers" name="browser" id="browser" class="campo_preenchimento">
+      <datalist id="browsers">
+    <option value="1">
+    <option value="2">
+    <option value="3">
+    <option value="4">
+    <option value="5">
+  </datalist>
+      </div>
+    <div>
+      <label>Água para consumo no domicílio</label></br>
+        <input list="browsers" name="browser" id="browser" class="campo_preenchimento">
+      <datalist id="browsers" class="campo_preenchimento">
+    <option value="1">
+    <option value="2">
+    <option value="3">
+    <option value="4">
+    <option value="5">
+  </datalist>
+      </div>
+      </div>
+    <div id="linha3">
+      <div >
+      <label>Tipo de Domicílio</label></br>
+        <input list="browsers" name="browser" id="browser">
+      <datalist id="browsers">
+    <option value="1">
+    <option value="2">
+    <option value="3">
+    <option value="4">
+    <option value="5">
+  </datalist>
+      </div>
+    <div>
+      <label>Destino do Lixo</label></br>
+        <input list="browsers" name="browser" id="browser" class="campo_preenchimento" placeholder="Queimado/Enterrado">
+      <datalist id="browsers">
+        <option value="Queimado/Enterrado">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+       </datalist>
+      </div>
+    </div>
+    <div id="linha4">
+      <div >
+
+        <input name="browser" id="browser" class="campo_preenchimento"  placeholder="Nº">
+        <label>Moradores</label></br>
+  </datalist>
+      </div>
+    <div>
+      <input name="browser" id="browser" class="campo_preenchimento" placeholder="Nº" style="">
+      <label>Cômodos</label></br>
+  </datalist>
+      </div>
+    </div>
+    <div id="linha5">
+      <div >
+      <label>Tipo de acesso ao domicílio</label></br>
+        <input list="browsers" name="browser" id="browser">
+      <datalist id="browsers">
+    <option value="1">
+    <option value="2">
+    <option value="3">
+    <option value="4">
+    <option value="5">
+  </datalist>
+      </div>
+    <div>
+      <label>Forma de escoamento do banheiro ou sanitário</label></br>
+        <input list="browsers" name="browser" id="browser">
+      <datalist id="browsers">
+    <option value="1">
+    <option value="2">
+    <option value="3">
+    <option value="4">
+    <option value="5">
+  </datalist>
+      </div>
+    </div>
+    <div id="linha6">
+      <div >
+      <label>Disponibilidade de Energia elétrica</label></br>
+        <input type="checkbox" id="browser">
+      </div>
+    <div>
+      <label>Condição de posse e uso da Terra</label></br>
+      <a>(Somente área de produção Rural)</a></br>
+        <input list="browsers" name="browser" id="browser">
+      <datalist id="browsers">
+    <option value="1">
+    <option value="2">
+    <option value="3">
+    <option value="4">
+    <option value="5">
+  </datalist>
+      </div>
+    </div>
+</div>
+  </div>
+  </div>
+</div>
+</body>
+</html>
