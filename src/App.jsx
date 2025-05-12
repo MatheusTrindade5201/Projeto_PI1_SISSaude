@@ -19,13 +19,13 @@ import React,{useState} from 'react';
 // import cabecalho from './Componentes/CabecalhoRodape.js';
 // import Rodape from './Componentes/CabecalhoRodape.js';
 
-import Login from './Componentes/login.js';
-import Pag1 from './Componentes/Pag1.js';
-import Pag2 from './Componentes/Pag2.js';
-import Pag3 from './Componentes/Pag3.js';
-import Pag4 from './Componentes/Pag4.js';
+import Login from './Componentes/login.jsx';
+import Pag1 from './Componentes/Pag1.jsx';
+import Pag2 from './Componentes/Pag2.jsx';
+import Pag3 from './Componentes/Pag3.jsx';
+import Pag4 from './Componentes/Pag4.jsx';
 //import Teste from './Componentes/teste.js';
-import Cabecalho from './Componentes/CabecalhoRodape.js';
+import Cabecalho from './Componentes/CabecalhoRodape.jsx';
 
 
 function App() {  

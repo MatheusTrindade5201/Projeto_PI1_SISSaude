@@ -1,16 +1,16 @@
 
     function Pag1(){
         return (
-        <div className="background">
+        <div>
            <Cabecalho />
            <div style={{display:'flex'}}>
                 <div style={{width:'50%'}}>
                     <EndLocaldepermanencia />
-                    <div>
-                        <div>
+                    <div style={{display:'flex'}}>
+                        <div style={{width:'50%'}}>
                             <Telefonecontato />
                         </div>
-                        <div>
+                        <div style={{width:'50%'}}>
                             <AnimaisDomicilio />
                         </div>
                     </div>
@@ -27,7 +27,7 @@
     
     function Cabecalho(){
         return (
-        <div id="cabecalho" className="cabecalho">
+        <div id="cabecalho" className="bloco" >
             <div className="form-title">
                 <p>Cadastro Domiciliar</p>
             </div>
@@ -71,9 +71,8 @@
         
         
         return (
-            <div id="End_Localdepermanencia">
+            <div id="End_Localdepermanencia" className="bloco">
             <p>Endereço/Local de Permanência</p><br />
-            <div className="bloco">
                 <div id="linha1" className="linha">
                     <div>
                         <label>CEP</label><br />
@@ -132,16 +131,16 @@
                     </div>
             
                 </div>
-            </div>
+            
         </div>
         )   
     }
 
     function Telefonecontato(){
         return(
-            <div id="Telefone para contato">
-                <h3>Telefone para contato</h3   ><br /> 
-                <div id="linha1" className="linha"  className="bloco">
+            <div id="Telefone para contato" className="bloco">
+                <p>Telefone para contato</p><br /> 
+                <div id="linha1" className="linha">
                     <div>
                         <label>Residencial</label><br />
                         <input id="email" className="campo_preenchimento" type="text" placeholder="(00) 00000-0000" />
@@ -157,24 +156,20 @@
 
     function AnimaisDomicilio(){
         return (
-            <div id="Animais no domicílio" >
-            <div style={{display:'flex'}}>
-                <p>Animais no domicílio</p>
-                <input id="email" className="campo_preenchimento" type="checkbox" />
-            </div>
-                <div id="linha1" className="linha" className="bloco" style={{display:'flex'}}>
+            <div id="Animais no domicílio" className="bloco" style={{display:'flex'}}>
+            <p>Animais no domicílio</p>
+            <input id="email" className="campo_preenchimento" type="checkbox" />
+                <div id="linha1" className="linha">
                     <div>
                     <label>Quais?</label>
-                        <label>Gato</label>
                         <input id="Gato" className="campo_preenchimento" type="checkbox" placeholder="" />
-                        <label>Cachorro</label>
                         <input id="Cachorro" className="campo_preenchimento" type="checkbox" placeholder="" />
-                        <label>Pássaro</label>
                         <input id="Pássaro" className="campo_preenchimento" type="checkbox" placeholder="" />
-                        <label>Outros</label>
                         <input id="Outros" className="campo_preenchimento" type="checkbox" placeholder="" />
                     </div>
-                    <div style={{display:'flex'}}>
+                </div>  
+                <div id="linha2" className="linha">
+                    <div>
                     <label>Quantos?</label><br />
                     <input id="email" className="campo_preenchimento" type="text"  />
                     </div>

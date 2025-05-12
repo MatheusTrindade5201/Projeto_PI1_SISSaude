@@ -1,5 +1,5 @@
     import react, {useState} from 'react';
-    import './Pag1.jsx'; 
+    import './Pag1.js'; 
     import '../styles/styleLogin.css';
     //import Alert from '@mui/material/Alert';
 
