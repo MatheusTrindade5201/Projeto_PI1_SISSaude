@@ -1,3 +1,4 @@
+import '../styles/stylePags.css';
 
     function Pag1(){
         return (

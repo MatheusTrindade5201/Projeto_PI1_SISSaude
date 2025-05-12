@@ -47,10 +47,15 @@
 .login{
   border-width: 2px;
   border-style: solid;
-  border-color: #76C5CE;
+  border-color: #09B5CC;
+  background-color: #F2F2F2;
   margin: auto;
+  margin-bottom: 4px;
   width:100%;
-  padding: 16px;
+  padding: 4px 0px;
+  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
+  font-size: 20px;
+  color: #1EA0D3;
 }
   
 .line{
@@ -88,8 +93,9 @@
 }
 
 .botoesmenu{
+  border-width: 2px;
   margin: auto;
-  padding: 16px 15px;
+  padding: 16px 20px;
   width: 150px;
   height: 50;
   background-color: #76C5CE;

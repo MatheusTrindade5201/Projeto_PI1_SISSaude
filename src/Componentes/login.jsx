@@ -49,7 +49,7 @@
                         className="buttonLogin"
                         type="submit"
                         onClick={ValidacaoLogin(Matricula,senha)}
-                        >login
+                        >Login
                     </button>
                 </div>
                 <div align="right">
