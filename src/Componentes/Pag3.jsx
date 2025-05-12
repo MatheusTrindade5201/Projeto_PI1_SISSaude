@@ -1,4 +1,5 @@
-import Cabecalho from './Pag1.jsx';
+import '../styles/stylePags.css';
+//import Cabecalho from './Pag1.jsx';
 
 function Pag3(){
     return (
@@ -17,7 +18,7 @@ function Pag3(){
 function IdentificacaoUsuario(){
     return (
     <div>
-        <h3>Identificação de Usuário/Cidadão</h3>
+        <h3 className='titulosSecoes'>Identificação de Usuário/Cidadão</h3>
         <div className="bloco">
             <div id="Linha1" style={{display:'flex'}}>
                 <div>
@@ -156,7 +157,7 @@ function IdentificacaoUsuario(){
 function SaidaCadastro(){
     return  (
         <div id="SaidaCadastro">
-            <h3> Saída do Cidadão do Cadastro </h3>
+            <h3 className='titulosSecoes'> Saída do Cidadão do Cadastro </h3>
             <div  className="bloco" style={{display:'flex'}}>
             <div>
                 <label>Motivo</label><br />
@@ -183,7 +184,7 @@ function SaidaCadastro(){
 function InfoSocioDemo (){
     return (
         <div style={{width:'50%'}}>
-            <h3>Informações Socio Demográficas</h3>
+            <h3 className='titulosSecoes'>Informações Socio Demográficas</h3>
             <div  className="bloco">
                 <div id="Linha1" style={{display:'flex'}}>
                     <div>

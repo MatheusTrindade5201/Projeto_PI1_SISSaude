@@ -3,7 +3,7 @@ import '../styles/stylePags.css';
     function Pag1(){
         return (
         <div className="background">
-           <Cabecalho />
+           {/*<Cabecalho />*/}
            <div style={{display:'flex'}}>
                 <div style={{width:'50%'}}>
                     <EndLocaldepermanencia />
@@ -58,6 +58,7 @@ import '../styles/stylePags.css';
         )   
     }
 
+
     function EndLocaldepermanencia(){
         function Options(props) {
             return <option>{ props.brand }</option>;
@@ -73,7 +74,7 @@ import '../styles/stylePags.css';
         
         return (
             <div id="End_Localdepermanencia">
-            <p>Endereço/Local de Permanência</p><br />
+            <p className='titulosSecoes'>Endereço/Local de Permanência</p><br />
             <div className="bloco">
                 <div id="linha1" className="linha">
                     <div>
@@ -141,7 +142,7 @@ import '../styles/stylePags.css';
     function Telefonecontato(){
         return(
             <div id="Telefone para contato">
-                <h3>Telefone para contato</h3   ><br /> 
+                <h3 className='titulosSecoes'>Telefone para contato</h3   ><br /> 
                 <div id="linha1" className="linha_bloco">
                     <div>
                         <label>Residencial</label><br />
@@ -160,7 +161,7 @@ import '../styles/stylePags.css';
         return (
             <div id="Animais no domicílio" >
             <div style={{display:'flex'}}>
-                <p>Animais no domicílio</p>
+                <p className='titulosSecoes'>Animais no domicílio</p>
                 <input id="email" className="campo_preenchimento" type="checkbox" />
             </div>
                 <div id="linha1" className="linha_bloco" style={{display:'flex'}}>
@@ -187,7 +188,7 @@ import '../styles/stylePags.css';
         return(
             <div>
             <div id="Condições de Moradia" className="bloco">
-            <p>Condições de Moradia</p><br />
+            <p className='titulosSecoes'>Condições de Moradia</p><br />
             <div id="linha1" className="linha">
                 <div >
                     <label>Situação de Moradia/posse da Terra</label><br />

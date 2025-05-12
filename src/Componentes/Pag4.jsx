@@ -1,4 +1,5 @@
-import Cabecalho from './Pag1.jsx';
+import '../styles/stylePags.css';
+//import Cabecalho from './Pag1.jsx';
 
 function Pag4(){
     return(
@@ -15,7 +16,7 @@ function Pag4(){
 function CondSitu(){
     return (
         <div>
-            <h3>Condições/Situações de saúde gerais</h3>
+            <h3 className='titulosSecoes'>Condições/Situações de saúde gerais</h3>
             <div className="bloco">
                 <div id="linha1" style={{display:'flex'}}>
                     <div>
@@ -137,7 +138,7 @@ function CondSitu(){
 function OutrasCondSaude(){
     return (
         <div>
-            <h3>Outras Condições de Saúde</h3>
+            <h3 className='titulosSecoes'>Outras Condições de Saúde</h3>
             <div className="bloco" style={{display:'flex'}}>
                 <div id="linha1" >
                     <label>1 - Qual?</label><br />
@@ -159,7 +160,7 @@ function OutrasCondSaude(){
 function CidadaoRua(){
     return (
         <div>
-            <h3>Cidadão em Situação de Rua</h3>
+            <h3 className='titulosSecoes'>Cidadão em Situação de Rua</h3>
             <div className="bloco">
                 <div id="linha1" style={{display:'flex'}}>
                     <div>

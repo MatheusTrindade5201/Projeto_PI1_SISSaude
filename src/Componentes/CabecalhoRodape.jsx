@@ -1,6 +1,5 @@
 import '../styles/styleCabecalhoRodape.css';
 
-
 function Cabecalho(){
     return (
 

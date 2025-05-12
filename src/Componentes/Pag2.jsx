@@ -1,10 +1,11 @@
-import Cabecalho from './Pag1.jsx';
+import '../styles/stylePags.css';
+//import Cabecalho from './Pag1.jsx';
 
 function Pag2(){
     return (
-    <div  className="background">
+    <div className="background">
         <div id="termo de recusa">
-            <h3>Termo de recusa do cadastro domiciliar de atenção básica</h3>
+            <h3 className='titulosSecoes'>Termo de recusa do cadastro domiciliar de atenção básica</h3>
             <div  style={{display:'flex'}} className="bloco" >
             <div style={{display:'flex'}}>
                 <p>Eu, </p>
@@ -20,7 +21,7 @@ function Pag2(){
             </div>
         </div>
         <div>
-            <h3>Instituição de Permanência</h3>
+            <h3 className='titulosSecoes'>Instituição de Permanência</h3>
         <div style={{display:'flex'}} className="bloco" >
                 
                 <div>
@@ -45,7 +46,7 @@ function Pag2(){
         </div>
         </div>
         <div>
-            <h3>Termo de recusa do cadastro domiciliar de atenção básica</h3>
+            <h3 className='titulosSecoes'>Termo de recusa do cadastro domiciliar de atenção básica</h3>
             <div  style={{display:'flex'}} className="bloco" >
                 <div>
                 <p>Eu, </p>
