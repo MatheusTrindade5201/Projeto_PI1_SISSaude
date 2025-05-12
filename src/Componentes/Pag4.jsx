@@ -1,8 +1,8 @@
-import Cabecalho from './Pag1.jsx';
+import Cabecalho from './Pag1.js';
 
 function Pag4(){
     return(
-        <div style={{display:'flex'}}>
+        <div  className="background" style={{display:'flex'}}>
             <div>
                 <CondSitu/>
                 <OutrasCondSaude/>
@@ -138,10 +138,10 @@ function OutrasCondSaude(){
     return (
         <div>
             <h3>Outras Condições de Saúde</h3>
-            <div className="bloco">
-                <div id="linha1" style={{display:'flex'}}>
+            <div className="bloco" style={{display:'flex'}}>
+                <div id="linha1" >
                     <label>1 - Qual?</label><br />
-                        <input id="Condicao1" className="campo_preenchimento" type="text" placeholder="Condição 1"/>
+                    <input id="Condicao1" className="campo_preenchimento" type="text" placeholder="Condição 1"/>
                 </div>
                 <div>
                     <label>2 - Qual?</label><br />
