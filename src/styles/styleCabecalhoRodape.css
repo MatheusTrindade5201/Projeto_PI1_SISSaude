@@ -21,10 +21,14 @@ body {
 }
 
 p {
-    font-family: 'acumin-pro', 'Verdana', 'Arial', sans-serif;
+    font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
     font-size: 16px;
     color: #1EA0D3;
     margin: 0;
+}
+
+a {
+  color: #1ED2D3;
 }
 
 .cadastroDomiciliar {
@@ -34,6 +38,7 @@ p {
     color: #105266;
     margin: 0;
     padding-bottom: 2px;
+    background-color: #e3e5e5;
 }
 
 #Cadastro_domiciliar label {
@@ -44,79 +49,22 @@ p {
     display: flex;
 }
 
-a {
-  color: #1ED2D3;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;;
-  text-align: center;
-  margin: auto;
-  width:50%;
-  padding: 16px;
-}
-
-.form {
-  display: flex;
-  justify-content: space-between;
-  /*align-items: center;*/
-  flex-direction: column;
-  width: 100%;
-  height: 200px;
-}
-
-.form-section{
-  display: inline;
-}
-
-
-
-.login{
-  border-width: 2px;
-  border-style: solid;
-  border-color: #09B5CC;
-  background-color: #F2F2F2;
-  margin: auto;
-  margin-bottom: 4px;
-  width:100%;
-  padding: 4px;
-  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
-  font-size: 20px;
-  color: #1EA0D3;
-}
-
-.login::placeholder{
-  color: #c8c8c8;
-}
-
-.button{
-  margin: auto;
-  width:30%;
-  padding: 16px;
-  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
-}
-
-.buttonLogin{
-  background-color: #e1e1e1;
-  border-width: 10px;
-  border-color: #c8c8c8;
-  color: #6f7272;
-  border: none;
-  padding: 6px 42px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  /*margin: auto;*/
-  margin-left: auto;
-  cursor: pointer;
+.campo_preenchimento{
   font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
   font-size: 16px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #76C5CE;
+  margin: auto;
+  margin-bottom: 8px;
+  width:88%;
+  height: 18px;
+  padding: 4px;
 }
 
 .sissaudeLogotipo{
   font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
   color: #1EA0D3;
   width: 400px;
-  height: 100px;
+  height: 75px;
 }
