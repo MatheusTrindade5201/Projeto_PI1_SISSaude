@@ -1,9 +1,9 @@
-import Cabecalho from './Pag1.jsx';
+import Cabecalho from './Pag1.js';
 
 function Pag3(){
     return (
-    <div style={{display:'flex'}}>
-        <div>
+    <div style={{display:'flex'}}  className="background">
+        <div style={{width:'50%'}}>
         <IdentificacaoUsuario />
         <SaidaCadastro />
         </div>
@@ -182,7 +182,7 @@ function SaidaCadastro(){
 
 function InfoSocioDemo (){
     return (
-        <div>
+        <div style={{width:'50%'}}>
             <h3>Informações Socio Demográficas</h3>
             <div  className="bloco">
                 <div id="Linha1" style={{display:'flex'}}>

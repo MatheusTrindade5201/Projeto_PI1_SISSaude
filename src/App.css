@@ -57,6 +57,10 @@
   display: inline-block;
   width: calc(100% - 50px)
 }
+.background{
+  height: 700px;
+  background-color: #E5E4E2;
+}
 
 .bloco{
   background-color: lightgray;
@@ -85,9 +89,10 @@
 
 .botoesmenu{
   margin: auto;
-  padding: 16px;
-  width: 300px;
+  padding: 16px 15px;
+  width: 150px;
   height: 50;
   background-color: #76C5CE;
   cursor: pointer;
+  justify-content: space-between;
 }

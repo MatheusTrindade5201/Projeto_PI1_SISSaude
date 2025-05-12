@@ -1,8 +1,8 @@
-import Cabecalho from './Pag1.jsx';
+import Cabecalho from './Pag1.js';
 
 function Pag2(){
     return (
-    <div>
+    <div  className="background">
         <div id="termo de recusa">
             <h3>Termo de recusa do cadastro domiciliar de atenção básica</h3>
             <div  style={{display:'flex'}} className="bloco" >
