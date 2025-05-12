@@ -3,11 +3,11 @@ import React,{useState} from 'react';
 
 // Use // para comentar nos códigos Reacr e {/**/} para comentar nos códigos HRTML
 import Login from './Componentes/login.js';
-import Pag1 from './Componentes/Pag1.js';
+import Pag1 from './Componentes/Pag1.jsx';
 import Pag2 from './Componentes/Pag2.js';
-import Pag3 from './Componentes/Pag3.js';
+import Pag3 from './Componentes/Pag3.jsx';
 import Pag4 from './Componentes/Pag4.js';
-import Teste from './Componentes/teste.js';
+import Teste from './Componentes/teste.jsx';
 
 
 function App() {  
@@ -17,14 +17,8 @@ function App() {
     function Conf() {
       
       if (login === "true")
-        return <div>
-          <Login setLogin={setLogin}/>
-            <div>
-            <div align="right">
-              <p>Valor {login} </p>
-              <a href="https://stackoverflow.com/questions/47875730/how-can-i-fix-jsx-a11y-anchor-is-valid-when-using-the-link-component-in-react">Esqueci minha senha</a>
-            </div>
-        </div>
+        return <div> <Login setLogin={setLogin}/>
+          
         </div>
       if (login === "false")
 

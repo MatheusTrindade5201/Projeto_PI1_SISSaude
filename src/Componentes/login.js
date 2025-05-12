@@ -1,5 +1,5 @@
     import react, {useState} from 'react';
-    import './Pag1.js'; 
+    import './Pag1.jsx'; 
 
     function Login({setLogin}){
         
@@ -7,7 +7,7 @@
           <form>
             <div class="container">
                 <div align="left">
-                    <p>SIS Saúde</p>
+                    <p>SIS Saúde2</p>
                     <p>Cadastro de Dados de sistema de saúde</p>
                 </div>
                 <div>

@@ -1,4 +1,4 @@
-import Cabecalho from './Pag1.js';
+import Cabecalho from './Pag1.jsx';
 
 function Pag3(){
     return (

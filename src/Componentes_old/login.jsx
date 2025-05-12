@@ -4,7 +4,7 @@
           <form>
             <div class="container">
                 <div align="left">
-                    <p><img src="./assets/logotipo_sissaude_v01" alt="Logotipo Sissaude"/></p>
+                    <p><img src="./assets/logotipo_sissaude_v01.png" alt="Logotipo Sissaude"/></p>
                     <p>SIS Saúde</p>
                     <p>Cadastro de Dados de sistema de saúde</p>
                 </div>
