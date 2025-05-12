@@ -34,7 +34,7 @@ import '../styles/stylePags.css';
             </div>
             <form className="linha">
                 <div id="Cadastro_domiciliar">
-                    <label>CNS do PRofissional</label>
+                    <label>CNS do Profissional</label>
                     <input id="CNS" className="campo_preenchimento" type="text" placeholder="Digite o CNS"/>
                 </div>
                 <div>

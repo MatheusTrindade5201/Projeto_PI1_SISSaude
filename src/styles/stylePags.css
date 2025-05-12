@@ -1,3 +1,9 @@
+@font-face {
+font-family:"acumin-pro-condensed";
+src:url("https://use.typekit.net/af/f09134/00000000000000007735d40a/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/f09134/00000000000000007735d40a/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/f09134/00000000000000007735d40a/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
 @import url('https://use.typekit.net/jkc1xhg.css');
 
 #root {
@@ -97,3 +103,9 @@ a {
   font-size: 16px;
 }
 
+.sissaudeLogotipo{
+  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
+  color: #1EA0D3;
+  width: 400px;
+  height: 100px;
+}
