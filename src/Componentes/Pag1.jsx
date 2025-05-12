@@ -142,7 +142,7 @@ import '../styles/stylePags.css';
         return(
             <div id="Telefone para contato">
                 <h3>Telefone para contato</h3   ><br /> 
-                <div id="linha1" className="linha"  className="bloco">
+                <div id="linha1" className="linha_bloco">
                     <div>
                         <label>Residencial</label><br />
                         <input id="email" className="campo_preenchimento" type="text" placeholder="(00) 00000-0000" />
@@ -163,7 +163,7 @@ import '../styles/stylePags.css';
                 <p>Animais no domicílio</p>
                 <input id="email" className="campo_preenchimento" type="checkbox" />
             </div>
-                <div id="linha1" className="linha" className="bloco" style={{display:'flex'}}>
+                <div id="linha1" className="linha_bloco" style={{display:'flex'}}>
                     <div>
                     <label>Quais?</label>
                         <label>Gato</label>

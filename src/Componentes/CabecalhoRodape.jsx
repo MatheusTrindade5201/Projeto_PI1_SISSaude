@@ -1,3 +1,5 @@
+import '../styles/styleCabecalhoRodape.css';
+
 
 function Cabecalho(){
     return (
@@ -8,28 +10,28 @@ function Cabecalho(){
                 <img src="./src/assets/logotipo_sissaude_v01.png" alt="Logotipo Sissaude" width="180"/>
                 <p id="paragraphCabecalho">Cadastro de dados de Sistema de Saúde</p>
         </div>
-        <div className="form-title">
-            <p>Cadastro Domiciliar</p>
+        <div className="form-title" align='left'>
+            <p className='cadastroDomiciliar'>Cadastro Domiciliar</p>
         </div>
         <form className="linha">
             <div id="Cadastro_domiciliar">
-                <label >CNS do PRofissional</label><br/>
+                <label>CNS do Profissional</label>
                 <input id="CNS" className="campo_preenchimento" type="text" placeholder="Digite o CNS"/>
             </div>
-            <div>
-                <label>CBO</label><br/>
+            <div id="Cadastro_domiciliar">
+                <label>CBO</label>
                 <input id="CBO" className="campo_preenchimento" type="text" placeholder="Digite o CBO"/>
             </div>
-            <div>
-                <label>CNES</label><br/>
+            <div id="Cadastro_domiciliar">
+                <label>CNES</label>
                 <input id="CNES" className="campo_preenchimento" type="text" placeholder="Digite o CNES"/>
             </div>
-            <div>
-                <label>INE</label><br/>
+            <div id="Cadastro_domiciliar">
+                <label>INE</label>
                 <input id="INE" className="campo_preenchimento" type="text" placeholder="Digite o INE"/>
             </div>
-            <div>
-                <label>Data</label><br/>
+            <div id="Cadastro_domiciliar">
+                <label>Data</label>
                 <input id="data_preenchimento" className="campo_preenchimento" type="date" placeholder="dd/mm/aaaa"/>
                 </div>  
         </form>
