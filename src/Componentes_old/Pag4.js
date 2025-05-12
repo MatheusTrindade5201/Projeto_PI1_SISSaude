@@ -2,7 +2,7 @@ import Cabecalho from './Pag1.js';
 
 function Pag4(){
     return(
-        <div style={{display:'flex'}}>
+        <div>
             <div>
                 <CondSitu/>
                 <OutrasCondSaude/>
@@ -17,7 +17,7 @@ function CondSitu(){
         <div>
             <h3>Condições/Situações de saúde gerais</h3>
             <div className="bloco">
-                <div id="linha1" style={{display:'flex'}}>
+                <div id="linha1">
                     <div>
                         <input id="FA" className="campo_preenchimento" type="checkbox"/>
                             <label>Esta Fumante</label>
@@ -31,7 +31,7 @@ function CondSitu(){
                             <label>Esta com hanseníase</label>
                     </div>
                 </div>
-                <div id="linha2" style={{display:'flex'}}>
+                <div id="linha2">
                     <div>
                         <input id="FA" className="campo_preenchimento" type="checkbox"/>
                             <label>Faz uso de álcool</label>
@@ -45,7 +45,7 @@ function CondSitu(){
                             <label>Esta com tuberculose</label>
                     </div>
                 </div>
-                <div id="linha3"style={{display:'flex'}}>
+                <div id="linha3">
                     <div>
                         <input id="FA" className="campo_preenchimento" type="checkbox"/>
                             <label>Faz uso de outras drogas</label>
@@ -59,7 +59,7 @@ function CondSitu(){
                             <label>Tem ou teve câncer</label>
                     </div>
                 </div>
-                <div id="linha4"style={{display:'flex'}}>
+                <div id="linha4">
                     <div>
                         <input id="FA" className="campo_preenchimento" type="checkbox"/>
                             <label>Tem hipertensão arterial</label>
@@ -73,7 +73,7 @@ function CondSitu(){
                             <label>Esta domicilado</label>
                     </div>
                 </div>
-                <div id="linha5" style={{display:'flex'}}>
+                <div id="linha5">
                     <div>
                         <label>Teve alguma internação nos últimos 12 meses??</label><br />
                             <input id="CheckDef" className="campo_preenchimento" type="checkbox" />
@@ -90,7 +90,7 @@ function CondSitu(){
                                     </datalist>
                     </div>  
                 </div>
-                <div id="linha6" style={{display:'flex'}}>
+                <div id="linha6">
                     <div>
                         <label>Gestante</label><br />
                             <input id="CheckDef" className="campo_preenchimento" type="checkbox" />
@@ -107,7 +107,7 @@ function CondSitu(){
                                     </datalist>
                     </div>
                 </div>
-                <div id="linha7" style={{display:'flex'}}>
+                <div id="linha7">
                     <div>
                     <label>Tem ou teve problemas de rins?</label><br />
                             <input id="CheckDef" className="campo_preenchimento" type="checkbox" />
@@ -139,7 +139,7 @@ function OutrasCondSaude(){
         <div>
             <h3>Outras Condições de Saúde</h3>
             <div className="bloco">
-                <div id="linha1" style={{display:'flex'}}>
+                <div id="linha1">
                     <label>1 - Qual?</label><br />
                         <input id="Condicao1" className="campo_preenchimento" type="text" placeholder="Condição 1"/>
                 </div>
@@ -161,7 +161,7 @@ function CidadaoRua(){
         <div>
             <h3>Cidadão em Situação de Rua</h3>
             <div className="bloco">
-                <div id="linha1" style={{display:'flex'}}>
+                <div id="linha1">
                     <div>
                         <label>Esta em situação de rua?(Tempo?)</label><br />
                             <input id="CheckDef" className="campo_preenchimento" type="checkbox" />
@@ -179,7 +179,7 @@ function CidadaoRua(){
 
                     </div>
                 </div>
-                <div id="linha2" style={{display:'flex'}}>
+                <div id="linha2">
                     <div>
                             <label>Esta em situação de rua?(Tempo?)</label><br />
                             <input id="CheckDef" className="campo_preenchimento" type="checkbox" />
@@ -191,7 +191,7 @@ function CidadaoRua(){
                                     </datalist>
                     </div>
                 </div>
-                <div id="linha3" style={{display:'flex'}}>
+                <div id="linha3">
                     <div>
                         <input id="FA" className="campo_preenchimento" type="checkbox"/>
                             <label>Receb Algum Benefício</label>
@@ -202,7 +202,7 @@ function CidadaoRua(){
                     </div>
                 </div>
                 <div>
-                    <div id="linha4" style={{display:'flex'}}>
+                    <div id="linha4">
                         <div>
                             <input id="FA" className="campo_preenchimento" type="checkbox"/>
                                 <label>Restaurante Popular</label>
@@ -224,7 +224,7 @@ function CidadaoRua(){
                                 <label> Outras</label>
                         </div>
                     </div>
-                    <div id="linha5" style={{display:'flex'}}>
+                    <div id="linha5">
                         <div>
                         <label>Visita algum familiar com frequência?</label><br />
                             <input id="CheckDef" className="campo_preenchimento" type="checkbox" />
@@ -244,7 +244,7 @@ function CidadaoRua(){
                                 <label>Higiene Bucal</label>
                         </div>
                         <div>
-                                <input id="FA" className="campo_preenchimento" type="checkbox"/>
+                            <input id="FA" className="campo_preenchimento" type="checkbox"/>
                                 <label>Outras</label>
                         </div>
                     </div>

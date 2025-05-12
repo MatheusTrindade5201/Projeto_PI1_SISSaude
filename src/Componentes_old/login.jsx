@@ -1,12 +1,10 @@
-    import react, {useState} from 'react';
-    import './Pag1.js'; 
-
-    function Login({setLogin}){
-        
+    //import './Pag1.js'; 
+    function Login(){
         return (
           <form>
             <div class="container">
                 <div align="left">
+                    <p><img src="./assets/logotipo_sissaude_v01" alt="Logotipo Sissaude"/></p>
                     <p>SIS Saúde</p>
                     <p>Cadastro de Dados de sistema de saúde</p>
                 </div>
@@ -16,9 +14,8 @@
                 <div>
                     <input class="login" type="password" placeholder="Senha" name="senha" required/>
                 </div>
-                
                 <div>
-                    <button type="submit" onClick={(e)=>setLogin("false")}>login</button>
+                    <button type="submit" onclick="myFunction()">Login</button>
 
                 </div>
                 <div align="right">

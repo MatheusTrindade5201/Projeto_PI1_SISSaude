@@ -3,53 +3,45 @@
         return (
         <div>
            <Cabecalho />
-           <div style={{display:'flex'}}>
-                <div style={{width:'50%'}}>
+           <div style={{display: 'inline-block'}}>
+                <div>
                     <EndLocaldepermanencia />
-                    <div style={{display:'flex'}}>
-                        <div style={{width:'50%'}}>
-                            <Telefonecontato />
-                        </div>
-                        <div style={{width:'50%'}}>
-                            <AnimaisDomicilio />
-                        </div>
+                    <div>
+                        <Telefonecontato />
+                        <AnimaisDomicilio />
                     </div>
                 </div>
-                <div style={{width:'50%'}}>
-                    <CondMoradia />
-                </div>
+                <CondMoradia />   
             </div>
         </div>
         )   
     }
 
-    const UFs = ["SP","RJ","MG"];
-    
     function Cabecalho(){
         return (
-        <div id="cabecalho" className="bloco" >
+        <div id="cabecalho">
             <div className="form-title">
                 <p>Cadastro Domiciliar</p>
             </div>
-            <form className="linha">
+            <form id="contact_form" >
                 <div id="Cadastro_domiciliar">
-                    <label>CNS do PRofissional</label>
+                    <label>CNS do PRofissional</label><br />
                     <input id="CNS" className="campo_preenchimento" type="text" placeholder="Digite o CNS"/>
                 </div>
                 <div>
-                    <label>CBO</label>
+                    <label>CBO</label><br />
                     <input id="CBO" className="campo_preenchimento" type="text" placeholder="Digite o CBO"/>
                 </div>
                 <div>
-                    <label>CNES</label>
+                    <label>CNES</label><br />
                     <input id="CNES" className="campo_preenchimento" type="text" placeholder="Digite o CNES"/>
                 </div>
                 <div>
-                    <label>INE</label>
+                    <label>INE</label><br />
                     <input id="INE" className="campo_preenchimento" type="text" placeholder="Digite o INE"/>
                 </div>
                 <div>
-                    <label>Data</label>
+                    <label>Data</label><br />
                     <input id="data_preenchimento" className="campo_preenchimento" type="date" placeholder="dd/mm/aaaa"/>
                     </div>  
             </form>
@@ -58,22 +50,10 @@
     }
 
     function EndLocaldepermanencia(){
-        function Options(props) {
-            return <option>{ props.brand }</option>;
-          }
-        function SetUF() {
-            return (
-              <>
-                  {UFs.map  ((item) => <Options brand={item} />)}
-              </>
-            );
-          }
-        
-        
         return (
-            <div id="End_Localdepermanencia" className="bloco">
+            <div id="End_Localdepermanencia">
             <p>Endereço/Local de Permanência</p><br />
-                <div id="linha1" className="linha">
+                <div id="linha1" className="line">
                     <div>
                         <label>CEP</label><br />
                         <input id="CEP" className="campo_preenchimento" type="number" placeholder="00000-000" />
@@ -85,16 +65,19 @@
                     <div>
                         <label>UF</label><br />
                         <input list="UFs" name="browser" id="browser" className="campo_preenchimento" placeholder="SP" />
-                        <datalist id="UFs">
-                            <SetUF/>
-                        </datalist>
+                        <datalist id="UFs" />
+                            <option value="SP" />
+                            <option value="RJ" />
+                            <option value="MG" />
+                            <option value="PR" />
+                            <option value="SC" />
                     </div>
                     <div>
                         <label>Tipo imóvel</label><br />
                         <input id="tipo_imovel" className="campo_preenchimento" type="text" placeholder="00" />
                     </div>
                 </div><br />
-                <div id="linha2" className="linha">
+                <div id="linha2" className="line">
                     <div>
                         <label>Bairro</label><br />
                         <input id="Bairro" className="campo_preenchimento" type="text" placeholder="" />
@@ -116,7 +99,7 @@
                         <input id="email" className="campo_preenchimento" type="text" placeholder="" />
                     </div>
                 </div><br />
-                <div id="linha3" className="linha">
+                <div id="linha3" className="line">
                     <div >
                         <label>Número</label><br />
                         <input id="email" className="campo_preenchimento" type="text" placeholder="" />
@@ -138,9 +121,9 @@
 
     function Telefonecontato(){
         return(
-            <div id="Telefone para contato" className="bloco">
+            <div id="Telefone para contato">
                 <p>Telefone para contato</p><br /> 
-                <div id="linha1" className="linha">
+                <div id="linha1" className="line">
                     <div>
                         <label>Residencial</label><br />
                         <input id="email" className="campo_preenchimento" type="text" placeholder="(00) 00000-0000" />
@@ -156,10 +139,10 @@
 
     function AnimaisDomicilio(){
         return (
-            <div id="Animais no domicílio" className="bloco" style={{display:'flex'}}>
+            <div id="Animais no domicílio">
             <p>Animais no domicílio</p>
             <input id="email" className="campo_preenchimento" type="checkbox" />
-                <div id="linha1" className="linha">
+                <div id="linha1">
                     <div>
                     <label>Quais?</label>
                         <input id="Gato" className="campo_preenchimento" type="checkbox" placeholder="" />
@@ -168,7 +151,7 @@
                         <input id="Outros" className="campo_preenchimento" type="checkbox" placeholder="" />
                     </div>
                 </div>  
-                <div id="linha2" className="linha">
+                <div id="linha2">
                     <div>
                     <label>Quantos?</label><br />
                     <input id="email" className="campo_preenchimento" type="text"  />
@@ -180,9 +163,9 @@
     function CondMoradia(){
         return(
             <div>
-            <div id="Condições de Moradia" className="bloco">
+            <div id="Condições de Moradia">
             <p>Condições de Moradia</p><br />
-            <div id="linha1" className="linha">
+            <div id="linha1">
                 <div >
                     <label>Situação de Moradia/posse da Terra</label><br />
                     <input list="browsers" name="browser" id="browser" className="campo_preenchimento" />
@@ -206,7 +189,7 @@
                 </datalist>
             </div>
             </div>
-            <div id="linha2" className="linha">
+            <div id="linha2">
                 <div >
                     <label>Localização</label><br />
                     <input list="browsers" name="browser" id="browser" className="campo_preenchimento" />
@@ -230,7 +213,7 @@
                 </datalist>
             </div>
             </div>
-            <div id="linha3" className="linha">
+            <div id="linha3">
                 <div>
                     <label>Tipo de Domicílio</label><br />
                     <input list="browsers" name="browser" id="browser" />
@@ -254,7 +237,7 @@
                 </datalist>
             </div>
             </div>
-            <div id="linha4" className="linha">
+            <div id="linha4">
             <div>
                 <input name="browser" id="browser" className="campo_preenchimento"  placeholder="Nº"  />
                 <label>Moradores</label><br />
@@ -264,7 +247,7 @@
                 <label>Cômodos</label><br />
             </div>
             </div>
-            <div id="linha5" className="linha">
+            <div id="linha5">
                 <div>
                     <label>Tipo de acesso ao domicílio</label><br />
                     <input list="browsers" name="browser" id="browser" />
@@ -288,7 +271,7 @@
                     </datalist>
                 </div>
             </div>
-            <div id="linha6" className="linha">
+            <div id="linha6">
                 <div>
                     <label>Disponibilidade de Energia elétrica</label><br />
                     <input type="checkbox" id="browser" />

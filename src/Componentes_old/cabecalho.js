@@ -12,7 +12,7 @@ function Cabecalho(){
                 <input id="CBO" class="campo_preenchimento" type="text" placeholder="Digite o CBO" />
             </div>
             <div>
-                <label>CNES</label><br />       
+                <label>CNES</label><br />
                 <input id="CNES" class="campo_preenchimento" type="text" placeholder="Digite o CNES" />
             </div>
             <div>

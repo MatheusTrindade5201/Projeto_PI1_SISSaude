@@ -2,7 +2,7 @@ import Cabecalho from './Pag1.js';
 
 function Pag3(){
     return (
-    <div style={{display:'flex'}}>
+    <div>
         <div>
         <IdentificacaoUsuario />
         <SaidaCadastro />
@@ -19,9 +19,9 @@ function IdentificacaoUsuario(){
     <div>
         <h3>Identificação de Usuário/Cidadão</h3>
         <div className="bloco">
-            <div id="Linha1" style={{display:'flex'}}>
+            <div id="Linha1">
                 <div>
-                    <label>CNS do Cidadão</label><br />
+                    <label>CNS do Cidadãi</label><br />
                     <input id="CNESCidadao" className="campo_preenchimento" type="text" placeholder="Digite o CNES"/>
                 </div>
                 <div>
@@ -42,7 +42,7 @@ function IdentificacaoUsuario(){
                     <label>FA</label>
                 </div>
             </div>
-            <div id="Linha2" style={{display:'flex'}}>
+            <div id="Linha2">
                 <div>
                     <label>Nome Completo</label><br />
                     <input id="NomeCompleto" className="campo_preenchimento" type="text" placeholder="Nome do Cidadão"/>
@@ -65,7 +65,7 @@ function IdentificacaoUsuario(){
                         </datalist>
                 </div>
             </div>
-            <div id="Linha3" style={{display:'flex'}}>
+            <div id="Linha3">
                 <div>
                     <label>Raça/Cor</label><br />
                     <input id="RacaCor" list= "browsers" className="campo_preenchimento" placeholder="M"/>
@@ -105,7 +105,7 @@ function IdentificacaoUsuario(){
                     <input id="DataNaturalizacao" className="campo_preenchimento" type="date"/>
                 </div>
             </div>
-            <div id="Linha4" style={{display:'flex'}}>
+            <div id="Linha4">
                 <div>
                     <label>Portaria Naturalização</label><br />
                     <input id="CNES" className="campo_preenchimento" type="text" placeholder="Digite o CNES"/>
@@ -129,12 +129,12 @@ function IdentificacaoUsuario(){
                     <label>Data Ent. no Brasil</label><br />
                     <input id="EntBrasil" className="campo_preenchimento" type="text" placeholder="Digite o CNES"/>
                 </div>
-                <div>   
+                <div>
                     <label>Celular</label><br />
                     <input id="Celular" className="campo_preenchimento" type="date" placeholder="XX XXXXX XXXX"/>
                 </div>
             </div>
-            <div id="Linha5" style={{display:'flex'}}>
+            <div id="Linha5">
                 <div>
                     <label>E-mail</label><br />
                     <input id="Email" className="campo_preenchimento" type="text" placeholder="nome@provedor.com"/>
@@ -157,7 +157,7 @@ function SaidaCadastro(){
     return  (
         <div id="SaidaCadastro">
             <h3> Saída do Cidadão do Cadastro </h3>
-            <div  className="bloco" style={{display:'flex'}}>
+            <div  className="bloco">
             <div>
                 <label>Motivo</label><br />
                 <input id="CNESCidadao" list="browsers" className="campo_preenchimento" placeholder="Mudança de Território"/>
@@ -185,7 +185,7 @@ function InfoSocioDemo (){
         <div>
             <h3>Informações Socio Demográficas</h3>
             <div  className="bloco">
-                <div id="Linha1" style={{display:'flex'}}>
+                <div id="Linha1">
                     <div>
                         <label>Relação de Parentesco</label>
                         <p>(com o responsável familiar)</p>
@@ -196,7 +196,7 @@ function InfoSocioDemo (){
                         <input id="Ocupacao" className="campo_preenchimento" type="text" placeholder="Digite a ocupação do Cidadão"/>
                     </div>
                 </div>
-                <div id="Linha2" style={{display:'flex'}}> 
+                <div id="Linha2">
                     <div>
                         <div>
                             <label>Curso mais elevado que frequenta(ou)</label><br />
@@ -231,7 +231,7 @@ function InfoSocioDemo (){
                         </div>
                     </div>
                 </div>
-                <div id="Linha3" style={{display:'flex'}}>
+                <div id="Linha3">
                     <p>Criança de 9 anos, com quem fica?</p>
                     <div>
                     <input id="Adulto Responsável" className="campo_preenchimento" type="checkbox"/>
@@ -248,13 +248,13 @@ function InfoSocioDemo (){
                         <label>Outro</label>
                     </div>
                 </div>
-                <div id="Linha4" style={{display:'flex'}}>
+                <div id="Linha4">
                     <div>
                         <input id="EnergiaEletrica" className="campo_preenchimento" type="checkbox"/>
                             <label>Disponibilidade de energia elétrica</label>
                     </div>
                 </div>
-                <div id="Linha5" style={{display:'flex'}}>   
+                <div id="Linha5">   
                     <div>
                         <div>
                             <label>Deseja informar a Orientação Sexual</label><br />
@@ -278,7 +278,7 @@ function InfoSocioDemo (){
                         </div>
                     </div>
                 </div>
-                <div id="Linha6" style={{display:'flex'}}>
+                <div id="Linha6">
                     <div>
                     <label>Deseja Informar Identidade de Gênero?</label><br />
                             <input id="CheckDef" className="campo_preenchimento" type="checkbox" />

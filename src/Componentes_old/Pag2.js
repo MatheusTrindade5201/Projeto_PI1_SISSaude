@@ -5,8 +5,7 @@ function Pag2(){
     <div>
         <div id="termo de recusa">
             <h3>Termo de recusa do cadastro domiciliar de atenção básica</h3>
-            <div  style={{display:'flex'}} className="bloco" >
-            <div style={{display:'flex'}}>
+            <div style={{display : 'inline'}}>
                 <p>Eu, </p>
                 <input id="NomeCidadao" className="campo_preenchimento" type="text" placeholder="Nome do Cidadão"/>
                 <p>portador(a) do RG nº </p>    
@@ -17,12 +16,9 @@ function Pag2(){
                 <h3>Assinatura</h3>
                 <canvas id="board"></canvas>
             </div>
-            </div>
         </div>
         <div>
-            <h3>Instituição de Permanência</h3>
-        <div style={{display:'flex'}} className="bloco" >
-                
+            
                 <div>
                     <label>Nome da Instituição de Permanência</label><br />
                     <input id="InstPerma" className="campo_preenchimento" type="text" placeholder="Digite o nome da IP"/>
@@ -43,11 +39,9 @@ function Pag2(){
                     <input id="CNES" className="campo_preenchimento" type="text" placeholder="(00) 00000-0000"/>
                 </div>
         </div>
-        </div>
         <div>
             <h3>Termo de recusa do cadastro domiciliar de atenção básica</h3>
-            <div  style={{display:'flex'}} className="bloco" >
-                <div>
+            <div style={{display : 'inline'}}>
                 <p>Eu, </p>
                 <input id="NomeCidadao" className="campo_preenchimento" type="text" placeholder="Nome do Cidadão"/>
                 <p>portador(a) do RG nº </p>    
@@ -57,7 +51,6 @@ function Pag2(){
             <div>
                 <h3>Assinatura</h3>
                 <canvas id="board"></canvas>
-                </div>
             </div>
         </div>
     </div>
