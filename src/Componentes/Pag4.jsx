@@ -76,12 +76,12 @@ function CondSitu(){
                 </div>
                 <div id="linha5" style={{display:'flex'}}>
                     <div>
-                        <label>Teve alguma internação nos últimos 12 meses??</label><br />
+                        <label>Teve alguma internação nos últimos 12 meses??</label>
                             <input id="CheckDef" className="campo_preenchimento" type="checkbox" />
                             <input id="CheckDef" className="campo_preenchimento" type="text" placeholder="Se sim, por qual causa."/>
                     </div>
                     <div>
-                        <label>Usa plantas medicinais?</label><br />
+                        <label>Usa plantas medicinais?</label>
                             <input id="CheckDef" className="campo_preenchimento" type="checkbox" />
                             <input id="PlantasMedicinais" list="browsers" className="campo_preenchimento" placeholder="Se sim, indique qual(is)"/>
                                     <datalist id="browsers">
@@ -93,12 +93,12 @@ function CondSitu(){
                 </div>
                 <div id="linha6" style={{display:'flex'}}>
                     <div>
-                        <label>Gestante</label><br />
+                        <label>Gestante</label>
                             <input id="CheckDef" className="campo_preenchimento" type="checkbox" />
                             <input id="Gestante" className="campo_preenchimento" type="text" placeholder="Maternidade de Referência."/>
                     </div>
                     <div>
-                        <label>Doença Respiratório do pulnão?</label><br />
+                        <label>Doença Respiratório do pulnão?</label>
                             <input id="CheckDef" className="campo_preenchimento" type="checkbox" />
                             <input id="DoencaRespiratoria" list="browsers" className="campo_preenchimento" placeholder="Asma"/>
                                     <datalist id="browsers">
@@ -110,7 +110,7 @@ function CondSitu(){
                 </div>
                 <div id="linha7" style={{display:'flex'}}>
                     <div>
-                    <label>Tem ou teve problemas de rins?</label><br />
+                    <label>Tem ou teve problemas de rins?</label>
                             <input id="CheckDef" className="campo_preenchimento" type="checkbox" />
                             <input id="DoencaRenal" list="browsers" className="campo_preenchimento" placeholder="Insuficiência Renal"/>
                                     <datalist id="browsers">
@@ -120,7 +120,7 @@ function CondSitu(){
                                     </datalist>
                     </div>
                     <div>
-                        <label>Tem ou teve doenã cardíaca /do coração?</label><br />
+                        <label>Tem ou teve doenã cardíaca /do coração?</label>
                             <input id="CheckDef" className="campo_preenchimento" type="checkbox" />
                             <input id="DoencaCardiaca" list="browsers" className="campo_preenchimento" placeholder="Insuficiência Cardíaca"/>
                                     <datalist id="browsers">
@@ -141,15 +141,15 @@ function OutrasCondSaude(){
             <h3 className='titulosSecoes'>Outras Condições de Saúde</h3>
             <div className="bloco" style={{display:'flex'}}>
                 <div id="linha1" >
-                    <label>1 - Qual?</label><br />
+                    <label>1 - Qual?</label>
                     <input id="Condicao1" className="campo_preenchimento" type="text" placeholder="Condição 1"/>
                 </div>
                 <div>
-                    <label>2 - Qual?</label><br />
+                    <label>2 - Qual?</label>
                         <input id="Condicao2 "className="campo_preenchimento" type="text" placeholder="Condição 2"/>
                 </div>  
                 <div>
-                    <label>3 - Qual?</label><br />
+                    <label>3 - Qual?</label>
                         <input id="Condicao3" className="campo_preenchimento" type="text" placeholder="Condição 3"/>
                 </div>                  
             </div>
@@ -164,7 +164,7 @@ function CidadaoRua(){
             <div className="bloco">
                 <div id="linha1" style={{display:'flex'}}>
                     <div>
-                        <label>Esta em situação de rua?(Tempo?)</label><br />
+                        <label>Esta em situação de rua?(Tempo?)</label>
                             <input id="CheckDef" className="campo_preenchimento" type="checkbox" />
                             <input id="TempoDeRua" list="browsers" className="campo_preenchimento" placeholder="Insuficiência Cardíaca"/>
                             <datalist id="browsers">
@@ -174,7 +174,7 @@ function CidadaoRua(){
                                     </datalist>
                     </div>
                     <div>
-                        <label>É acompanhdo por outra instituição?</label><br />
+                        <label>É acompanhdo por outra instituição?</label>
                             <input id="CheckDef" className="campo_preenchimento" type="checkbox" />
                             <input id="DoencaCardiaca" list="browsers" className="campo_preenchimento" placeholder="<6 meses>"/>
 

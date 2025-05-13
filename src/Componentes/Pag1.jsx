@@ -78,58 +78,58 @@ import '../styles/stylePags.css';
             <div className="bloco">
                 <div id="linha1" className="linha">
                     <div>
-                        <label>CEP</label><br />
+                        <label>CEP</label>
                         <input id="CEP" className="campo_preenchimento" type="number" placeholder="00000-000" />
                     </div>
                     <div>
-                        <label>Município</label><br />
+                        <label>Município</label>
                         <input id="Municipio" className="campo_preenchimento" type="text" placeholder="Guarulhos" />
                     </div>
                     <div>
-                        <label>UF</label><br />
+                        <label>UF</label>
                         <input list="UFs" name="browser" id="browser" className="campo_preenchimento" placeholder="SP" />
                         <datalist id="UFs">
                             <SetUF/>
                         </datalist>
                     </div>
                     <div>
-                        <label>Tipo imóvel</label><br />
+                        <label>Tipo imóvel</label>
                         <input id="tipo_imovel" className="campo_preenchimento" type="text" placeholder="00" />
                     </div>
                 </div><br />
                 <div id="linha2" className="linha">
                     <div>
-                        <label>Bairro</label><br />
+                        <label>Bairro</label>
                         <input id="Bairro" className="campo_preenchimento" type="text" placeholder="" />
                     </div>
                     <div>
-                        <label>Tipo de Logradouro</label><br />
+                        <label>Tipo de Logradouro</label>
                         <input id="Logradouro" className="campo_preenchimento" type="text" placeholder="" />
                     </div>
                     <div>
-                        <label>Nome do Logradouro</label><br />
+                        <label>Nome do Logradouro</label>
                         <input id="email" className="campo_preenchimento" type="text" placeholder="" />
                     </div>
                     <div>
-                        <label>Microarea</label><br />
+                        <label>Microarea</label>
                         <input id="email" className="campo_preenchimento" type="text" placeholder="" />
                     </div>
                     <div>
-                        <label>FA</label><br />
+                        <label>FA</label>
                         <input id="email" className="campo_preenchimento" type="text" placeholder="" />
                     </div>
                 </div><br />
                 <div id="linha3" className="linha">
                     <div >
-                        <label>Número</label><br />
+                        <label>Número</label>
                         <input id="email" className="campo_preenchimento" type="text" placeholder="" />
                     </div>
                     <div>
                         <input id="email" className="campo_preenchimento" type="Checkbox" placeholder=""/>
-                        <label>Sem número</label><br />
+                        <label>Sem número</label>
                     </div>
                     <div>
-                        <label>Ponto de Referência</label><br />
+                        <label>Ponto de Referência</label>
                         <input id="email" className="campo_preenchimento" type="text" placeholder="" />
                     </div>
             
@@ -145,11 +145,11 @@ import '../styles/stylePags.css';
                 <h3 className='titulosSecoes'>Telefone para contato</h3   ><br /> 
                 <div id="linha1" className="linha_bloco">
                     <div>
-                        <label>Residencial</label><br />
+                        <label>Residencial</label>
                         <input id="email" className="campo_preenchimento" type="text" placeholder="(00) 00000-0000" />
                     </div><br />
                     <div>
-                        <label>Município</label><br />
+                        <label>Município</label>
                         <input id="email" className="campo_preenchimento" type="text" placeholder="(00) 00000-0000" />
                     </div>
                 </div>
@@ -177,7 +177,7 @@ import '../styles/stylePags.css';
                         <input id="Outros" className="campo_preenchimento" type="checkbox" placeholder="" />
                     </div>
                     <div style={{display:'flex'}}>
-                    <label>Quantos?</label><br />
+                    <label>Quantos?</label>
                     <input id="email" className="campo_preenchimento" type="text"  />
                     </div>
                 </div>
@@ -188,10 +188,10 @@ import '../styles/stylePags.css';
         return(
             <div>
             <div id="Condições de Moradia" className="bloco">
-            <p className='titulosSecoes'>Condições de Moradia</p><br />
+            <p className='titulosSecoes'>Condições de Moradia</p>
             <div id="linha1" className="linha">
                 <div >
-                    <label>Situação de Moradia/posse da Terra</label><br />
+                    <label>Situação de Moradia/posse da Terra</label>
                     <input list="browsers" name="browser" id="browser" className="campo_preenchimento" />
                     <datalist id="browsers">
                         <option value="1" />
@@ -202,7 +202,7 @@ import '../styles/stylePags.css';
                     </datalist>
                 </div>
             <div>
-                <label>Endereço/Local de Permanência</label><br />
+                <label>Endereço/Local de Permanência</label>
                 <input list="browsers" name="browser" id="browser" className="campo_preenchimento"  />
                 <datalist id="browsers">
                     <option value="1" />
@@ -215,7 +215,7 @@ import '../styles/stylePags.css';
             </div>
             <div id="linha2" className="linha">
                 <div >
-                    <label>Localização</label><br />
+                    <label>Localização</label>
                     <input list="browsers" name="browser" id="browser" className="campo_preenchimento" />
                     <datalist id="browsers">
                         <option value="1" />
@@ -226,7 +226,7 @@ import '../styles/stylePags.css';
                     </datalist>
                 </div>
             <div>
-                <label>Água para consumo no domicílio</label><br />
+                <label>Água para consumo no domicílio</label>
                 <input list="browsers" name="browser" id="browser" className="campo_preenchimento" />
                 <datalist id="browsers" className="campo_preenchimento">
                     <option value="1" />
@@ -239,7 +239,7 @@ import '../styles/stylePags.css';
             </div>
             <div id="linha3" className="linha">
                 <div>
-                    <label>Tipo de Domicílio</label><br />
+                    <label>Tipo de Domicílio</label>
                     <input list="browsers" name="browser" id="browser" />
                     <datalist id="browsers">
                         <option value="1" />
@@ -250,7 +250,7 @@ import '../styles/stylePags.css';
                     </datalist>
                 </div>
             <div>
-                <label>Destino do Lixo</label><br />
+                <label>Destino do Lixo</label>
                 <input list="browsers" name="browser" id="browser" className="campo_preenchimento" placeholder="Queimado/Enterrado" />
                 <datalist id="browsers">
                     <option value="Queimado/Enterrado" />
@@ -264,16 +264,16 @@ import '../styles/stylePags.css';
             <div id="linha4" className="linha">
             <div>
                 <input name="browser" id="browser" className="campo_preenchimento"  placeholder="Nº"  />
-                <label>Moradores</label><br />
+                <label>Moradores</label>
             </div>
             <div>
                 <input name="browser" id="browser" className="campo_preenchimento" placeholder="Nº" />
-                <label>Cômodos</label><br />
+                <label>Cômodos</label>
             </div>
             </div>
             <div id="linha5" className="linha">
                 <div>
-                    <label>Tipo de acesso ao domicílio</label><br />
+                    <label>Tipo de acesso ao domicílio</label>
                     <input list="browsers" name="browser" id="browser" />
                     <datalist id="browsers">
                         <option value="1" />
@@ -284,7 +284,7 @@ import '../styles/stylePags.css';
                     </datalist>
                 </div>
                 <div>
-                    <label>Forma de escoamento do banheiro ou sanitário</label><br />
+                    <label>Forma de escoamento do banheiro ou sanitário</label>
                     <input list="browsers" name="browser" id="browser" />
                     <datalist id="browsers">
                         <option value="1" />
@@ -297,12 +297,12 @@ import '../styles/stylePags.css';
             </div>
             <div id="linha6" className="linha">
                 <div>
-                    <label>Disponibilidade de Energia elétrica</label><br />
+                    <label>Disponibilidade de Energia elétrica</label>
                     <input type="checkbox" id="browser" />
                 </div>
                 <div>
-                    <label>Condição de posse e uso da Terra</label><br />
-                    <p>(Somente área de produção Rural)</p><br />
+                    <label>Condição de posse e uso da Terra</label>
+                    <p>(Somente área de produção Rural)</p>
                     <input list="browsers" name="browser" id="browser" />
                         <datalist id="browsers">
                             <option value="1" />

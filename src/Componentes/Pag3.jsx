@@ -22,20 +22,20 @@ function IdentificacaoUsuario(){
         <div className="bloco">
             <div id="Linha1" style={{display:'flex'}}>
                 <div>
-                    <label>CNS do Cidadão</label><br />
+                    <label>CNS do Cidadão</label>
                     <input id="CNESCidadao" className="campo_preenchimento" type="text" placeholder="Digite o CNES"/>
                 </div>
                 <div>
                     
-                    <input id="ResponsavelFamiliar" className="campo_preenchimento" type="checkbox" placeholder="Digite o CNES"/><br />
+                    <input id="ResponsavelFamiliar" className="campo_preenchimento" type="checkbox" placeholder="Digite o CNES"/>
                     <label>Responsável Familiar</label>
                 </div>
                 <div>
-                    <label>CNS do Responsável Familiar</label><br />
+                    <label>CNS do Responsável Familiar</label>
                     <input id="CNES" className="campo_preenchimento" type="text" placeholder="Digite o nome do responsável familiar"/>
                 </div>
                 <div>
-                    <label>Microarea</label><br />
+                    <label>Microarea</label>
                     <input id="MicroArea" className="campo_preenchimento" type="text" placeholder="Digite o CNES"/>
                 </div>
                 <div>
@@ -45,19 +45,19 @@ function IdentificacaoUsuario(){
             </div>
             <div id="Linha2" style={{display:'flex'}}>
                 <div>
-                    <label>Nome Completo</label><br />
+                    <label>Nome Completo</label>
                     <input id="NomeCompleto" className="campo_preenchimento" type="text" placeholder="Nome do Cidadão"/>
                 </div>
                 <div>
-                    <label>Nome Social</label><br />
+                    <label>Nome Social</label>
                     <input id="Nome Social" className="campo_preenchimento" type="text" placeholder="Nome Social"/>
                 </div>
                 <div>
-                    <label>Data de Nascimento</label><br />
+                    <label>Data de Nascimento</label>
                     <input id="CNES" className="campo_preenchimento" type="date"/>
                 </div>
                 <div>
-                    <label>Sexo</label><br />
+                    <label>Sexo</label>
                     <input id="CNES" list= "browsers" className="campo_preenchimento" placeholder="M"/>
                         <datalist id="browsers">
                             <option value="M" />
@@ -68,7 +68,7 @@ function IdentificacaoUsuario(){
             </div>
             <div id="Linha3" style={{display:'flex'}}>
                 <div>
-                    <label>Raça/Cor</label><br />
+                    <label>Raça/Cor</label>
                     <input id="RacaCor" list= "browsers" className="campo_preenchimento" placeholder="M"/>
                         <datalist id="browsers">
                             <option value="Indígena" />
@@ -77,15 +77,15 @@ function IdentificacaoUsuario(){
                         </datalist>
                 </div>
                 <div>
-                    <label>Etnia</label><br />
+                    <label>Etnia</label>
                     <input id="Etnia" className="campo_preenchimento" type="text" placeholder="Etnia"/>
                 </div>
                 <div>
-                    <label>Nº PIS (PIS/PASEP)</label><br />
+                    <label>Nº PIS (PIS/PASEP)</label>
                     <input id="PIS_PASEP" className="campo_preenchimento" type="text" placeholder="XXXXXXXXXX"/>
                 </div>
                 <div>
-                    <label>Nacionalidade</label><br />
+                    <label>Nacionalidade</label>
                     <input id="Nacionalidade" list= "browsers" className="campo_preenchimento" placeholder="M"/>
                         <datalist id="browsers">
                             <option value="Brasileiro" />
@@ -93,7 +93,7 @@ function IdentificacaoUsuario(){
                         </datalist>
                 </div>
                 <div>
-                    <label>País</label><br />
+                    <label>País</label>
                     <input id="Pais" list= "browsers" className="campo_preenchimento" placeholder="M"/>
                         <datalist id="browsers">
                             <option value="Brasil" />
@@ -102,17 +102,17 @@ function IdentificacaoUsuario(){
                         </datalist>
                 </div>
                 <div>
-                    <label>Data da Naturalização</label><br />
+                    <label>Data da Naturalização</label>
                     <input id="DataNaturalizacao" className="campo_preenchimento" type="date"/>
                 </div>
             </div>
             <div id="Linha4" style={{display:'flex'}}>
                 <div>
-                    <label>Portaria Naturalização</label><br />
+                    <label>Portaria Naturalização</label>
                     <input id="CNES" className="campo_preenchimento" type="text" placeholder="Digite o CNES"/>
                 </div>
                 <div>
-                    <label>UF e Município do Nascimento</label><br />
+                    <label>UF e Município do Nascimento</label>
                     <input id="UF" list= "browsers" className="campo_preenchimento" placeholder="SP"/>
                     <datalist id="browsers">
                             <option value="Brasil" />
@@ -127,25 +127,25 @@ function IdentificacaoUsuario(){
                         </datalist>
                 </div>
                 <div>
-                    <label>Data Ent. no Brasil</label><br />
+                    <label>Data Ent. no Brasil</label>
                     <input id="EntBrasil" className="campo_preenchimento" type="text" placeholder="Digite o CNES"/>
                 </div>
                 <div>   
-                    <label>Celular</label><br />
+                    <label>Celular</label>
                     <input id="Celular" className="campo_preenchimento" type="date" placeholder="XX XXXXX XXXX"/>
                 </div>
             </div>
             <div id="Linha5" style={{display:'flex'}}>
                 <div>
-                    <label>E-mail</label><br />
+                    <label>E-mail</label>
                     <input id="Email" className="campo_preenchimento" type="text" placeholder="nome@provedor.com"/>
                 </div>
                 <div>
-                    <label>Nome completo da mãe</label><br />
+                    <label>Nome completo da mãe</label>
                     <input id="NomeMae" className="campo_preenchimento" type="text" placeholder="Digite o nome completo da mãe"/>
                 </div>
                 <div>
-                    <label>Nome completo da mãe</label><br />
+                    <label>Nome completo da mãe</label>
                     <input id="NomePai" className="campo_preenchimento" type="text" placeholder="Digite o nome completo do pai"/>
                 </div>
             </div>
@@ -160,7 +160,7 @@ function SaidaCadastro(){
             <h3 className='titulosSecoes'> Saída do Cidadão do Cadastro </h3>
             <div  className="bloco" style={{display:'flex'}}>
             <div>
-                <label>Motivo</label><br />
+                <label>Motivo</label>
                 <input id="CNESCidadao" list="browsers" className="campo_preenchimento" placeholder="Mudança de Território"/>
                     <datalist id="browsers">
                             <option value="M" />
@@ -169,11 +169,11 @@ function SaidaCadastro(){
                     </datalist>
             </div>
             <div>
-                <label>Data do Óbito</label><br />
+                <label>Data do Óbito</label>
                 <input id="Obito" className="campo_preenchimento" type="date"/>
             </div>
             <div>
-                <label>Número da D.D.</label><br />
+                <label>Número da D.D.</label>
                 <input id="NumeroDD" className="campo_preenchimento" type="text" placeholder="XXXXXXXXXXXX"/>
             </div>
             </div>
@@ -193,14 +193,14 @@ function InfoSocioDemo (){
                         <input id="RelacaoParentesco" className="campo_preenchimento" type="text" placeholder="Digite o CNES"/>
                     </div>
                     <div>
-                        <label>Ocupação</label><br />
+                        <label>Ocupação</label>
                         <input id="Ocupacao" className="campo_preenchimento" type="text" placeholder="Digite a ocupação do Cidadão"/>
                     </div>
                 </div>
                 <div id="Linha2" style={{display:'flex'}}> 
                     <div>
                         <div>
-                            <label>Curso mais elevado que frequenta(ou)</label><br />
+                            <label>Curso mais elevado que frequenta(ou)</label>
                                 <input id="Curso" list= "browsers" className="campo_preenchimento" placeholder="Creche"/>
                                     <datalist id="browsers">
                                         <option value="Creche" />
@@ -213,7 +213,7 @@ function InfoSocioDemo (){
                                     </datalist>
                         </div>
                         <div>
-                            <label>Curso mais elevado que frequenta(ou)</label><br />
+                            <label>Curso mais elevado que frequenta(ou)</label>
                                 <input id="Curso" list= "browsers" className="campo_preenchimento" placeholder="Empregador"/>
                                     <datalist id="browsers">
                                         <option value="Empregador" />
@@ -223,11 +223,11 @@ function InfoSocioDemo (){
                         </div>
                     
                         <div>
-                            <input id="EscolaOuCreche" className="campo_preenchimento" type="checkbox"/><br />
+                            <input id="EscolaOuCreche" className="campo_preenchimento" type="checkbox"/>
                                 <label>Frequente escola ou creche</label>
-                            <input id="GrupoComunitario" className="campo_preenchimento" type="checkbox"/><br />
+                            <input id="GrupoComunitario" className="campo_preenchimento" type="checkbox"/>
                                 <label>Participa de algum grupo comunitário</label>
-                            <input id="PlanoSaude" className="campo_preenchimento" type="checkbox"/><br />
+                            <input id="PlanoSaude" className="campo_preenchimento" type="checkbox"/>
                                 <label>Possui Plano de Saúde</label>
                         </div>
                     </div>
@@ -258,7 +258,7 @@ function InfoSocioDemo (){
                 <div id="Linha5" style={{display:'flex'}}>   
                     <div>
                         <div>
-                            <label>Deseja informar a Orientação Sexual</label><br />
+                            <label>Deseja informar a Orientação Sexual</label>
                                 <input id="CheckSex" className="campo_preenchimento" type="checkbox" />
                                 <input id="Sexualidade" list="browsers" className="campo_preenchimento" placeholder="Heterossexual"/>
                                     <datalist id="browsers">
@@ -268,7 +268,7 @@ function InfoSocioDemo (){
                                     </datalist>
                         </div>
                         <div>
-                            <label>Tem alguma deficiência?</label><br />
+                            <label>Tem alguma deficiência?</label>
                                 <input id="CheckDef" className="campo_preenchimento" type="checkbox" />
                                 <input id="Deficiência" list="browsers" className="campo_preenchimento" placeholder="Heterossexual"/>
                                     <datalist id="browsers">
@@ -281,7 +281,7 @@ function InfoSocioDemo (){
                 </div>
                 <div id="Linha6" style={{display:'flex'}}>
                     <div>
-                    <label>Deseja Informar Identidade de Gênero?</label><br />
+                    <label>Deseja Informar Identidade de Gênero?</label>
                             <input id="CheckDef" className="campo_preenchimento" type="checkbox" />
                             <input id="Deficiência" list="browsers" className="campo_preenchimento" placeholder="Mulher Cis"/>
                                 <datalist id="browsers">
