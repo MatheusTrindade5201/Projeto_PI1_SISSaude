@@ -31,6 +31,19 @@ a {
   color: #1ED2D3;
 }
 
+.botoesmenu {
+  /*margin: auto;*/
+  margin-right: 10px;
+  margin-left: 10px;
+  width:90%;
+  padding: 6px 50px;
+  display: block-inline;
+  align-content: center;
+  background-color: #c9c9c9;
+  border: 0px;
+}
+
+
 .cadastroDomiciliar {
     font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
     font-size: 21px;

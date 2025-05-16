@@ -42,7 +42,7 @@ function Cabecalho(){
 
 function Rodape({setNumber}){
     <div style={{display: "inline-block"}}>
-        <button type="submit" className="botoesmenu" onClick= {()=>setNumber(1)} color="#f194ff"></button>
+        <button type="submit" className="botoesmenu" onClick= {()=>setNumber(1)}></button>
         <button type="submit" className="botoesmenu" onClick= {()=>setNumber(2)}></button>
         <button type="submit" className="botoesmenu" onClick= {()=>setNumber(3)}></button>
         <button type="submit" className="botoesmenu" onClick= {()=>setNumber(4)}></button>

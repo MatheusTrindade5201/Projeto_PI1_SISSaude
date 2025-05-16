@@ -5,18 +5,19 @@ import '../styles/stylePags.css';
         <div className="background">
            {/*<Cabecalho />*/}
            <div style={{display:'flex'}}>
-                <div style={{width:'50%'}}>
+                <div style={{width:'61%'}}>
                     <EndLocaldepermanencia />
                     <div>
-                        <div>
+                        <div className="boxesPag1">
                             <Telefonecontato />
+                            <Familias />
                         </div>
                         <div>
                             <AnimaisDomicilio />
                         </div>
                     </div>
                 </div>
-                <div style={{width:'50%'}}>
+                <div style={{width:'39%'}}>
                     <CondMoradia />
                 </div>
             </div>
@@ -24,7 +25,7 @@ import '../styles/stylePags.css';
         )   
     }
 
-    const UFs = ["SP","RJ","MG"];
+    const UFs = ["SP", "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SE", "TO"];
     
     function Cabecalho(){
         return (
@@ -79,58 +80,58 @@ import '../styles/stylePags.css';
                 <div id="linha1" className="linha">
                     <div>
                         <label>CEP</label>
-                        <input id="CEP" className="campo_preenchimento" type="number" placeholder="00000-000" />
+                        <input id="CEP" className="campo_preenchimento CEP" type="number" placeholder="00000-000" />
                     </div>
                     <div>
                         <label>Município</label>
-                        <input id="Municipio" className="campo_preenchimento" type="text" placeholder="Guarulhos" />
+                        <input id="Municipio" className="campo_preenchimento Municipio" type="text" placeholder="Guarulhos" />
                     </div>
                     <div>
                         <label>UF</label>
-                        <input list="UFs" name="browser" id="browser" className="campo_preenchimento" placeholder="SP" />
+                        <input list="UFs" name="browser" id="browser" className="campo_preenchimento UFs" placeholder="SP" />
                         <datalist id="UFs">
                             <SetUF/>
                         </datalist>
                     </div>
                     <div>
                         <label>Tipo imóvel</label>
-                        <input id="tipo_imovel" className="campo_preenchimento" type="text" placeholder="00" />
+                        <input id="tipo_imovel" className="campo_preenchimento Tipo_imovel" type="text" placeholder="00" />
                     </div>
                 </div><br />
                 <div id="linha2" className="linha">
                     <div>
                         <label>Bairro</label>
-                        <input id="Bairro" className="campo_preenchimento" type="text" placeholder="" />
+                        <input id="Bairro" className="campo_preenchimento Bairro" type="text" placeholder="" />
                     </div>
                     <div>
                         <label>Tipo de Logradouro</label>
-                        <input id="Logradouro" className="campo_preenchimento" type="text" placeholder="" />
+                        <input id="Logradouro" className="campo_preenchimento Tipo_logradouro" type="text" placeholder="" />
                     </div>
                     <div>
                         <label>Nome do Logradouro</label>
-                        <input id="email" className="campo_preenchimento" type="text" placeholder="" />
+                        <input id="email" className="campo_preenchimento Nome_logradouro" type="text" placeholder="" />
                     </div>
                     <div>
-                        <label>Microarea</label>
-                        <input id="email" className="campo_preenchimento" type="text" placeholder="" />
+                        <label>Microárea</label>
+                        <input id="email" className="campo_preenchimento Microarea" type="text" placeholder="" />
                     </div>
                     <div>
                         <label>FA</label>
-                        <input id="email" className="campo_preenchimento" type="text" placeholder="" />
+                        <input type="checkbox" id="email" className="campo_preenchimento FA" placeholder="" />
                     </div>
                 </div><br />
                 <div id="linha3" className="linha">
                     <div >
                         <label>Número</label>
-                        <input id="email" className="campo_preenchimento" type="text" placeholder="" />
+                        <input id="email" className="campo_preenchimento Numero" type="text" placeholder="" />
                     </div>
                     <div>
-                        <input id="email" className="campo_preenchimento" type="Checkbox" placeholder=""/>
-                        <label>Sem número</label>
+                        <label>S/Nº</label>
+                        <input id="email" className="campo_preenchimento SNum" type="Checkbox" placeholder=""/>
                     </div>
                     <div>
-                        <label>Ponto de Referência</label>
-                        <input id="email" className="campo_preenchimento" type="text" placeholder="" />
+                        <label className = "pto_ref">Ponto de Referência</label>
+                        <input id="email" className="campo_preenchimento PtoRef" type="text" placeholder="" />
                     </div>
             
                 </div>
@@ -146,10 +147,10 @@ import '../styles/stylePags.css';
                 <div id="linha1" className="linha_bloco">
                     <div>
                         <label>Residencial</label>
-                        <input id="email" className="campo_preenchimento" type="text" placeholder="(00) 00000-0000" />
-                    </div><br />
+                        <input id="email" className="campo_preenchimento Residencial" type="text" placeholder="(00) 00000-0000" />
+                    </div>
                     <div>
-                        <label>Município</label>
+                        <label className='contato'>Contato</label>
                         <input id="email" className="campo_preenchimento" type="text" placeholder="(00) 00000-0000" />
                     </div>
                 </div>
@@ -184,6 +185,40 @@ import '../styles/stylePags.css';
             </div>
         )
     }
+
+    function Familias(){
+        return(
+            <div id="Familias">
+                <h3 className='titulosSecoes'>Famílias</h3   ><br /> 
+                <div id="linha1" className="linha_bloco_familias">
+                    <div className='box'>
+                        <label>Nº Prontuário familiar</label>
+                        <input id="email" className="campo_preenchimento Prontuario_familiar" type="text" placeholder="" />
+                    
+                        <label>Data Nasc.</label>
+                        <p className='fonte_pequena'>(do responsável)</p>
+                        <input id="email" className="campo_preenchimento" type="text" placeholder="" />
+                    </div>
+                    <div>
+                        <label>CNS do Responsável</label>
+                        <input id="email" className="campo_preenchimento CNS_responsavel" type="text" placeholder="" /> 
+                   
+                        <label>Membros</label>
+                        <p className='fonte_pequena'>(da Família)</p>
+                        <input id="email" className="campo_preenchimento" type="text" placeholder="" />
+                    </div>
+                    <div>
+                        <label>Renda Familiar(sm)</label>
+                        <input id="email" className="campo_preenchimento Renda_familiar" type="text" placeholder="" />
+                        
+                        <label>Reside desde</label>
+                        <input id="email" className="campo_preenchimento" type="text" placeholder="mm/aaaa" />
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
     function CondMoradia(){
         return(
             <div>

@@ -26,20 +26,20 @@ function App() {
     function Rodape(){
       return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100px' } }>
         <div>
-          <button type="submit" className="botoesmenu" onClick= {()=>setNumber(1)} color="#f194ff"></button><br/>
-          <label>1</label>
+          <button type="submit" className="botoesmenu" onClick= {()=>setNumber(1)}></button>
+          <label className='labelsLogin'>1</label>
         </div>
         <div>
-          <button type="submit" className="botoesmenu" onClick= {()=>setNumber(2)}></button><br/>
-          <label>2</label>
+          <button type="submit" className="botoesmenu" onClick= {()=>setNumber(2)}></button>
+          <label className='labelsLogin'>2</label>
         </div>
         <div> 
-          <button type="submit" className="botoesmenu" onClick= {()=>setNumber(3)}></button><br/>
-          <label>3</label>
+          <button type="submit" className="botoesmenu" onClick= {()=>setNumber(3)}></button>
+          <label className='labelsLogin'>3</label>
         </div>
         <div>
-          <button type="submit" className="botoesmenu" onClick= {()=>setNumber(4)}></button><br/>
-          <label>4</label>
+          <button type="submit" className="botoesmenu" onClick= {()=>setNumber(4)}></button>
+          <label className='labelsLogin'>4</label>
         </div>
        </div>
   }

@@ -33,7 +33,7 @@ label {
   color: #565656; 
   text-align: left;
   display: block;
-  padding-bottom: 0px;
+  padding-bottom: 0px; 
 }
 
 p {
@@ -43,10 +43,6 @@ p {
     margin: 0;
 }
 
-.fonte_pequena {
-  text-align: left;  
-  font-size: 11px;
-}
 
 /* || Utilities */
 
@@ -58,20 +54,19 @@ p {
   width:50%;
   padding: 16px;
 }
-/*
+
 .form {
   display: flex;
   justify-content: space-between;
   /*align-items: center;*/
-  /*flex-direction: column;
+  flex-direction: column;
   width: 100%;
   height: 200px;
-}*/
-/*
+}
+
 .form-section{
   display: inline;
 }
-  */
 
 .button{
   margin: auto;
@@ -95,16 +90,10 @@ p {
     margin: 0;
     padding-bottom: 2px;
     padding-left: 6px;
-    padding-top: 8px;
     text-align: left;
 }
 
 /* || Boxes */
-
-.boxesPag1 {
-  display: flex; /* Enables Flexbox */
-  gap: 4px;
-}
 
 .campo_preenchimento {
     font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
@@ -112,18 +101,18 @@ p {
     color: #c8c8c8;
     border-color: #1EA0D3;
     margin: 0;
-    /*margin-right: 8px;*/
+    margin-right: 4px;
     /*padding-bottom: 4px;*/
     /*width: 90px;*/
 }
 
 .campo_preenchimento.CEP{
-    /*margin-right: 4px;*/
+    margin-right: 4px;
     width: 90px;
 }
 
 .campo_preenchimento.Municipio {
-    /*margin-right: 4px;*/
+    margin-right: 4px;
     width: 135px;
 }
 
@@ -149,7 +138,7 @@ p {
 
 .campo_preenchimento.Nome_logradouro {
     margin-right: 4px;
-    width: 175px;
+    width: 225px;
 }
 
 .campo_preenchimento.Microarea {
@@ -160,81 +149,4 @@ p {
 .campo_preenchimento.Residencial {
     margin-right: 4px;
     width: 153px;
-}
-
-.campo_preenchimento.FA {
-    transform: scale(1.5);
-    width: 20px;
-    height: 20px;
-    margin: 0;
-    margin-top: 5px;
-    margin-left: 4px;
-    padding: 0;
-}
-
-.campo_preenchimento.Numero{
-    margin-right: 8px;
-    width: 90px;
-}
-.campo_preenchimento.SNum {
-    transform: scale(1.5);
-    width: 20px;
-    height: 20px;
-    margin: 0;
-    margin-top: 5px;
-    margin-right: 4px;
-    padding: 0;
-}
-
-.campo_preenchimento.PtoRef{
-    margin-left: 4px;
-    width: 400px;
-}
-
-.pto_ref{
-    margin-left: 6px;
-}
-
-
-/* || Telefone Contato */
-
-.campo_preenchimento.Residencial {
-  display: inline-block; 
-  width: 130px;
-  margin-left: 4px; 
-}
-
-.contato {
-  display: block;  
-  margin-top: 14px;
-}
-
-
-/* || Animais no domicílio */
-
-.campo_preenchimento.Animais {
-  display: block; 
-  margin-left: 4px; 
-}
-
-
-/* || Famílias */
-
-.linha_bloco_familias {
-  display: flex;
-}
-.campo_preenchimento.Prontuario_familiar{
-    margin-right: 4px;
-    width: 125px;
-}
-
-.campo_preenchimento.CNS_responsavel {
-  width: 125px;
-  margin-right: 4px;
-}
-
-.campo_preenchimento.Renda_familiar{
-  display: block;
-  width: 50px;
-  margin-bottom: 14px;
 }

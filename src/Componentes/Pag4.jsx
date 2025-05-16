@@ -1,4 +1,4 @@
-import '../styles/stylePags.css';
+import '../styles/stylePag4.css';
 //import Cabecalho from './Pag1.jsx';
 
 function Pag4(){
@@ -20,11 +20,11 @@ function CondSitu(){
             <div className="bloco">
                 <div id="linha1" style={{display:'flex'}}>
                     <div>
-                        <input id="FA" className="campo_preenchimento" type="checkbox"/>
+                        <input id="FA" className="campo_preenchimento CondSaude" type="checkbox"/>
                             <label>Esta Fumante</label>
                     </div>
                     <div>
-                        <input id="FA" className="campo_preenchimento" type="checkbox"/>
+                        <input id="FA" className="campo_preenchimento CondSaude" type="checkbox"/>
                             <label>Tem Diabetes</label>
                     </div>
                     <div>

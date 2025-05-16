@@ -1,4 +1,4 @@
-import '../styles/stylePags.css';
+import '../styles/stylePag1.css';
 //import Cabecalho from './Pag1.jsx';
 
 function Pag3(){
