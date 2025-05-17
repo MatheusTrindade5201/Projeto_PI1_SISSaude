@@ -1,0 +1,172 @@
+@import url('https://use.typekit.net/jkc1xhg.css');
+
+@font-face {
+font-family:"acumin-pro-condensed";
+src:url("https://use.typekit.net/af/f09134/00000000000000007735d40a/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/f09134/00000000000000007735d40a/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/f09134/00000000000000007735d40a/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* || General Styles */
+
+a {
+  color: #1ED2D3;
+}
+
+body {
+  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  
+}
+
+label {
+  font-size: 18px; 
+  color: #565656; 
+  text-align: left;
+  display: block;
+  padding-bottom: 0px;
+}
+
+p {
+    font-size: 16px;
+    display: flex;
+}
+
+/* || Utilities */
+/*
+.container {
+  display: flex;
+  flex-direction: column;;
+  text-align: center;
+  margin: auto;
+  width:50%;
+  padding: 16px;
+}
+*/
+
+.button{
+  margin: auto;
+  width:30%;
+  padding: 16px;
+  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
+}
+
+.sissaudeLogotipo{
+  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
+  color: #1EA0D3;
+  width: 400px;
+  height: 100px;
+}
+
+.titulosSecoes {
+    font-size: 18px;
+    font-weight: bold;
+    color: #565656;
+    margin: 0;
+    padding-bottom: 2px;
+    padding-left: 6px;
+    padding-top: 8px;
+    text-align: left;
+}
+
+/* || Boxes */
+
+.campo_preenchimento {
+    font-size: 16px;
+    color: #c8c8c8;
+    border-color: #1EA0D3;
+    margin: 0;
+}
+
+/* || Termo de Recusa */
+
+.linha1 {
+    display: flex;
+    color: #565656;
+    text-align: left;
+    padding-left: 6px;
+    padding-top: 8px;
+    margin: 4px;
+}
+
+.termoRecusa {
+    width: 60%;
+}
+
+.bloco.termo_Recusa{
+    padding: 6px;
+}
+
+.assinatura {
+    width: 40%;
+}
+
+
+/* || Instituição de Permanência */
+
+.linha2 {
+    width: 100%;
+    padding-left: 0;
+    margin-left: 0;
+    /*
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;*/
+}
+
+.linha2 > div {
+    padding-left: 0; /* Removes padding on the left */
+    margin-left: 0; /* Removes margin on the left */
+}
+
+.bloco.IP{
+  padding-left: 6px;
+}
+
+.nomeIP{
+  width:60%;
+  padding-left: 6px;
+  margin: 0;
+}
+
+
+/* || Assinatura */
+
+.signature-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#signature-pad {
+  background-color: white;
+  width: 400px;
+  height: 100px;
+  cursor: crosshair;
+}
+
+/*
+#clear-button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#clear-button:hover {
+  background-color: #0056b3;
+}
+*/

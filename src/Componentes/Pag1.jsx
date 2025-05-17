@@ -5,7 +5,7 @@ import '../styles/stylePags.css';
         <div className="background">
            {/*<Cabecalho />*/}
            <div style={{display:'flex'}}>
-                <div style={{width:'61%'}}>
+                <div style={{width:'55%'}}>
                     <EndLocaldepermanencia />
                     <div>
                         <div className="boxesPag1">
@@ -17,7 +17,7 @@ import '../styles/stylePags.css';
                         </div>
                     </div>
                 </div>
-                <div style={{width:'39%'}}>
+                <div style={{width:'45%'}}>
                     <CondMoradia />
                 </div>
             </div>
@@ -161,26 +161,22 @@ import '../styles/stylePags.css';
     function AnimaisDomicilio(){
         return (
             <div id="Animais no domicílio" >
-            <div style={{display:'flex'}}>
-                <p className='titulosSecoes'>Animais no domicílio</p>
-                <input id="email" className="campo_preenchimento" type="checkbox" />
-            </div>
-                <div id="linha1" className="linha_bloco" style={{display:'flex'}}>
-                    <div>
-                    <label>Quais?</label>
+                <div>
+                    <p className='titulosSecoes'>Animais no domicílio
+                    <input id="email" type="checkbox" /></p>
+                </div>
+                <div id="linha1" className="linha_bloco Animais">
+                        <label>Quais?</label>
                         <label>Gato</label>
-                        <input id="Gato" className="campo_preenchimento" type="checkbox" placeholder="" />
+                        <input id="Gato" /*className="campo_preenchimento"*/ type="checkbox" placeholder="" />
                         <label>Cachorro</label>
-                        <input id="Cachorro" className="campo_preenchimento" type="checkbox" placeholder="" />
+                        <input id="Cachorro" /*className="campo_preenchimento"*/ type="checkbox" placeholder="" />
                         <label>Pássaro</label>
-                        <input id="Pássaro" className="campo_preenchimento" type="checkbox" placeholder="" />
+                        <input id="Pássaro" /*className="campo_preenchimento"*/ type="checkbox" placeholder="" />
                         <label>Outros</label>
-                        <input id="Outros" className="campo_preenchimento" type="checkbox" placeholder="" />
-                    </div>
-                    <div style={{display:'flex'}}>
-                    <label>Quantos?</label>
-                    <input id="email" className="campo_preenchimento" type="text"  />
-                    </div>
+                        <input id="Outros" /*className="campo_preenchimento"*/ type="checkbox" placeholder="" />
+                        <label>Quantos?</label>
+                        <input id="email" className="campo_preenchimento Quantos_animais" type="text"  />
                 </div>
             </div>
         )
@@ -226,19 +222,22 @@ import '../styles/stylePags.css';
             <p className='titulosSecoes'>Condições de Moradia</p>
             <div id="linha1" className="linha">
                 <div >
-                    <label>Situação de Moradia/posse da Terra</label>
-                    <input list="browsers" name="browser" id="browser" className="campo_preenchimento" />
+                    <label>Situação de Moradia/Posse da Terra</label>
+                    <input list="browsers" name="browser" id="browser" className="campo_preenchimento Moradia" />
                     <datalist id="browsers">
-                        <option value="1" />
-                        <option value="2" />
-                        <option value="3" />
-                        <option value="4" />
-                        <option value="5" />
+                        <option value="Próprio" />
+                        <option value="Financiado" />
+                        <option value="Alugado" />
+                        <option value="Arrendado" />
+                        <option value="Cedido" />
+                        <option value="Ocupado" />
+                        <option value="Situação de rua" />
+                        <option value="Outra" />
                     </datalist>
                 </div>
             <div>
                 <label>Endereço/Local de Permanência</label>
-                <input list="browsers" name="browser" id="browser" className="campo_preenchimento"  />
+                <input list="browsers" name="browser" id="browser" className="campo_preenchimento Moradia"  />
                 <datalist id="browsers">
                     <option value="1" />
                     <option value="2" />
@@ -251,7 +250,7 @@ import '../styles/stylePags.css';
             <div id="linha2" className="linha">
                 <div >
                     <label>Localização</label>
-                    <input list="browsers" name="browser" id="browser" className="campo_preenchimento" />
+                    <input list="browsers" name="browser" id="browser" className="campo_preenchimento Moradia" />
                     <datalist id="browsers">
                         <option value="1" />
                         <option value="2" />
@@ -262,7 +261,7 @@ import '../styles/stylePags.css';
                 </div>
             <div>
                 <label>Água para consumo no domicílio</label>
-                <input list="browsers" name="browser" id="browser" className="campo_preenchimento" />
+                <input list="browsers" name="browser" id="browser" className="campo_preenchimento Moradia" />
                 <datalist id="browsers" className="campo_preenchimento">
                     <option value="1" />
                     <option value="2" />
@@ -275,7 +274,7 @@ import '../styles/stylePags.css';
             <div id="linha3" className="linha">
                 <div>
                     <label>Tipo de Domicílio</label>
-                    <input list="browsers" name="browser" id="browser" />
+                    <input list="browsers" name="browser" id="browser" className="campo_preenchimento Moradia" />
                     <datalist id="browsers">
                         <option value="1" />
                         <option value="2" />
@@ -286,7 +285,7 @@ import '../styles/stylePags.css';
                 </div>
             <div>
                 <label>Destino do Lixo</label>
-                <input list="browsers" name="browser" id="browser" className="campo_preenchimento" placeholder="Queimado/Enterrado" />
+                <input list="browsers" name="browser" id="browser" className="campo_preenchimento Moradia" placeholder="Queimado/Enterrado" />
                 <datalist id="browsers">
                     <option value="Queimado/Enterrado" />
                     <option value="2" />
@@ -297,19 +296,31 @@ import '../styles/stylePags.css';
             </div>
             </div>
             <div id="linha4" className="linha">
-            <div>
-                <input name="browser" id="browser" className="campo_preenchimento"  placeholder="Nº"  />
+            <div className="moradores_comodos">
+                <input name="browser" id="browser" className="campo_preenchimento Num_moradores"  placeholder="Nº"  />
                 <label>Moradores</label>
             </div>
-            <div>
+            <div className='moradores_comodos'>
                 <input name="browser" id="browser" className="campo_preenchimento" placeholder="Nº" />
                 <label>Cômodos</label>
             </div>
+            <div>
+                <label>Forma de escoamento</label>
+                <p className='fonte_pequena'>(do banheiro ou sanitário)</p>
+                <input list="browsers" name="browser" id="browser" className="campo_preenchimento"/>
+                    <datalist id="browsers">
+                        <option value="1" />
+                        <option value="2" />
+                        <option value="3" />
+                        <option value="4" />
+                        <option value="5" />
+                    </datalist>
+                </div>
             </div>
             <div id="linha5" className="linha">
                 <div>
-                    <label>Tipo de acesso ao domicílio</label>
-                    <input list="browsers" name="browser" id="browser" />
+                    <label className="acesso_domicilio">Tipo de acesso ao domicílio</label>
+                    <input list="browsers" name="browser" id="browser" className="campo_preenchimento Acesso_domicilio"/>
                     <datalist id="browsers">
                         <option value="1" />
                         <option value="2" />
@@ -317,28 +328,29 @@ import '../styles/stylePags.css';
                         <option value="4" />
                         <option value="5" />
                     </datalist>
-                </div>
-                <div>
-                    <label>Forma de escoamento do banheiro ou sanitário</label>
-                    <input list="browsers" name="browser" id="browser" />
-                    <datalist id="browsers">
-                        <option value="1" />
-                        <option value="2" />
-                        <option value="3" />
-                        <option value="4" />
-                        <option value="5" />
-                    </datalist>
-                </div>
-            </div>
-            <div id="linha6" className="linha">
-                <div>
-                    <label>Disponibilidade de Energia elétrica</label>
-                    <input type="checkbox" id="browser" />
                 </div>
                 <div>
                     <label>Condição de posse e uso da Terra</label>
-                    <p>(Somente área de produção Rural)</p>
-                    <input list="browsers" name="browser" id="browser" />
+                    <p className='fonte_pequena'>(Somente área de produção Rural)</p>
+                    <input list="browsers" name="browser" id="browser" className="campo_preenchimento Acesso_domicilio"/>
+                        <datalist id="browsers">
+                            <option value="1" />
+                            <option value="2" />
+                            <option value="3" />
+                            <option value="4" />
+                            <option value="5" />
+                        </datalist>
+                </div>                
+            </div>
+            <div id="linha6" className="linha">
+                <div className='moradores_comodos Energia'>
+                    <input type="checkbox" id="browser" className="campo_preenchimento FA"/>
+                    <label className="energia_eletrica">Disponibilidade de Energia elétrica</label>
+                </div>
+                <div>   
+                    <label>Material predominante</label>
+                    <p className='fonte_pequena'>(na construção das paredes externas do domicílio)</p>
+                    <input list="browsers" name="browser" id="browser" className="campo_preenchimento Acesso_domicilio"/>
                         <datalist id="browsers">
                             <option value="1" />
                             <option value="2" />
@@ -347,6 +359,7 @@ import '../styles/stylePags.css';
                             <option value="5" />
                         </datalist>
                 </div>
+                
             </div>
             </div>
         </div>

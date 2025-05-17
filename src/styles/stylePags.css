@@ -1,10 +1,10 @@
+@import url('https://use.typekit.net/jkc1xhg.css');
+
 @font-face {
 font-family:"acumin-pro-condensed";
 src:url("https://use.typekit.net/af/f09134/00000000000000007735d40a/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/f09134/00000000000000007735d40a/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/f09134/00000000000000007735d40a/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
 font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 }
-
-@import url('https://use.typekit.net/jkc1xhg.css');
 
 #root {
   max-width: 1280px;
@@ -39,13 +39,13 @@ label {
 p {
     font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
     font-size: 16px;
-    color: #1EA0D3;
     margin: 0;
 }
 
 .fonte_pequena {
   text-align: left;  
   font-size: 11px;
+  color: #1EA0D3;
 }
 
 /* || Utilities */
@@ -58,20 +58,6 @@ p {
   width:50%;
   padding: 16px;
 }
-/*
-.form {
-  display: flex;
-  justify-content: space-between;
-  /*align-items: center;*/
-  /*flex-direction: column;
-  width: 100%;
-  height: 200px;
-}*/
-/*
-.form-section{
-  display: inline;
-}
-  */
 
 .button{
   margin: auto;
@@ -88,7 +74,6 @@ p {
 }
 
 .titulosSecoes {
-    font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: #565656;
@@ -112,18 +97,13 @@ p {
     color: #c8c8c8;
     border-color: #1EA0D3;
     margin: 0;
-    /*margin-right: 8px;*/
-    /*padding-bottom: 4px;*/
-    /*width: 90px;*/
 }
 
 .campo_preenchimento.CEP{
-    /*margin-right: 4px;*/
     width: 90px;
 }
 
 .campo_preenchimento.Municipio {
-    /*margin-right: 4px;*/
     width: 135px;
 }
 
@@ -237,4 +217,60 @@ p {
   display: block;
   width: 50px;
   margin-bottom: 14px;
+}
+
+
+/* || Moradia */
+
+.campo_preenchimento.Moradia {
+  display: block;
+  width: 214px;
+  margin-right: 4px;
+}
+
+.campo_preenchimento.Acesso_domicilio {
+  display: block;
+  width: 214px;
+  margin-right: 4px;
+}
+
+.moradores_comodos {
+  display: flex;
+  margin-top:34px;
+  margin-right: 4px;
+  padding-right: 10px;
+  align-items: center;
+  width: 100px;
+}
+
+.moradores_comodos.Energia {
+  width: 214px;
+  margin-top: 4px;
+}
+
+.acesso_domicilio {
+  margin-top: 14px;
+}
+
+.energia_eletrica {
+  font-size: 18px;
+  margin-left: 8px;
+}
+
+/* || Animais no domicílio */
+.animais_domicilio {
+  display: flex;
+  align-items: center;
+}
+
+.linha_bloco.Animais {
+    display: flex; /* Enables Flexbox */
+    flex-wrap: wrap; /* Allows wrapping if elements don't fit in one row */
+    align-items: center; /* Aligns items vertically */
+    gap: 4px; /* Adds spacing between elements */
+}
+
+.campo_preenchimento.Quantos_animais {
+    width: 20px;
+    margin-right: 4px;
 }
