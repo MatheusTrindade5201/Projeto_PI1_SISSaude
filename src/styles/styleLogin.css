@@ -1,4 +1,4 @@
-@import url('https://use.typekit.net/jkc1xhg.css');
+@import url("https://use.typekit.net/jkc1xhg.css");
 
 #root {
   max-width: 1280px;
@@ -11,34 +11,34 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
+  font-family: "acumin-pro-condensed", "Verdana", "Arial", sans-serif;
 }
 
 p {
-    font-family: 'acumin-pro', 'Verdana', 'Arial', sans-serif;
-    font-size: 16px;
-    color: #1EA0D3;
-    margin: 0;
+  font-family: "acumin-pro", "Verdana", "Arial", sans-serif;
+  font-size: 16px;
+  color: #1ea0d3;
+  margin: 0;
 }
 
 #paragraphLogin {
-    font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
-    font-size: 16px;
-    color: #1EA0D3;
-    margin: 0;
-    padding-bottom: 2px;
+  font-family: "acumin-pro-condensed", "Verdana", "Arial", sans-serif;
+  font-size: 16px;
+  color: #1ea0d3;
+  margin: 0;
+  padding-bottom: 2px;
 }
 
 a {
-  color: #1ED2D3;
+  color: #1ed2d3;
 }
 
 .container {
   display: flex;
-  flex-direction: column;;
+  flex-direction: column;
   text-align: center;
   margin: auto;
-  width:50%;
+  width: 50%;
   padding: 16px;
 }
 
@@ -51,36 +51,36 @@ a {
   height: 200px;
 }
 
-.form-section{
+.form-section {
   display: inline;
 }
 
-.login{
+.login {
   border-width: 2px;
   border-style: solid;
-  border-color: #09B5CC;
-  background-color: #F2F2F2;
+  border-color: #09b5cc;
+  background-color: #f2f2f2;
   margin: auto;
   margin-bottom: 4px;
-  width:100%;
+  width: 100%;
   padding: 4px 4px;
-  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
+  font-family: "acumin-pro-condensed", "Verdana", "Arial", sans-serif;
   font-size: 20px;
-  color: #1EA0D3;
+  color: #1ea0d3;
 }
 
-.login::placeholder{
+.login::placeholder {
   color: #c8c8c8;
 }
 
-.button{
+.button {
   margin: auto;
-  width:30%;
+  width: 30%;
   padding: 16px;
-  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
+  font-family: "acumin-pro-condensed", "Verdana", "Arial", sans-serif;
 }
 
-.buttonLogin{
+.buttonLogin {
   background-color: #e1e1e1;
   /*border-color: #c8c8c8;*/
   color: #6f7272;
@@ -92,7 +92,10 @@ a {
   display: inline-block;
   margin-left: auto;
   cursor: pointer;
-  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
+  font-family: "acumin-pro-condensed", "Verdana", "Arial", sans-serif;
   font-size: 16px;
 }
 
+.buttonLogin:disabled {
+  opacity: 60;
+}

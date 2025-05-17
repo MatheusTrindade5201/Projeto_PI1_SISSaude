@@ -1,12 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-//import './index.css'
-import './styles/styleLogin.css'
-import App from './App.jsx'
-import Login from './Componentes/login.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./styles/styleLogin.css";
+import { AuthProvider } from "./Context/AuthContext.jsx";
+import { AlertProvider } from "./Context/AlertContext.jsx";
+import AppRoutes from "./routes.jsx";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    <AlertProvider>
+      <AuthProvider>
+        <AppRoutes />
+      </AuthProvider>
+    </AlertProvider>
+  </StrictMode>
+);
