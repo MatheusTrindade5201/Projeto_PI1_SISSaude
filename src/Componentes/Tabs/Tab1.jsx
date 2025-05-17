@@ -28,7 +28,8 @@ function Tab1({ formData, setFormData }) {
           <div>
             <div className="boxesPag1">
               <Telefonecontato formData={formData} setFormData={setFormData} />
-              {/* <Familias formData={formData} setFormData={setFormData} /> */}
+              {/* APÓS A EDIÇÃO, VOLTAR A COMENTAR FAMÍLIAS */}
+              <Familias formData={formData} setFormData={setFormData} />
             </div>
             <div>
               <AnimaisDomicilio formData={formData} setFormData={setFormData} />
@@ -47,7 +48,7 @@ function EndLocaldepermanencia({ formData, setFormData }) {
   return (
     <div id="End_Localdepermanencia">
       <p className="titulosSecoes">Endereço/Local de Permanência</p>
-      <br />
+      
       <div className="bloco">
         <div id="linha1" className="linha">
           <div>
@@ -245,8 +246,8 @@ function Telefonecontato({ formData, setFormData }) {
   return (
     <div id="Telefone para contato">
       <h3 className="titulosSecoes">Telefones para contato</h3>
-      <br />
-      <div id="linha1" className="linha_bloco">
+      
+      <div id="linha1" className="bloco">
         <div>
           <label>Residencial</label>
           <input
@@ -266,7 +267,7 @@ function Telefonecontato({ formData, setFormData }) {
           />
         </div>
         <div>
-          <label className="contato">Contato</label>
+          <label>Contato</label>
           <input
             value={formData.telefone_contato}
             onChange={(event) =>
@@ -278,7 +279,7 @@ function Telefonecontato({ formData, setFormData }) {
               )
             }
             id="telefone_contato"
-            className="campo_preenchimento"
+            className="campo_preenchimento Residencial"
             type="text"
             placeholder="(00) 00000-0000"
           />
@@ -292,7 +293,7 @@ function AnimaisDomicilio({ formData, setFormData }) {
   return (
     <div id="Animais no domicílio">
       <div>
-        <p className="titulosSecoes">Animais no domicílio</p>
+        <p className="titulosSecoes">Animais no domicílio
         <button
           onClick={() =>
             setFormData({
@@ -300,18 +301,21 @@ function AnimaisDomicilio({ formData, setFormData }) {
               animais: [...formData.animais, { animal: "", quantidade: 0 }],
             })
           }
+          className="button Adicionar"
         >
           Adicionar +
         </button>
+        </p>
+
       </div>
-      <div id="linha1" className="linha_bloco Animais">
+      <div id="linha1" className="bloco">
         {React.Children.toArray(
           formData.animais.map((animal, index) => (
             <div>
               <label>Animal</label>
               <input
                 id={`animal-${index}`}
-                className="campo_preenchimento Num_moradores"
+                className="campo_preenchimento Animais"
                 placeholder="Ex: Cachorro"
                 value={animal.animal}
                 onChange={(event) =>
@@ -328,7 +332,7 @@ function AnimaisDomicilio({ formData, setFormData }) {
               <label>Quantidade</label>
               <input
                 id={`animal-quantidade-${index}`}
-                className="campo_preenchimento Num_moradores"
+                className="campo_preenchimento Animais"
                 placeholder="Nº"
                 value={animal.quantidade}
                 onChange={(event) =>
@@ -350,7 +354,10 @@ function AnimaisDomicilio({ formData, setFormData }) {
   );
 }
 
-/* function Familias({ formData, setFormData }) {
+/* || Após a edição do CSS, voltar a comentar 
+      a função Familias e o bloco de código abaixo  
+*/
+function Familias({ formData, setFormData }) {
   return (
     <div id="Familias">
       <h3 className="titulosSecoes">Famílias</h3>
@@ -412,13 +419,13 @@ function AnimaisDomicilio({ formData, setFormData }) {
       </div>
     </div>
   );
-} */
+} 
 
 function CondMoradia({ formData, setFormData }) {
   return (
     <div>
       <div id="Condições de Moradia" className="bloco">
-        <p className="titulosSecoes">Condições de Moradia</p>
+        <h3 className="titulosSecoes">Condições de Moradia</h3>
         <div id="linha1" className="linha">
           <div>
             <label>Situação de Moradia/Posse da Terra</label>
