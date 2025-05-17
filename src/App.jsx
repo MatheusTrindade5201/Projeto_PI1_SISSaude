@@ -34,20 +34,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <div>
-              <button type="submit" onClick={()=>setLogin("false")}>login</button>
-              <button type="submit" onClick={()=>setLogin("true")}>logout</button>
-              <p>teste {login}</p>
-            </div>
-            <div style={{display: "inline-block"}}>
-              <button type="submit" className="botoesmenu" onClick= {()=>setCurrentTabIndex(1)} color="#f194ff"></button>
-              <button type="submit" className="botoesmenu" onClick= {()=>setCurrentTabIndex(2)}></button>
-              <button type="submit" className="botoesmenu" onClick= {()=>setCurrentTabIndex(3)}></button>
-              <button type="submit" className="botoesmenu" onClick= {()=>setCurrentTabIndex(4)}></button>
-              <p>teste {currentTabIndex}</p>
-            </div>
-
-        <Teste  setLogin={setLogin}/> */}
       <Conf />
     </div>
   );

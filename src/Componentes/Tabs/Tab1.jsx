@@ -1,73 +1,49 @@
+import React from "react";
+import { handleDataChange } from "../../Helpers/handleDataChange";
 import "../../styles/stylePags.css";
+import {
+  abastecimentoAgua,
+  acessoDomicilio,
+  aguaConsumo,
+  destinoLixo,
+  formaEscoamento,
+  localizacao,
+  materialPredominante,
+  posseTerra,
+  situacaoMoradia,
+  tipoDomicilio,
+  UFs,
+} from "../../Utils/constants";
+import SelectInput from "../SelectInput";
 
-function Tab1() {
+function Tab1({ formData, setFormData }) {
   return (
     <div className="background">
       <div style={{ display: "flex" }}>
         <div style={{ width: "55%" }}>
-          <EndLocaldepermanencia />
+          <EndLocaldepermanencia
+            formData={formData}
+            setFormData={setFormData}
+          />
           <div>
             <div className="boxesPag1">
-              <Telefonecontato />
-              <Familias />
+              <Telefonecontato formData={formData} setFormData={setFormData} />
+              {/* <Familias formData={formData} setFormData={setFormData} /> */}
             </div>
             <div>
-              <AnimaisDomicilio />
+              <AnimaisDomicilio formData={formData} setFormData={setFormData} />
             </div>
           </div>
         </div>
         <div style={{ width: "45%" }}>
-          <CondMoradia />
+          <CondMoradia formData={formData} setFormData={setFormData} />
         </div>
       </div>
     </div>
   );
 }
 
-const UFs = [
-  "SP",
-  "AC",
-  "AL",
-  "AP",
-  "AM",
-  "BA",
-  "CE",
-  "DF",
-  "ES",
-  "GO",
-  "MA",
-  "MT",
-  "MS",
-  "MG",
-  "PA",
-  "PB",
-  "PR",
-  "PE",
-  "PI",
-  "RJ",
-  "RN",
-  "RS",
-  "RO",
-  "RR",
-  "SC",
-  "SE",
-  "TO",
-];
-
-function EndLocaldepermanencia() {
-  function Options(props) {
-    return <option>{props.brand}</option>;
-  }
-  function SetUF() {
-    return (
-      <>
-        {UFs.map((item) => (
-          <Options brand={item} />
-        ))}
-      </>
-    );
-  }
-
+function EndLocaldepermanencia({ formData, setFormData }) {
   return (
     <div id="End_Localdepermanencia">
       <p className="titulosSecoes">Endereço/Local de Permanência</p>
@@ -77,15 +53,33 @@ function EndLocaldepermanencia() {
           <div>
             <label>CEP</label>
             <input
+              value={formData.cep}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "cep",
+                  event.target.value
+                )
+              }
               id="CEP"
               className="campo_preenchimento CEP"
-              type="number"
+              type="text"
               placeholder="00000-000"
             />
           </div>
           <div>
             <label>Município</label>
             <input
+              value={formData.municipio}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "municipio",
+                  event.target.value
+                )
+              }
               id="Municipio"
               className="campo_preenchimento Municipio"
               type="text"
@@ -94,20 +88,32 @@ function EndLocaldepermanencia() {
           </div>
           <div>
             <label>UF</label>
-            <input
-              list="UFs"
-              name="browser"
-              id="browser"
-              className="campo_preenchimento UFs"
-              placeholder="SP"
+
+            <SelectInput
+              value={formData.uf}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "uf",
+                  event.target.value
+                )
+              }
+              items={UFs}
             />
-            <datalist id="UFs">
-              <SetUF />
-            </datalist>
           </div>
           <div>
             <label>Tipo imóvel</label>
             <input
+              value={formData.tipo_imovel}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "tipo_imovel",
+                  event.target.value
+                )
+              }
               id="tipo_imovel"
               className="campo_preenchimento Tipo_imovel"
               type="text"
@@ -120,6 +126,15 @@ function EndLocaldepermanencia() {
           <div>
             <label>Bairro</label>
             <input
+              value={formData.bairro}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "bairro",
+                  event.target.value
+                )
+              }
               id="Bairro"
               className="campo_preenchimento Bairro"
               type="text"
@@ -129,6 +144,15 @@ function EndLocaldepermanencia() {
           <div>
             <label>Tipo de Logradouro</label>
             <input
+              value={formData.tipo_logradouro}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "tipo_logradouro",
+                  event.target.value
+                )
+              }
               id="Logradouro"
               className="campo_preenchimento Tipo_logradouro"
               type="text"
@@ -138,7 +162,16 @@ function EndLocaldepermanencia() {
           <div>
             <label>Nome do Logradouro</label>
             <input
-              id="email"
+              value={formData.nome_logradouro}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "nome_logradouro",
+                  event.target.value
+                )
+              }
+              id="nome_logradouro"
               className="campo_preenchimento Nome_logradouro"
               type="text"
               placeholder=""
@@ -147,18 +180,18 @@ function EndLocaldepermanencia() {
           <div>
             <label>Microárea</label>
             <input
-              id="email"
+              value={formData.microarea}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "microarea",
+                  event.target.value
+                )
+              }
+              id="microarea"
               className="campo_preenchimento Microarea"
               type="text"
-              placeholder=""
-            />
-          </div>
-          <div>
-            <label>FA</label>
-            <input
-              type="checkbox"
-              id="email"
-              className="campo_preenchimento FA"
               placeholder=""
             />
           </div>
@@ -168,25 +201,34 @@ function EndLocaldepermanencia() {
           <div>
             <label>Número</label>
             <input
-              id="email"
+              value={formData.numero}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "numero",
+                  event.target.value
+                )
+              }
+              id="numero"
               className="campo_preenchimento Numero"
               type="text"
               placeholder=""
             />
           </div>
           <div>
-            <label>S/Nº</label>
-            <input
-              id="email"
-              className="campo_preenchimento SNum"
-              type="Checkbox"
-              placeholder=""
-            />
-          </div>
-          <div>
             <label className="pto_ref">Ponto de Referência</label>
             <input
-              id="email"
+              value={formData.pto_referencia}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "pto_referencia",
+                  event.target.value
+                )
+              }
+              id="pto_ref"
               className="campo_preenchimento PtoRef"
               type="text"
               placeholder=""
@@ -198,7 +240,7 @@ function EndLocaldepermanencia() {
   );
 }
 
-function Telefonecontato() {
+function Telefonecontato({ formData, setFormData }) {
   return (
     <div id="Telefone para contato">
       <h3 className="titulosSecoes">Telefone para contato</h3>
@@ -207,7 +249,16 @@ function Telefonecontato() {
         <div>
           <label>Residencial</label>
           <input
-            id="email"
+            value={formData.telefone_residencia}
+            onChange={(event) =>
+              handleDataChange(
+                formData,
+                setFormData,
+                "telefone_residencia",
+                event.target.value
+              )
+            }
+            id="telefone_residencia"
             className="campo_preenchimento Residencial"
             type="text"
             placeholder="(00) 00000-0000"
@@ -216,7 +267,16 @@ function Telefonecontato() {
         <div>
           <label className="contato">Contato</label>
           <input
-            id="email"
+            value={formData.telefone_contato}
+            onChange={(event) =>
+              handleDataChange(
+                formData,
+                setFormData,
+                "telefone_contato",
+                event.target.value
+              )
+            }
+            id="telefone_contato"
             className="campo_preenchimento"
             type="text"
             placeholder="(00) 00000-0000"
@@ -227,53 +287,69 @@ function Telefonecontato() {
   );
 }
 
-function AnimaisDomicilio() {
+function AnimaisDomicilio({ formData, setFormData }) {
   return (
     <div id="Animais no domicílio">
       <div>
-        <p className="titulosSecoes">
-          Animais no domicílio
-          <input id="email" type="checkbox" />
-        </p>
+        <p className="titulosSecoes">Animais no domicílio</p>
+        <button
+          onClick={() =>
+            setFormData({
+              ...formData,
+              animais: [...formData.animais, { animal: "", quantidade: 0 }],
+            })
+          }
+        >
+          Adicionar +
+        </button>
       </div>
       <div id="linha1" className="linha_bloco Animais">
-        <label>Quais?</label>
-        <label>Gato</label>
-        <input
-          id="Gato"
-          /*className="campo_preenchimento"*/ type="checkbox"
-          placeholder=""
-        />
-        <label>Cachorro</label>
-        <input
-          id="Cachorro"
-          /*className="campo_preenchimento"*/ type="checkbox"
-          placeholder=""
-        />
-        <label>Pássaro</label>
-        <input
-          id="Pássaro"
-          /*className="campo_preenchimento"*/ type="checkbox"
-          placeholder=""
-        />
-        <label>Outros</label>
-        <input
-          id="Outros"
-          /*className="campo_preenchimento"*/ type="checkbox"
-          placeholder=""
-        />
-        <label>Quantos?</label>
-        <input
-          id="email"
-          className="campo_preenchimento Quantos_animais"
-          type="text"
-        />
+        {React.Children.toArray(
+          formData.animais.map((animal, index) => (
+            <div>
+              <label>Animal</label>
+              <input
+                id={`animal-${index}`}
+                className="campo_preenchimento Num_moradores"
+                placeholder="Ex: Cachorro"
+                value={animal.animal}
+                onChange={(event) =>
+                  handleDataChange(
+                    formData,
+                    setFormData,
+                    "animais",
+                    event.target.value,
+                    index,
+                    "animal"
+                  )
+                }
+              />
+              <label>Quantidade</label>
+              <input
+                id={`animal-quantidade-${index}`}
+                className="campo_preenchimento Num_moradores"
+                placeholder="Nº"
+                value={animal.quantidade}
+                onChange={(event) =>
+                  handleDataChange(
+                    formData,
+                    setFormData,
+                    "animais",
+                    event.target.value,
+                    index,
+                    "quantidade"
+                  )
+                }
+              />
+            </div>
+          ))
+        )}
       </div>
     </div>
   );
 }
 
-function Familias() {
+/* function Familias({ formData, setFormData }) {
   return (
     <div id="Familias">
       <h3 className="titulosSecoes">Famílias</h3>
@@ -335,9 +411,9 @@ function Familias() {
       </div>
     </div>
   );
-}
+} */
 
-function CondMoradia() {
+function CondMoradia({ formData, setFormData }) {
   return (
     <div>
       <div id="Condições de Moradia" className="bloco">
@@ -345,107 +421,97 @@ function CondMoradia() {
         <div id="linha1" className="linha">
           <div>
             <label>Situação de Moradia/Posse da Terra</label>
-            <input
-              list="browsers"
-              name="browser"
-              id="browser"
-              className="campo_preenchimento Moradia"
+            <SelectInput
+              items={situacaoMoradia}
+              value={formData.situacao_moradia}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "situacao_moradia",
+                  event.target.value
+                )
+              }
             />
-            <datalist id="browsers">
-              <option value="Próprio" />
-              <option value="Financiado" />
-              <option value="Alugado" />
-              <option value="Arrendado" />
-              <option value="Cedido" />
-              <option value="Ocupado" />
-              <option value="Situação de rua" />
-              <option value="Outra" />
-            </datalist>
           </div>
           <div>
-            <label>Endereço/Local de Permanência</label>
-            <input
-              list="browsers"
-              name="browser"
-              id="browser"
-              className="campo_preenchimento Moradia"
+            <label>Abastecimento de água</label>
+            <SelectInput
+              items={abastecimentoAgua}
+              value={formData.abastecimento_agua}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "abastecimento_agua",
+                  event.target.value
+                )
+              }
             />
-            <datalist id="browsers">
-              <option value="1" />
-              <option value="2" />
-              <option value="3" />
-              <option value="4" />
-              <option value="5" />
-            </datalist>
           </div>
         </div>
         <div id="linha2" className="linha">
           <div>
             <label>Localização</label>
-            <input
-              list="browsers"
-              name="browser"
-              id="browser"
-              className="campo_preenchimento Moradia"
+            <SelectInput
+              items={localizacao}
+              value={formData.localizacao}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "localizacao",
+                  event.target.value
+                )
+              }
             />
-            <datalist id="browsers">
-              <option value="1" />
-              <option value="2" />
-              <option value="3" />
-              <option value="4" />
-              <option value="5" />
-            </datalist>
           </div>
           <div>
             <label>Água para consumo no domicílio</label>
-            <input
-              list="browsers"
-              name="browser"
-              id="browser"
-              className="campo_preenchimento Moradia"
+            <SelectInput
+              items={aguaConsumo}
+              value={formData.agua_consumo}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "agua_consumo",
+                  event.target.value
+                )
+              }
             />
-            <datalist id="browsers" className="campo_preenchimento">
-              <option value="1" />
-              <option value="2" />
-              <option value="3" />
-              <option value="4" />
-              <option value="5" />
-            </datalist>
           </div>
         </div>
         <div id="linha3" className="linha">
           <div>
             <label>Tipo de Domicílio</label>
-            <input
-              list="browsers"
-              name="browser"
-              id="browser"
-              className="campo_preenchimento Moradia"
+            <SelectInput
+              items={tipoDomicilio}
+              value={formData.tipo_domicilio}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "tipo_domicilio",
+                  event.target.value
+                )
+              }
             />
-            <datalist id="browsers">
-              <option value="1" />
-              <option value="2" />
-              <option value="3" />
-              <option value="4" />
-              <option value="5" />
-            </datalist>
           </div>
           <div>
             <label>Destino do Lixo</label>
-            <input
-              list="browsers"
-              name="browser"
-              id="browser"
-              className="campo_preenchimento Moradia"
-              placeholder="Queimado/Enterrado"
+            <SelectInput
+              items={destinoLixo}
+              value={formData.destino_lixo}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "destino_lixo",
+                  event.target.value
+                )
+              }
             />
-            <datalist id="browsers">
-              <option value="Queimado/Enterrado" />
-              <option value="2" />
-              <option value="3" />
-              <option value="4" />
-              <option value="5" />
-            </datalist>
           </div>
         </div>
         <div id="linha4" className="linha">
@@ -455,6 +521,15 @@ function CondMoradia() {
               id="browser"
               className="campo_preenchimento Num_moradores"
               placeholder="Nº"
+              value={formData.n_moradores}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "n_moradores",
+                  event.target.value
+                )
+              }
             />
             <label>Moradores</label>
           </div>
@@ -464,25 +539,33 @@ function CondMoradia() {
               id="browser"
               className="campo_preenchimento"
               placeholder="Nº"
+              value={formData.n_comodos}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "n_comodos",
+                  event.target.value
+                )
+              }
             />
             <label>Cômodos</label>
           </div>
           <div>
             <label>Forma de escoamento</label>
             <p className="fonte_pequena">(do banheiro ou sanitário)</p>
-            <input
-              list="browsers"
-              name="browser"
-              id="browser"
-              className="campo_preenchimento"
+            <SelectInput
+              items={formaEscoamento}
+              value={formData.escoamento_banheiro}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "escoamento_banheiro",
+                  event.target.value
+                )
+              }
             />
-            <datalist id="browsers">
-              <option value="1" />
-              <option value="2" />
-              <option value="3" />
-              <option value="4" />
-              <option value="5" />
-            </datalist>
           </div>
         </div>
         <div id="linha5" className="linha">
@@ -490,36 +573,34 @@ function CondMoradia() {
             <label className="acesso_domicilio">
               Tipo de acesso ao domicílio
             </label>
-            <input
-              list="browsers"
-              name="browser"
-              id="browser"
-              className="campo_preenchimento Acesso_domicilio"
+            <SelectInput
+              items={acessoDomicilio}
+              value={formData.tipo_acesso}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "tipo_acesso",
+                  event.target.value
+                )
+              }
             />
-            <datalist id="browsers">
-              <option value="1" />
-              <option value="2" />
-              <option value="3" />
-              <option value="4" />
-              <option value="5" />
-            </datalist>
           </div>
           <div>
             <label>Condição de posse e uso da Terra</label>
             <p className="fonte_pequena">(Somente área de produção Rural)</p>
-            <input
-              list="browsers"
-              name="browser"
-              id="browser"
-              className="campo_preenchimento Acesso_domicilio"
+            <SelectInput
+              items={posseTerra}
+              value={formData.condicao_posse_producao_rural}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "condicao_posse_producao_rural",
+                  event.target.value
+                )
+              }
             />
-            <datalist id="browsers">
-              <option value="1" />
-              <option value="2" />
-              <option value="3" />
-              <option value="4" />
-              <option value="5" />
-            </datalist>
           </div>
         </div>
         <div id="linha6" className="linha">
@@ -528,6 +609,15 @@ function CondMoradia() {
               type="checkbox"
               id="browser"
               className="campo_preenchimento FA"
+              value={formData.energia_eletrica}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "energia_eletrica",
+                  event.target.value
+                )
+              }
             />
             <label className="energia_eletrica">
               Disponibilidade de Energia elétrica
@@ -538,19 +628,18 @@ function CondMoradia() {
             <p className="fonte_pequena">
               (na construção das paredes externas do domicílio)
             </p>
-            <input
-              list="browsers"
-              name="browser"
-              id="browser"
-              className="campo_preenchimento Acesso_domicilio"
+            <SelectInput
+              items={materialPredominante}
+              value={formData.material_predominante}
+              onChange={(event) =>
+                handleDataChange(
+                  formData,
+                  setFormData,
+                  "material_predominante",
+                  event.target.value
+                )
+              }
             />
-            <datalist id="browsers">
-              <option value="1" />
-              <option value="2" />
-              <option value="3" />
-              <option value="4" />
-              <option value="5" />
-            </datalist>
           </div>
         </div>
       </div>

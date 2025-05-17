@@ -1,7 +1,7 @@
 import "../../styles/stylePags.css";
 //import Cabecalho from './Pag1.jsx';
 
-function Tab3() {
+function Tab3({ formData, setFormData }) {
   return (
     <div style={{ display: "flex" }} className="background">
       <div style={{ width: "50%" }}>
