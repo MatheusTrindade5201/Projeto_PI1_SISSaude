@@ -32,10 +32,10 @@ function App() {
           <button type="submit" className="botoesmenu" onClick= {()=>setNumber(3)}></button><br/>
           <label>3</label>
         </div>
-        <div>
+        {/* <div>
           <button type="submit" className="botoesmenu" onClick= {()=>setNumber(4)}></button><br/>
           <label>4</label>
-        </div>
+        </div> */}
        </div>
   }
 
