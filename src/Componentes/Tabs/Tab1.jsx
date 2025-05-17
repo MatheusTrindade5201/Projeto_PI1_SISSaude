@@ -90,6 +90,7 @@ function EndLocaldepermanencia({ formData, setFormData }) {
             <label>UF</label>
 
             <SelectInput
+              className="campo_preenchimento UF"
               value={formData.uf}
               onChange={(event) =>
                 handleDataChange(
@@ -121,7 +122,7 @@ function EndLocaldepermanencia({ formData, setFormData }) {
             />
           </div>
         </div>
-        <br />
+        
         <div id="linha2" className="linha">
           <div>
             <label>Bairro</label>
@@ -196,7 +197,7 @@ function EndLocaldepermanencia({ formData, setFormData }) {
             />
           </div>
         </div>
-        <br />
+        
         <div id="linha3" className="linha">
           <div>
             <label>Número</label>
@@ -243,7 +244,7 @@ function EndLocaldepermanencia({ formData, setFormData }) {
 function Telefonecontato({ formData, setFormData }) {
   return (
     <div id="Telefone para contato">
-      <h3 className="titulosSecoes">Telefone para contato</h3>
+      <h3 className="titulosSecoes">Telefones para contato</h3>
       <br />
       <div id="linha1" className="linha_bloco">
         <div>

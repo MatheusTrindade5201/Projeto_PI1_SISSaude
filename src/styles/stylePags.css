@@ -33,6 +33,7 @@ label {
   color: #565656; 
   text-align: left;
   display: block;
+  padding-top: 6px;
   padding-bottom: 0px;
 }
 
@@ -42,6 +43,11 @@ p {
     margin: 0;
 }
 
+.bloco {
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
 .fonte_pequena {
   text-align: left;  
   font-size: 11px;
@@ -49,7 +55,7 @@ p {
 }
 
 /* || Utilities */
-
+/*
 .container {
   display: flex;
   flex-direction: column;;
@@ -58,7 +64,7 @@ p {
   width:50%;
   padding: 16px;
 }
-
+*/
 .button{
   margin: auto;
   width:30%;
@@ -66,12 +72,13 @@ p {
   font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
 }
 
+/*
 .sissaudeLogotipo{
   font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
   color: #1EA0D3;
   width: 400px;
   height: 100px;
-}
+}*/
 
 .titulosSecoes {
     font-size: 18px;
@@ -80,7 +87,6 @@ p {
     margin: 0;
     padding-bottom: 2px;
     padding-left: 6px;
-    padding-top: 8px;
     text-align: left;
 }
 
@@ -97,6 +103,7 @@ p {
     color: #c8c8c8;
     border-color: #1EA0D3;
     margin: 0;
+    margin-right: 4px;;
 }
 
 .campo_preenchimento.CEP{
@@ -107,41 +114,36 @@ p {
     width: 135px;
 }
 
-.campo_preenchimento.UFs {
-    margin-right: 4px;
-    width: 36px;
+.campo_preenchimento.UF {
+  width: 50px;
+  height: 30px;
 }
 
 .campo_preenchimento.Tipo_imovel {
-    margin-right: 4px;
     width: 90px;
 }
 
 .campo_preenchimento.Bairro {
-    margin-right: 4px;
     width: 90px;
 }
 
 .campo_preenchimento.Tipo_logradouro {
-    margin-right: 4px;
     width: 135px;
 }
 
 .campo_preenchimento.Nome_logradouro {
-    margin-right: 4px;
     width: 175px;
 }
 
 .campo_preenchimento.Microarea {
-    margin-right: 4px;
     width: 63px;
 }
 
 .campo_preenchimento.Residencial {
-    margin-right: 4px;
     width: 153px;
 }
 
+/*
 .campo_preenchimento.FA {
     transform: scale(1.5);
     width: 20px;
@@ -151,6 +153,7 @@ p {
     margin-left: 4px;
     padding: 0;
 }
+*/
 
 .campo_preenchimento.Numero{
     margin-right: 8px;
@@ -167,7 +170,6 @@ p {
 }
 
 .campo_preenchimento.PtoRef{
-    margin-left: 4px;
     width: 400px;
 }
 
@@ -186,7 +188,6 @@ p {
 
 .contato {
   display: block;  
-  margin-top: 14px;
 }
 
 
