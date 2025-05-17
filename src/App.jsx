@@ -3,7 +3,7 @@ import "./styles/styleLogin.css";
 import "./App.css";
 import React, { useState } from "react";
 
-import Login from "./Componentes/login.jsx";
+import Login from "./Pages/login.jsx";
 import Cabecalho from "./Componentes/Cabecalho.jsx";
 import Rodape from "./Componentes/Rodape.jsx";
 import TabsWrapper from "./Componentes/Tabs/TabsWrapper.jsx";

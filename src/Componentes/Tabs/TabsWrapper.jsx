@@ -1,83 +1,7 @@
 import { useState } from "react";
 import Tab1 from "./Tab1";
-import Tab2 from "./Tab2";
-import Tab3 from "./Tab3";
-import Tab4 from "./Tab4";
-
-const defaultIndividualDataScheme = {
-  cns: "",
-  cpf: "",
-  domicilio: "",
-  nome: "",
-  nome_social: "",
-  data_nascimento: null,
-  sexo: "",
-  raca_cor: "",
-  etnia: "",
-  nome_mae: "",
-  nome_pai: "",
-  nacionalidade: "",
-  pais: "",
-  data_naturalizacao: null,
-  naturalizacao_portaria: "",
-  municipio_nascimento: "",
-  uf_nascimento: "",
-  entrada_brasil_data: null,
-  celular: "",
-  email: "",
-  relacao_responsavel: "",
-  ocupacao: "",
-  frequenta_escola_creche: false,
-  escolaridade: "",
-  situacao_mercado_trabalho: "",
-  frequenta_cuidador: false,
-  participa_grupo_comunitario: false,
-  plano_saude: false,
-  membro_povo_comunidade_tradicional: false,
-  orientacao_sexual: "",
-  identidade_genero: "",
-  motivo_saida: "",
-  data_saida: null,
-  numero_declaracao_obito: "",
-  gestante: "",
-  maternidade_referencia: "",
-  fumante: false,
-  uso_alcool: false,
-  uso_drogas: false,
-  hipertensao: false,
-  diabetes: false,
-  avc_derrame: false,
-  infarto: false,
-  doenca_cardiaca: false,
-  problemas_renais: false,
-  hanseniase: false,
-  doenca_respiratoria: false,
-  tuberculose: false,
-  cancer: false,
-  internacao_recente: false,
-  internacao_motivo: "",
-  diagnostico_problema_mental: false,
-  acamado: false,
-  domiciliado: false,
-  praticas_ingestivas_complementares: false,
-  cuidadores: [],
-  concicoes: [],
-  deficiencias: [],
-  doencas_cardiacas: [],
-  doencas_respiratorias: [],
-  doencas_renais: [],
-  condicao_rua: {
-    tempo: "",
-    recebe_beneficio: false,
-    referencia_familiar: false,
-    refeicoes_dia: 0,
-    visita_familiar: false,
-    graus_parentesco_familiar: "",
-    instituicao_apoio: "",
-    origem_alimentacao: [],
-    acesso_higiene: [],
-  },
-};
+import { useUpsertResidence } from "../../Hooks/useUpsertResidence";
+import { useDeleteResidence } from "../../Hooks/useDeleteResidences";
 
 const defaultResidenceDataScheme = {
   cep: "",
@@ -109,34 +33,46 @@ const defaultResidenceDataScheme = {
   animais: [],
 };
 
-function TabsWrapper({ currentTabIndex }) {
+function TabsWrapper({ residence }) {
+  const residenceID = residence?.id;
   const [residenceFormData, setResidenceFormData] = useState(
-    defaultResidenceDataScheme
-  );
-  const [individualFormData, setIndividualFormData] = useState(
-    defaultIndividualDataScheme
+    residence || defaultResidenceDataScheme
   );
 
-  const tabs = [
-    <Tab1 formData={residenceFormData} setFormData={setResidenceFormData} />,
-    <Tab2 formData={residenceFormData} setFormData={setResidenceFormData} />,
-    <Tab3 formData={individualFormData} setFormData={setIndividualFormData} />,
-    <Tab4 formData={individualFormData} setFormData={setIndividualFormData} />,
-  ];
+  const { submitForm, isLoading } = useUpsertResidence(residenceID);
+
+  const { deleteResidence, isLoadingDelete } = useDeleteResidence();
 
   return (
     <>
-      {tabs[currentTabIndex]}
+      <Tab1 formData={residenceFormData} setFormData={setResidenceFormData} />
       <button
-        onClick={() =>
-          console.log({
-            residence: residenceFormData,
-            individual: individualFormData,
-          })
-        }
+        onClick={() => {
+          submitForm(residenceFormData);
+        }}
+        disabled={isLoading || isLoadingDelete}
       >
-        Logar objeto
+        {!isLoading && <p>Enviar</p>}
+
+        {isLoading && <p>Enviando...</p>}
       </button>
+      {residenceID && (
+        <button
+          onClick={() => {
+            const confirmed = window.confirm(
+              "Tem certeza que deseja deletar este domicílio?"
+            );
+            if (confirmed) {
+              deleteResidence(residenceID);
+            }
+          }}
+          disabled={isLoading || isLoadingDelete}
+        >
+          {!isLoading && <p>Deletar</p>}
+
+          {isLoading && <p>Deletando...</p>}
+        </button>
+      )}
     </>
   );
 }

@@ -288,6 +288,13 @@ function Telefonecontato({ formData, setFormData }) {
 }
 
 function AnimaisDomicilio({ formData, setFormData }) {
+  const handleRemove = (indexToRemove) => {
+    const updatedAnimais = formData.animais.filter(
+      (_, index) => index !== indexToRemove
+    );
+    setFormData({ ...formData, animais: updatedAnimais });
+  };
+
   return (
     <div id="Animais no domicílio">
       <div>
@@ -341,6 +348,13 @@ function AnimaisDomicilio({ formData, setFormData }) {
                   )
                 }
               />
+              <button
+                type="button"
+                className="btn-remover"
+                onClick={() => handleRemove(index)}
+              >
+                Remover
+              </button>
             </div>
           ))
         )}
