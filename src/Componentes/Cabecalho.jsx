@@ -1,12 +1,26 @@
-import { NavLink } from "react-router";
+import { NavLink, useLocation } from "react-router";
 import "../styles/styleCabecalhoRodape.css";
 import { useAuth } from "../Context/AuthContext";
 
 function Cabecalho() {
   const { signOut } = useAuth();
 
+  const location = useLocation();
+
+  const isOnRoot = location.pathname == "/";
+
   return (
     <div id="cabecalho" className="cabecalho">
+      <NavLink to="/">
+        <div id="sissaude" className="sissaudeLogotipo" align="left">
+          <img
+            src="/logotipo_sissaude_v01.png"
+            alt="Logotipo Sissaude"
+            width="180"
+          />
+          <p id="paragraphCabecalho">Cadastro de dados de Sistema de Saúde</p>
+        </div>
+      </NavLink>
       <div
         style={{
           display: "flex",
@@ -15,17 +29,12 @@ function Cabecalho() {
           padding: "0 0 10px 0",
         }}
       >
-        <NavLink to="/">
-          <div id="sissaude" className="sissaudeLogotipo" align="left">
-            <img
-              src="./src/assets/logotipo_sissaude_v01.png"
-              alt="Logotipo Sissaude"
-              width="180"
-            />
-            <p id="paragraphCabecalho">Cadastro de dados de Sistema de Saúde</p>
-          </div>
-        </NavLink>
-        <button type="submit" onClick={() => signOut()}>
+        {!isOnRoot && <NavLink to={-1}>voltar</NavLink>}
+        <button
+          style={{ marginLeft: "auto" }}
+          type="submit"
+          onClick={() => signOut()}
+        >
           logout
         </button>
       </div>

@@ -3,8 +3,6 @@ import "../styles/styleAlert.css";
 import { useAlert } from "../Context/AlertContext";
 
 const AlertModal = ({ type, message }) => {
-  console.log(message);
-
   const dividedMessage = message ? message.split("/n") : [];
 
   const [showDiv, setShowDiv] = useState(false);

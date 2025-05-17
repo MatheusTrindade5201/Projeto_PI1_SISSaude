@@ -1,31 +1,28 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import TabsWrapper from "../Componentes/Tabs/TabsWrapper";
-import Rodape from "../Componentes/Rodape";
+import { useGetResidences } from "../Hooks/useGetResidences";
+import { useParams } from "react-router";
 
 function UpdateResidence() {
-  let [currentTabIndex, setCurrentTabIndex] = useState(0);
+  const { id } = useParams();
 
-  /* teria a função do get
-  const [domicilio, setDomicilio] = useState()
+  const { fetchResidenceById, loading, residence } = useGetResidences();
 
-  useEffect(()= >{
-
-    const resposta = await façoOGet()
-
-    setDomicilio(resposta)
-
-  },[])
-*/
+  useEffect(() => {
+    fetchResidenceById(id);
+  }, [id]);
 
   return (
     <>
-      <div>
-        <TabsWrapper
-          currentTabIndex={currentTabIndex}
-          /* respostaDoGet={domicilio} */
-        />
-        <Rodape setNumber={setCurrentTabIndex} />
-      </div>
+      {loading ? (
+        <div className="loader">Carregando...</div>
+      ) : !residence ? (
+        <div className="loader">Nenhum domicílio encontrado.</div>
+      ) : (
+        <div>
+          <TabsWrapper residence={residence} />
+        </div>
+      )}
     </>
   );
 }

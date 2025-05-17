@@ -36,7 +36,7 @@ function Login() {
           <div align="left">
             <p>
               <img
-                src="./src/assets/logotipo_sissaude_v01.png"
+                src="/logotipo_sissaude_v01.png"
                 alt="Logotipo Sissaude"
                 width="180"
               />
