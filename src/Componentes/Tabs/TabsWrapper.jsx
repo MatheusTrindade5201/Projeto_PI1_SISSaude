@@ -56,21 +56,23 @@ function TabsWrapper({ residence }) {
 
         {isLoading && <p>Enviando...</p>}
       </button>
-      <button
-        onClick={() => {
-          const confirmed = window.confirm(
-            "Tem certeza que deseja deletar este domicílio?"
-          );
-          if (confirmed) {
-            deleteResidence(residenceID);
-          }
-        }}
-        disabled={isLoading || isLoadingDelete}
-      >
-        {!isLoading && <p>Deletar</p>}
+      {residenceID && (
+        <button
+          onClick={() => {
+            const confirmed = window.confirm(
+              "Tem certeza que deseja deletar este domicílio?"
+            );
+            if (confirmed) {
+              deleteResidence(residenceID);
+            }
+          }}
+          disabled={isLoading || isLoadingDelete}
+        >
+          {!isLoading && <p>Deletar</p>}
 
-        {isLoading && <p>Deletando...</p>}
-      </button>
+          {isLoading && <p>Deletando...</p>}
+        </button>
+      )}
     </>
   );
 }
