@@ -1,6 +1,6 @@
 import "../../styles/stylePag4.css";
 
-function Tab4() {
+function Tab4({ formData, setFormData }) {
   return (
     <div className="background" style={{ display: "flex" }}>
       <div>

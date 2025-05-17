@@ -1,6 +1,6 @@
 import "../../styles/stylePag2.css";
 
-function Tab2() {
+function Tab2({ formData, setFormData }) {
   return (
     <div className="background">
       <div className="linha1">
