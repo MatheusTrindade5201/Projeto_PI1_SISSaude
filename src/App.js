@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 
-import Login from "./Componentes/login.js";
+import Login from "./Pages/login.jsx";
 import Pag1 from "./Componentes/Tabs/Tab1.jsx";
 import Pag2 from "./Componentes/Tabs/Tab2.jsx";
 import Pag3 from "./Componentes/Tabs/Tab3.jsx";

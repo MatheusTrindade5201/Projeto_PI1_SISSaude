@@ -3,6 +3,9 @@ import Tab1 from "./Tab1";
 import Tab2 from "./Tab2";
 import Tab3 from "./Tab3";
 import Tab4 from "./Tab4";
+import { useAlert } from "../../Context/AlertContext";
+import { addDomicilio } from "../../services/domicilio";
+import { apiTokenInterceptor } from "../../Helpers/apiTokenInterceptor";
 
 const defaultIndividualDataScheme = {
   cns: "",
@@ -113,29 +116,41 @@ function TabsWrapper({ currentTabIndex }) {
   const [residenceFormData, setResidenceFormData] = useState(
     defaultResidenceDataScheme
   );
-  const [individualFormData, setIndividualFormData] = useState(
-    defaultIndividualDataScheme
-  );
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  const { handleSuccess, handleError } = useAlert();
+
+  const submitForm = async () => {
+    try {
+      apiTokenInterceptor();
+      setIsLoading(true);
+
+      await addDomicilio(residenceFormData);
+
+      handleSuccess("Domicilio cadastrado com sucesso!");
+    } catch (error) {
+      handleError(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const tabs = [
     <Tab1 formData={residenceFormData} setFormData={setResidenceFormData} />,
-    <Tab2 formData={residenceFormData} setFormData={setResidenceFormData} />,
-    <Tab3 formData={individualFormData} setFormData={setIndividualFormData} />,
-    <Tab4 formData={individualFormData} setFormData={setIndividualFormData} />,
   ];
 
   return (
     <>
       {tabs[currentTabIndex]}
       <button
-        onClick={() =>
-          console.log({
-            residence: residenceFormData,
-            individual: individualFormData,
-          })
-        }
+        onClick={() => {
+          submitForm();
+        }}
       >
-        Logar objeto
+        {!isLoading && <p>Enviar</p>}
+
+        {isLoading && <p>Enviando...</p>}
       </button>
     </>
   );

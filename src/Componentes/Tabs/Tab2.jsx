@@ -33,7 +33,7 @@ function Tab2({ formData, setFormData }) {
         </div>
         <div className="assinatura">
           <div>
-            <div class="signature-container">
+            <div className="signature-container">
               <h3 className="titulosSecoes">Assinatura</h3>
               <canvas id="signature-pad"></canvas>
             </div>
