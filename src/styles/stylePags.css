@@ -47,6 +47,7 @@ p {
   padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 4px;
+  margin-right: 8px;
 }
 
 
@@ -63,6 +64,13 @@ p {
   width:30%;
   padding: 16px;
   font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
+}
+
+.chkboxEnergia {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  border-color: #1EA0D3;
 }
 
 .button.Adicionar {
@@ -106,15 +114,27 @@ p {
     color: #c8c8c8;
     border-color: #1EA0D3;
     margin: 0;
-    margin-right: 4px;;
+    margin-right: 4px;
 }
 
-.campo_preenchimento.CEP{
+.campo_preenchimento.input50px {
+    width: 20px;
+}
+
+.campo_preenchimento.input90px{
     width: 90px;
 }
 
-.campo_preenchimento.Municipio {
+.campo_preenchimento.input135px {
     width: 135px;
+}
+
+.campo_preenchimento.input175px {
+    width: 175px;
+}
+
+.campo_preenchimento.input175px.afastaTop14px {
+    margin-top: 14px;
 }
 
 .campo_preenchimento.UF {
@@ -122,20 +142,15 @@ p {
   height: 30px;
 }
 
-.campo_preenchimento.Tipo_imovel {
-    width: 90px;
+.campo_preenchimento.input272px {
+    width: 272px;
+    height: 30px;
 }
 
-.campo_preenchimento.Bairro {
-    width: 90px;
-}
-
-.campo_preenchimento.Tipo_logradouro {
-    width: 135px;
-}
-
-.campo_preenchimento.Nome_logradouro {
-    width: 175px;
+.campo_preenchimento.input272pxMiddle{
+    width: 272px;
+    height: 30px;
+    margin-left: 48px;
 }
 
 .campo_preenchimento.Microarea {
@@ -146,10 +161,10 @@ p {
     width: 153px;
 }
 
-.campo_preenchimento.Numero{
-    margin-right: 8px;
-    width: 90px;
+.afastado_metade {
+    padding-left: 48px;
 }
+
 .campo_preenchimento.SNum {
     transform: scale(1.5);
     width: 20px;
@@ -161,7 +176,7 @@ p {
 }
 
 .campo_preenchimento.PtoRef{
-    width: 400px;
+    width: 405px;
 }
 
 .pto_ref{
@@ -186,24 +201,12 @@ p {
 
 /* || Famílias */
 
-.linha_bloco_familias {
-  display: flex;
-}
 .campo_preenchimento.Prontuario_familiar{
     margin-right: 4px;
     width: 125px;
 }
 
-.campo_preenchimento.CNS_responsavel {
-  width: 125px;
-  margin-right: 4px;
-}
 
-.campo_preenchimento.Renda_familiar{
-  display: block;
-  width: 50px;
-  margin-bottom: 14px;
-}
 
 
 /* || Moradia */
@@ -214,11 +217,6 @@ p {
   margin-right: 4px;
 }
 
-.campo_preenchimento.Acesso_domicilio {
-  display: block;
-  width: 214px;
-  margin-right: 4px;
-}
 
 .moradores_comodos {
   display: flex;
@@ -229,19 +227,24 @@ p {
   width: 100px;
 }
 
-.moradores_comodos.Energia {
-  width: 214px;
-  margin-top: 4px;
+
+.Energia {
+  display: flex;
+  width: 48%;
+  margin-top: 15px;;
 }
 
 .acesso_domicilio {
   margin-top: 14px;
 }
 
+/*
 .energia_eletrica {
   font-size: 18px;
   margin-left: 8px;
 }
+*/
+
 
 /* || Animais no domicílio */
 .animais_domicilio {
