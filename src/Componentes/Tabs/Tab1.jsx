@@ -28,7 +28,8 @@ function Tab1({ formData, setFormData }) {
           <div>
             <div className="boxesPag1">
               <Telefonecontato formData={formData} setFormData={setFormData} />
-              {/* <Familias formData={formData} setFormData={setFormData} /> */}
+              {/* APÓS A EDIÇÃO, VOLTAR A COMENTAR FAMÍLIAS */}
+              <Familias formData={formData} setFormData={setFormData} />
             </div>
             <div>
               <AnimaisDomicilio formData={formData} setFormData={setFormData} />
@@ -47,7 +48,7 @@ function EndLocaldepermanencia({ formData, setFormData }) {
   return (
     <div id="End_Localdepermanencia">
       <p className="titulosSecoes">Endereço/Local de Permanência</p>
-      <br />
+      
       <div className="bloco">
         <div id="linha1" className="linha">
           <div>
@@ -63,7 +64,7 @@ function EndLocaldepermanencia({ formData, setFormData }) {
                 )
               }
               id="CEP"
-              className="campo_preenchimento CEP"
+              className="campo_preenchimento input90px"
               type="text"
               placeholder="00000-000"
             />
@@ -81,7 +82,7 @@ function EndLocaldepermanencia({ formData, setFormData }) {
                 )
               }
               id="Municipio"
-              className="campo_preenchimento Municipio"
+              className="campo_preenchimento input135px"
               type="text"
               placeholder="Guarulhos"
             />
@@ -90,6 +91,7 @@ function EndLocaldepermanencia({ formData, setFormData }) {
             <label>UF</label>
 
             <SelectInput
+              className="campo_preenchimento UF"
               value={formData.uf}
               onChange={(event) =>
                 handleDataChange(
@@ -115,13 +117,13 @@ function EndLocaldepermanencia({ formData, setFormData }) {
                 )
               }
               id="tipo_imovel"
-              className="campo_preenchimento Tipo_imovel"
+              className="campo_preenchimento input90px"
               type="text"
               placeholder="00"
             />
           </div>
         </div>
-        <br />
+        
         <div id="linha2" className="linha">
           <div>
             <label>Bairro</label>
@@ -136,7 +138,7 @@ function EndLocaldepermanencia({ formData, setFormData }) {
                 )
               }
               id="Bairro"
-              className="campo_preenchimento Bairro"
+              className="campo_preenchimento input90px"
               type="text"
               placeholder=""
             />
@@ -154,7 +156,7 @@ function EndLocaldepermanencia({ formData, setFormData }) {
                 )
               }
               id="Logradouro"
-              className="campo_preenchimento Tipo_logradouro"
+              className="campo_preenchimento input135px"
               type="text"
               placeholder=""
             />
@@ -172,7 +174,7 @@ function EndLocaldepermanencia({ formData, setFormData }) {
                 )
               }
               id="nome_logradouro"
-              className="campo_preenchimento Nome_logradouro"
+              className="campo_preenchimento input175px"
               type="text"
               placeholder=""
             />
@@ -196,7 +198,7 @@ function EndLocaldepermanencia({ formData, setFormData }) {
             />
           </div>
         </div>
-        <br />
+        
         <div id="linha3" className="linha">
           <div>
             <label>Número</label>
@@ -211,13 +213,13 @@ function EndLocaldepermanencia({ formData, setFormData }) {
                 )
               }
               id="numero"
-              className="campo_preenchimento Numero"
+              className="campo_preenchimento input90px"
               type="text"
               placeholder=""
             />
           </div>
           <div>
-            <label className="pto_ref">Ponto de Referência</label>
+            <label>Ponto de Referência</label>
             <input
               value={formData.pto_referencia}
               onChange={(event) =>
@@ -243,9 +245,9 @@ function EndLocaldepermanencia({ formData, setFormData }) {
 function Telefonecontato({ formData, setFormData }) {
   return (
     <div id="Telefone para contato">
-      <h3 className="titulosSecoes">Telefone para contato</h3>
-      <br />
-      <div id="linha1" className="linha_bloco">
+      <h3 className="titulosSecoes">Telefones para contato</h3>
+      
+      <div id="linha1" className="bloco">
         <div>
           <label>Residencial</label>
           <input
@@ -265,7 +267,7 @@ function Telefonecontato({ formData, setFormData }) {
           />
         </div>
         <div>
-          <label className="contato">Contato</label>
+          <label>Contato</label>
           <input
             value={formData.telefone_contato}
             onChange={(event) =>
@@ -277,7 +279,7 @@ function Telefonecontato({ formData, setFormData }) {
               )
             }
             id="telefone_contato"
-            className="campo_preenchimento"
+            className="campo_preenchimento Residencial"
             type="text"
             placeholder="(00) 00000-0000"
           />
@@ -298,7 +300,7 @@ function AnimaisDomicilio({ formData, setFormData }) {
   return (
     <div id="Animais no domicílio">
       <div>
-        <p className="titulosSecoes">Animais no domicílio</p>
+        <p className="titulosSecoes">Animais no domicílio
         <button
           onClick={() =>
             setFormData({
@@ -306,18 +308,21 @@ function AnimaisDomicilio({ formData, setFormData }) {
               animais: [...formData.animais, { animal: "", quantidade: 0 }],
             })
           }
+          className="button Adicionar"
         >
           Adicionar +
         </button>
+        </p>
+
       </div>
-      <div id="linha1" className="linha_bloco Animais">
+      <div id="linha1" className="bloco">
         {React.Children.toArray(
           formData.animais.map((animal, index) => (
             <div>
               <label>Animal</label>
               <input
                 id={`animal-${index}`}
-                className="campo_preenchimento Num_moradores"
+                className="campo_preenchimento Animais"
                 placeholder="Ex: Cachorro"
                 value={animal.animal}
                 onChange={(event) =>
@@ -334,7 +339,7 @@ function AnimaisDomicilio({ formData, setFormData }) {
               <label>Quantidade</label>
               <input
                 id={`animal-quantidade-${index}`}
-                className="campo_preenchimento Num_moradores"
+                className="campo_preenchimento Animais"
                 placeholder="Nº"
                 value={animal.quantidade}
                 onChange={(event) =>
@@ -363,79 +368,88 @@ function AnimaisDomicilio({ formData, setFormData }) {
   );
 }
 
-/* function Familias({ formData, setFormData }) {
+/*  || COMENTAR INÍCIO
+    || Após a edição do CSS, voltar a comentar 
+      a função Familias e o bloco de código abaixo  
+*/
+function Familias({ formData, setFormData }) {
   return (
-    <div id="Familias">
+    <div>
       <h3 className="titulosSecoes">Famílias</h3>
-      <br />
-      <div id="linha1" className="linha_bloco_familias">
-        <div className="box">
-          <label>Nº Prontuário familiar</label>
-          <input
-            id="email"
-            className="campo_preenchimento Prontuario_familiar"
-            type="text"
-            placeholder=""
-          />
+      <div id="Familias" className="bloco">
+        <div id="linha1" className="linha">
+          <div>
+            <label>Nº Prontuário familiar</label>
+            <input
+              id="email"
+              className="campo_preenchimento input135px"
+              type="text"
+              placeholder=""
+            />
 
-          <label>Data Nasc.</label>
-          <p className="fonte_pequena">(do responsável)</p>
-          <input
-            id="email"
-            className="campo_preenchimento"
-            type="text"
-            placeholder=""
-          />
-        </div>
-        <div>
-          <label>CNS do Responsável</label>
-          <input
-            id="email"
-            className="campo_preenchimento CNS_responsavel"
-            type="text"
-            placeholder=""
-          />
+            <label>Data Nasc.</label>
+            <p className="fonte_pequena">(do responsável)</p>
+            <input
+              id="email"
+              className="campo_preenchimento input135px"
+              type="text"
+              placeholder=""
+            />
+          </div>
+          <div>
+            <label>CNS do Responsável</label>
+            <input
+              id="email"
+              className="campo_preenchimento input135px"
+              type="text"
+              placeholder=""
+            />
 
-          <label>Membros</label>
-          <p className="fonte_pequena">(da Família)</p>
-          <input
-            id="email"
-            className="campo_preenchimento"
-            type="text"
-            placeholder=""
-          />
-        </div>
-        <div>
-          <label>Renda Familiar(sm)</label>
-          <input
-            id="email"
-            className="campo_preenchimento Renda_familiar"
-            type="text"
-            placeholder=""
-          />
+            <label>Membros</label>
+            <p className="fonte_pequena">(da Família)</p>
+            <input
+              id="email"
+              className="campo_preenchimento input135px"
+              type="text"
+              placeholder=""
+            />
+          </div>
+          <div>
+            <label>Renda Familiar(sm)</label>
+            <input
+              id="email"
+              className="campo_preenchimento input175px"
+              type="text"
+              placeholder=""
+            />
 
-          <label>Reside desde</label>
-          <input
-            id="email"
-            className="campo_preenchimento"
-            type="text"
-            placeholder="mm/aaaa"
-          />
+            <label>Reside desde</label>
+            <input
+              id="email"
+              className="campo_preenchimento input175px afastaTop14px"
+              type="text"
+              placeholder="mm/aaaa"
+            />
+          </div>
         </div>
       </div>
+      
     </div>
   );
-} */
+} 
+/*  || COMENTAR FIM  */
+
 
 function CondMoradia({ formData, setFormData }) {
   return (
     <div>
-      <div id="Condições de Moradia" className="bloco">
-        <p className="titulosSecoes">Condições de Moradia</p>
+      <h3 className="titulosSecoes">Condições de Moradia</h3>
+      <div id="Condições de Moradia" className="bloco"> 
         <div id="linha1" className="linha">
           <div>
             <label>Situação de Moradia/Posse da Terra</label>
             <SelectInput
+              className="campo_preenchimento input272px"
               items={situacaoMoradia}
               value={formData.situacao_moradia}
               onChange={(event) =>
@@ -446,11 +460,13 @@ function CondMoradia({ formData, setFormData }) {
                   event.target.value
                 )
               }
+              
             />
           </div>
           <div>
             <label>Abastecimento de água</label>
             <SelectInput
+              className="campo_preenchimento input272px"
               items={abastecimentoAgua}
               value={formData.abastecimento_agua}
               onChange={(event) =>
@@ -468,6 +484,7 @@ function CondMoradia({ formData, setFormData }) {
           <div>
             <label>Localização</label>
             <SelectInput
+              className="campo_preenchimento input272px"
               items={localizacao}
               value={formData.localizacao}
               onChange={(event) =>
@@ -483,6 +500,7 @@ function CondMoradia({ formData, setFormData }) {
           <div>
             <label>Água para consumo no domicílio</label>
             <SelectInput
+              className="campo_preenchimento input272px"
               items={aguaConsumo}
               value={formData.agua_consumo}
               onChange={(event) =>
@@ -500,6 +518,7 @@ function CondMoradia({ formData, setFormData }) {
           <div>
             <label>Tipo de Domicílio</label>
             <SelectInput
+              className="campo_preenchimento input272px"
               items={tipoDomicilio}
               value={formData.tipo_domicilio}
               onChange={(event) =>
@@ -515,6 +534,7 @@ function CondMoradia({ formData, setFormData }) {
           <div>
             <label>Destino do Lixo</label>
             <SelectInput
+              className="campo_preenchimento input272px"
               items={destinoLixo}
               value={formData.destino_lixo}
               onChange={(event) =>
@@ -533,7 +553,7 @@ function CondMoradia({ formData, setFormData }) {
             <input
               name="browser"
               id="browser"
-              className="campo_preenchimento Num_moradores"
+              className="campo_preenchimento input50px"
               placeholder="Nº"
               value={formData.n_moradores}
               onChange={(event) =>
@@ -551,7 +571,7 @@ function CondMoradia({ formData, setFormData }) {
             <input
               name="browser"
               id="browser"
-              className="campo_preenchimento"
+              className="campo_preenchimento input50px"
               placeholder="Nº"
               value={formData.n_comodos}
               onChange={(event) =>
@@ -565,10 +585,11 @@ function CondMoradia({ formData, setFormData }) {
             />
             <label>Cômodos</label>
           </div>
-          <div>
+          <div className="afastado_metade">
             <label>Forma de escoamento</label>
             <p className="fonte_pequena">(do banheiro ou sanitário)</p>
             <SelectInput
+              className="campo_preenchimento input272px"
               items={formaEscoamento}
               value={formData.escoamento_banheiro}
               onChange={(event) =>
@@ -588,6 +609,7 @@ function CondMoradia({ formData, setFormData }) {
               Tipo de acesso ao domicílio
             </label>
             <SelectInput
+              className="campo_preenchimento input272px"
               items={acessoDomicilio}
               value={formData.tipo_acesso}
               onChange={(event) =>
@@ -604,6 +626,7 @@ function CondMoradia({ formData, setFormData }) {
             <label>Condição de posse e uso da Terra</label>
             <p className="fonte_pequena">(Somente área de produção Rural)</p>
             <SelectInput
+              className="campo_preenchimento input272px"
               items={posseTerra}
               value={formData.condicao_posse_producao_rural}
               onChange={(event) =>
@@ -618,11 +641,10 @@ function CondMoradia({ formData, setFormData }) {
           </div>
         </div>
         <div id="linha6" className="linha">
-          <div className="moradores_comodos Energia">
+          <div className="Energia">
             <input
               type="checkbox"
               id="browser"
-              className="campo_preenchimento FA"
               value={formData.energia_eletrica}
               onChange={(event) =>
                 handleDataChange(
@@ -632,17 +654,19 @@ function CondMoradia({ formData, setFormData }) {
                   event.target.value
                 )
               }
+              className="chkboxEnergia"
             />
-            <label className="energia_eletrica">
+            <label>
               Disponibilidade de Energia elétrica
             </label>
           </div>
-          <div>
+          <div className="afastado_metade">
             <label>Material predominante</label>
             <p className="fonte_pequena">
               (na construção das paredes externas do domicílio)
             </p>
             <SelectInput
+              className="campo_preenchimento input272px"
               items={materialPredominante}
               value={formData.material_predominante}
               onChange={(event) =>
