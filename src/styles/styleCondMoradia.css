@@ -1,0 +1,34 @@
+/* styleCondMoradia.css */
+.cond-moradia-inputs {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+/* Container para os selects organizados em linha */
+.selects-linha {
+  display: flex;
+  flex-wrap: wrap; /* permite quebra de linha se não couber */
+  gap: 16px; /* espaçamento entre inputs */
+  margin-bottom: 16px;
+  max-width: 270px;
+}
+
+/* Responsividade: em telas pequenas, ocupa 100% */
+@media (max-width: 768px) {
+  .selects-linha {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .selects-linha .select-input,
+  .selects-linha .input-group {
+    min-width: 100%;
+    flex-basis: 100%;
+  }
+}
+
+/* Pequeno ajuste de espaçamento interno */
+.selects-linha .select-input select,
+.selects-linha .input-group input {
+  width: 100%;
+}

@@ -1,4 +1,4 @@
-import TabsWrapper from "../Componentes/Tabs/TabsWrapper";
+import TabsWrapper from "../Componentes/FormularioIndividuo/index.tsx";
 
 function AddResidence() {
   return (

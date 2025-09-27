@@ -1,0 +1,58 @@
+/* Container flexível para todos os inputs */
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Cada grupo de input */
+.end-local-group {
+  flex: 1 1 100%; /* mobile: ocupa 100% */
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.end-local-input:focus,
+.end-local-select:focus {
+  border-color: #3182ce;
+  box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.2);
+}
+
+/* Mobile first: 1 input por linha */
+.end-local-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Tablet: até 2 inputs por linha */
+@media (min-width: 600px) {
+  .end-local-group {
+    flex: 1 1 calc(50% - 16px); /* 2 por linha com gap */
+  }
+}
+
+/* Desktop: até 3 inputs por linha */
+@media (min-width: 900px) {
+  .end-local-group {
+    flex: 1 1 calc(33.333% - 16px); /* 3 por linha com gap */
+  }
+}
+
+/* Ajustes menores */
+@media (max-width: 479px) {
+  .end-local-input,
+  .end-local-select {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+
+  .end-local-label {
+    font-size: 13px;
+  }
+}

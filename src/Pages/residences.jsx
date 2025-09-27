@@ -40,7 +40,10 @@ const ResidenceList = () => {
               <p>
                 <strong>Telefone:</strong> {res.telefone_residencia}
               </p>
-              <NavLink className="details-button" to={`/editar/${res.id}`}>
+              <NavLink
+                className="details-button"
+                to={`/domicilios/editar/${res.id}`}
+              >
                 Ver detalhes
               </NavLink>
             </div>

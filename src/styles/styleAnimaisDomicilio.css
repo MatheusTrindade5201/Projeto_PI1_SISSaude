@@ -1,0 +1,80 @@
+/* Container scrollável da lista de animais */
+.animais-list-container {
+  max-height: 340px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 4px; /* para não sobrepor scrollbar */
+}
+
+/* Scrollbar estilizada (opcional, moderno) */
+.animais-list-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.animais-list-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.animais-list-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Linha do animal */
+.linha-animal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0; /* evita encolher no scroll */
+}
+
+/* Botões */
+.btn-adicionar {
+  background-color: #38a169;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.btn-adicionar:hover {
+  background-color: #2f855a;
+}
+
+.btn-adicionar svg {
+  width: 16px;
+  height: 16px;
+  font-weight: bold;
+}
+
+.btn-remover {
+  background-color: #e53e3e;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.btn-remover:hover {
+  background-color: #c53030;
+}
+
+.btn-remover svg {
+  width: 16px;
+  height: 16px;
+  font-weight: bold;
+}

@@ -30,7 +30,8 @@ export const useUpsertResidence = (residenceID) => {
 
       handleSuccess(successMessage);
 
-      if (residenceResponse) navigate(`/editar/${residenceResponse.id}`);
+      if (residenceResponse)
+        navigate(`/domicilios/editar/${residenceResponse.id}`);
     } catch (error) {
       const status = error?.response?.status;
 

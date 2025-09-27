@@ -11,9 +11,9 @@ const PrivateRoutes = () => {
       <Routes>
         <Route path="/" element={<StandardPage />}>
           <Route index element={<Home />} />
-          <Route path="adicionar" element={<AddResidence />} />
-          <Route path="listar" element={<ResidenceList />} />
-          <Route path="editar/:id" element={<UpdateResidence />} />
+          <Route path="domicilios/adicionar" element={<AddResidence />} />
+          <Route path="domicilios/listar" element={<ResidenceList />} />
+          <Route path="domicilios/editar/:id" element={<UpdateResidence />} />
         </Route>
       </Routes>
     </>

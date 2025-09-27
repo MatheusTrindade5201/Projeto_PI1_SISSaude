@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import TabsWrapper from "../Componentes/Tabs/TabsWrapper";
+import TabsWrapper from "../Componentes/FormularioIndividuo/index.tsx";
 import { useGetResidences } from "../Hooks/useGetResidences";
 import { useParams } from "react-router";
 

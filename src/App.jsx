@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import Login from "./Pages/login.jsx";
 import Cabecalho from "./Componentes/Cabecalho.jsx";
 import Rodape from "./Componentes/Rodape.jsx";
-import TabsWrapper from "./Componentes/Tabs/TabsWrapper.jsx";
+import TabsWrapper from "./Componentes/FormularioIndividuo/index.tsx.jsx";
 
 function App() {
   let [currentTabIndex, setCurrentTabIndex] = useState(0);

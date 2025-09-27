@@ -1,0 +1,132 @@
+.tabs-wrapper {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mobile-first */
+.residencia-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.residencia-grid > * {
+  width: 100%;
+}
+
+/* Breakpoint intermediário (~600px) */
+@media (min-width: 600px) {
+  .residencia-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .residencia-grid > :nth-child(2),
+  .residencia-grid > :nth-child(3) {
+    display: inline-block;
+  }
+}
+
+/* Breakpoint grande (~900px) */
+@media (min-width: 1024px) {
+  .residencia-grid {
+    display: grid;
+    grid-template-columns: 60% 15% 22%;
+    gap: 16px;
+  }
+
+  .residencia-grid > * {
+    width: 100%;
+  }
+}
+
+/* CondMoradia ocupa sempre 100% */
+.cond-moradia {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: #dbdbdb;
+  border-radius: 8px;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.titulos-secoes {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.secao-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.header-secao {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  align-self: flex-end;
+}
+
+/* Botão salvar */
+.form-actions button {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.form-actions button svg {
+  width: 18px;
+  height: 18px;
+  font-weight: bold; /* ícone negrito */
+}
+
+/* Salvar (verde) */
+.form-actions button:first-child {
+  background-color: #38a169; /* verde */
+}
+
+.form-actions button:first-child:hover:not(:disabled) {
+  background-color: #2f855a;
+}
+
+/* Deletar (vermelho) */
+.form-actions .delete-btn {
+  background-color: #e53e3e; /* vermelho */
+}
+
+.form-actions .delete-btn:hover:not(:disabled) {
+  background-color: #c53030;
+}
+
+/* Estado desabilitado */
+.form-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
