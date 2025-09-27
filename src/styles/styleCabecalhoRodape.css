@@ -1,83 +1,86 @@
-@font-face {
-font-family:"acumin-pro-condensed";
-src:url("https://use.typekit.net/af/77c301/00000000000000007735d430/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"),url("https://use.typekit.net/af/77c301/00000000000000007735d430/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"),url("https://use.typekit.net/af/77c301/00000000000000007735d430/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
-font-display:auto;font-style:normal;font-weight:600;font-stretch:normal;
-}
-
-@import url('https://use.typekit.net/jkc1xhg.css');
-
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+@import url("https://use.typekit.net/jkc1xhg.css");
 
 body {
-  justify-content: center;
-  align-items: center;
   margin: 0;
-  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
+  font-family: "acumin-pro", sans-serif;
 }
 
-p {
-    font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
-    font-size: 16px;
-    color: #1EA0D3;
-    margin: 0;
+/* Cabeçalho */
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8f9fa;
+  padding: 10px 20px;
+  flex-wrap: wrap; /* permite quebrar em telas menores */
 }
 
-a {
-  color: #1ED2D3;
+.cabecalho-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-decoration: none;
 }
 
-.botoesmenu {
-  /*margin: auto;*/
-  margin-right: 10px;
-  margin-left: 10px;
-  width:90%;
-  padding: 6px 50px;
-  display: block-inline;
-  align-content: center;
-  background-color: #c9c9c9;
-  border: 0px;
+.logo-img {
+  width: 160px;
+  height: auto;
 }
 
-
-.cadastroDomiciliar {
-    font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
-    font-size: 21px;
-    font-weight: bold;
-    color: #105266;
-    margin: 0;
-    padding-bottom: 2px;
-    background-color: #e3e5e5;
+.logo-subtitle {
+  font-size: 14px;
+  color: #1ea0d3;
 }
 
-#Cadastro_domiciliar label {
-    font-size: 16px; 
-    font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
-    color: #565656; 
-    text-align: left;
-    display: flex;
+/* Ações (voltar/logout) */
+.cabecalho-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.campo_preenchimento{
-  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
-  font-size: 16px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #76C5CE;
-  margin: auto;
-  margin-bottom: 8px;
-  width:88%;
-  height: 18px;
-  padding: 4px;
+.voltar-btn,
+.logout-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
 }
 
-.sissaudeLogotipo{
-  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
-  color: #1EA0D3;
-  width: 400px;
-  height: 75px;
+.voltar-btn {
+  color: #1ea0d3;
+}
+
+.voltar-btn:hover {
+  background: rgba(30, 160, 211, 0.1);
+}
+
+.logout-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cabecalho {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .cabecalho-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .logo-subtitle {
+    font-size: 12px;
+  }
 }

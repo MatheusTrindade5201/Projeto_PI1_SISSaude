@@ -9,7 +9,7 @@ const StandardPage = () => {
   return (
     <>
       <Cabecalho />
-
+      <br />
       <Outlet />
 
       {showAlertModal && <AlertModal message={message} type={type} />}

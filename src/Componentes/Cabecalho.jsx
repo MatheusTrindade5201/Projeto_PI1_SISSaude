@@ -4,70 +4,34 @@ import { useAuth } from "../Context/AuthContext";
 
 function Cabecalho() {
   const { signOut } = useAuth();
-
   const location = useLocation();
-
-  const isOnRoot = location.pathname == "/";
+  const isOnRoot = location.pathname === "/";
 
   return (
-    <div id="cabecalho" className="cabecalho">
-      <NavLink to="/">
-        <div id="sissaude" className="sissaudeLogotipo" align="left">
-          <img
-            src="/logotipo_sissaude_v01.png"
-            alt="Logotipo Sissaude"
-            width="180"
-          />
-          <p id="paragraphCabecalho">Cadastro de dados de Sistema de Saúde</p>
-        </div>
+    <header className="cabecalho">
+      {/* Logo e título */}
+      <NavLink to="/" className="cabecalho-logo">
+        <img
+          src="/logotipo_sissaude_v01.png"
+          alt="Logotipo SIS Saúde"
+          className="logo-img"
+        />
+        <p className="logo-subtitle">Cadastro de dados do Sistema de Saúde</p>
       </NavLink>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "end",
-          justifyContent: "space-between",
-          padding: "0 0 10px 0",
-        }}
-      >
-        {!isOnRoot && <NavLink to={-1}>voltar</NavLink>}
-        <button
-          style={{ marginLeft: "auto" }}
-          type="submit"
-          onClick={() => signOut()}
-        >
-          logout
-        </button>
-      </div>
-      <div className="form-title" align="left">
-        <p className="cadastroDomiciliar">Cadastro Domiciliar</p>
-      </div>
-    </div>
-  );
-}
 
-function Rodape({ setNumber }) {
-  <div style={{ display: "inline-block" }}>
-    <button
-      type="submit"
-      className="botoesmenu"
-      onClick={() => setNumber(1)}
-    ></button>
-    <button
-      type="submit"
-      className="botoesmenu"
-      onClick={() => setNumber(2)}
-    ></button>
-    <button
-      type="submit"
-      className="botoesmenu"
-      onClick={() => setNumber(3)}
-    ></button>
-    <button
-      type="submit"
-      className="botoesmenu"
-      onClick={() => setNumber(4)}
-    ></button>
-  </div>;
+      {/* Navegação / Ações */}
+      <nav className="cabecalho-actions">
+        {!isOnRoot && (
+          <NavLink to={-1} className="voltar-btn">
+            Voltar
+          </NavLink>
+        )}
+        <button type="button" className="logout-btn" onClick={() => signOut()}>
+          Logout
+        </button>
+      </nav>
+    </header>
+  );
 }
 
 export default Cabecalho;

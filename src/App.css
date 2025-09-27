@@ -1,5 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .App {
-  text-align:"";
+  text-align: "";
 }
 
 .App-logo {
@@ -40,74 +48,73 @@
 .container {
   text-align: center;
   margin: auto;
-  width:50%;
+  width: 50%;
   padding: 16px;
-} 
+}
 
-.login{
+.login {
   border-width: 2px;
   border-style: solid;
-  border-color: #09B5CC;
-  background-color: #F2F2F2;
+  border-color: #09b5cc;
+  background-color: #f2f2f2;
   margin: auto;
   margin-bottom: 4px;
-  width:100%;
+  width: 100%;
   padding: 4px 0px;
-  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
+  font-family: "Roboto";
   font-size: 20px;
-  color: #1EA0D3;
-}
-  
-.line{
-  display: inline-block;
-  width: calc(100% - 50px)
-}
-.background{
-  height: 700px;
-  background-color: #E5E4E2;
+  color: #1ea0d3;
 }
 
-.bloco{
+.line {
+  display: inline-block;
+  width: calc(100% - 50px);
+}
+.background {
+  height: 700px;
+  background-color: #e5e4e2;
+}
+
+.bloco {
   background-color: lightgray;
 }
-.campo_preenchimento{
+.campo_preenchimento {
   border-width: 2px;
   border-style: solid;
-  border-color: #76C5CE;
+  border-color: #76c5ce;
   margin: auto;
   /*width:100%;*/
   padding: 16px;
 }
 
-.checkbox{
+.checkbox {
   border-width: 2px;
   border-style: solid;
-  border-color: #76C5CE;
+  border-color: #76c5ce;
   margin: auto;
   /*width:100%;*/
   padding: 16px;
 }
-.linha{
+.linha {
   margin: auto;
-  display:flex;
+  display: flex;
 }
 
-.botoesmenu{
+.botoesmenu {
   border-width: 2px;
   margin: auto;
   padding: 16px 20px;
   width: 150px;
   height: 50;
-  background-color: #76C5CE;
+  background-color: #76c5ce;
   cursor: pointer;
   justify-content: space-between;
 }
 
-.labelsLogin{
-  font-size: 21px; 
-  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
-  color: #c9c9c9; 
+.labelsLogin {
+  font-size: 21px;
+  color: #c9c9c9;
   text-align: center;
   display: block;
-  padding-bottom: 0px;  
+  padding-bottom: 0px;
 }

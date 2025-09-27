@@ -1,57 +1,39 @@
-@font-face {
-font-family:"acumin-pro-condensed";
-src:url("https://use.typekit.net/af/f09134/00000000000000007735d40a/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/f09134/00000000000000007735d40a/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/f09134/00000000000000007735d40a/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
-font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
-}
-
-@import url('https://use.typekit.net/jkc1xhg.css');
-
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+@import url("https://use.typekit.net/jkc1xhg.css");
 
 /* || General Styles */
 
 a {
-  color: #1ED2D3;
+  color: #1ed2d3;
 }
 
 body {
-  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
   justify-content: center;
   align-items: center;
   margin: 0;
-  
 }
 
 label {
-  font-size: 18px; 
-  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
-  color: #565656; 
+  font-size: 18px;
+  color: #565656;
   text-align: left;
   display: block;
-  padding-bottom: 0px; 
+  padding-bottom: 0px;
 }
 
 p {
-    font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
-    font-size: 16px;
-    color: #1EA0D3;
-    margin: 0;
+  font-size: 16px;
+  color: #1ea0d3;
+  margin: 0;
 }
-
 
 /* || Utilities */
 
 .container {
   display: flex;
-  flex-direction: column;;
+  flex-direction: column;
   text-align: center;
   margin: auto;
-  width:50%;
+  width: 50%;
   padding: 16px;
 }
 
@@ -64,89 +46,85 @@ p {
   height: 200px;
 }
 
-.form-section{
+.form-section {
   display: inline;
 }
 
-.button{
+.button {
   margin: auto;
-  width:30%;
+  width: 30%;
   padding: 16px;
-  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
 }
 
-.sissaudeLogotipo{
-  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
-  color: #1EA0D3;
+.sissaudeLogotipo {
+  color: #1ea0d3;
   width: 400px;
   height: 100px;
 }
 
 .titulosSecoes {
-    font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    color: #565656;
-    margin: 0;
-    padding-bottom: 2px;
-    padding-left: 6px;
-    text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  color: #565656;
+  margin: 0;
+  padding-bottom: 2px;
+  padding-left: 6px;
+  text-align: left;
 }
 
 /* || Boxes */
 
 .campo_preenchimento {
-    font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
-    font-size: 16px;
-    color: #c8c8c8;
-    border-color: #1EA0D3;
-    margin: 0;
-    margin-right: 4px;
-    /*padding-bottom: 4px;*/
-    /*width: 90px;*/
+  font-size: 16px;
+  color: #c8c8c8;
+  border-color: #1ea0d3;
+  margin: 0;
+  margin-right: 4px;
+  /*padding-bottom: 4px;*/
+  /*width: 90px;*/
 }
 
-.campo_preenchimento.CEP{
-    margin-right: 4px;
-    width: 90px;
+.campo_preenchimento.CEP {
+  margin-right: 4px;
+  width: 90px;
 }
 
 .campo_preenchimento.Municipio {
-    margin-right: 4px;
-    width: 135px;
+  margin-right: 4px;
+  width: 135px;
 }
 
 .campo_preenchimento.UFs {
-    margin-right: 4px;
-    width: 36px;
+  margin-right: 4px;
+  width: 36px;
 }
 
 .campo_preenchimento.Tipo_imovel {
-    margin-right: 4px;
-    width: 90px;
+  margin-right: 4px;
+  width: 90px;
 }
 
 .campo_preenchimento.Bairro {
-    margin-right: 4px;
-    width: 90px;
+  margin-right: 4px;
+  width: 90px;
 }
 
 .campo_preenchimento.Tipo_logradouro {
-    margin-right: 4px;
-    width: 135px;
+  margin-right: 4px;
+  width: 135px;
 }
 
 .campo_preenchimento.Nome_logradouro {
-    margin-right: 4px;
-    width: 225px;
+  margin-right: 4px;
+  width: 225px;
 }
 
 .campo_preenchimento.Microarea {
-    margin-right: 4px;
-    width: 63px;
+  margin-right: 4px;
+  width: 63px;
 }
 
 .campo_preenchimento.Residencial {
-    margin-right: 4px;
-    width: 153px;
+  margin-right: 4px;
+  width: 153px;
 }

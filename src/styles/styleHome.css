@@ -1,41 +1,61 @@
 .home-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  background-color: #f2f4f8;
-  padding: 20px;
+  gap: 2rem;
+}
+
+.home-section {
+  background-color: #f9f9f9;
+  padding-bottom: 20px;
+  border-radius: 8px;
+}
+
+.home-section-header {
+  background-color: #d3d3d3;
+  padding: 0.5rem;
+  font-weight: bold;
+  color: #333;
 }
 
 .home-title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #333;
+  text-align: center;
+  font-size: 1.25rem;
+  margin: 1rem 0;
+  color: #000;
 }
 
 .button-group {
   display: flex;
+  justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0 20px;
 }
 
 .home-button {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 1rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
-.home-button:hover {
+.home-button.primary {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.home-button.primary:hover {
   background-color: #45a049;
 }
 
 .home-button.secondary {
   background-color: #2196f3;
+  color: #fff;
 }
 
 .home-button.secondary:hover {

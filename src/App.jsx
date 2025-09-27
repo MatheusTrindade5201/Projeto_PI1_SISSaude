@@ -1,6 +1,7 @@
 import "./styles/styleLogin.css";
 
 import "./App.css";
+import "./reset.css";
 import React, { useState } from "react";
 
 import Login from "./Pages/login.jsx";

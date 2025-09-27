@@ -1,36 +1,20 @@
-@import url('https://use.typekit.net/jkc1xhg.css');
-
-@font-face {
-font-family:"acumin-pro-condensed";
-src:url("https://use.typekit.net/af/f09134/00000000000000007735d40a/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/f09134/00000000000000007735d40a/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/f09134/00000000000000007735d40a/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
-font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
-}
-
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+@import url("https://use.typekit.net/jkc1xhg.css");
 
 /* || General Styles */
 
 a {
-  color: #1ED2D3;
+  color: #1ed2d3;
 }
 
 body {
-  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
   justify-content: center;
   align-items: center;
   margin: 0;
-  
 }
 
 label {
-  font-size: 18px; 
-  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
-  color: #565656; 
+  font-size: 18px;
+  color: #565656;
   text-align: left;
   display: block;
   padding-top: 6px;
@@ -38,9 +22,8 @@ label {
 }
 
 p {
-    font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
-    font-size: 16px;
-    margin: 0;
+  font-size: 16px;
+  margin: 0;
 }
 
 .bloco {
@@ -50,55 +33,45 @@ p {
   margin-right: 8px;
 }
 
-
 .fonte_pequena {
-  text-align: left;  
+  text-align: left;
   font-size: 11px;
-  color: #1EA0D3;
+  color: #1ea0d3;
 }
 
 /* || Utilities */
 
 .button {
   margin: auto;
-  width:30%;
+  width: 30%;
   padding: 16px;
-  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
 }
 
 .chkboxEnergia {
   width: 30px;
   height: 30px;
   margin: 0;
-  border-color: #1EA0D3;
+  border-color: #1ea0d3;
 }
 
 .button.Adicionar {
-  display:inline-block;
+  display: inline-block;
   width: 90px;
   margin-left: 10px;
   padding: 0;
   padding-top: 2px;
   padding-bottom: 2px;
-  border-color: #1EA0D3;
+  border-color: #1ea0d3;
 }
 
-/*
-.sissaudeLogotipo{
-  font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
-  color: #1EA0D3;
-  width: 400px;
-  height: 100px;
-}*/
-
 .titulosSecoes {
-    font-size: 18px;
-    font-weight: bold;
-    color: #565656;
-    margin: 0;
-    padding-bottom: 2px;
-    padding-left: 6px;
-    text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  color: #565656;
+  margin: 0;
+  padding-bottom: 2px;
+  padding-left: 6px;
+  text-align: left;
 }
 
 /* || Boxes */
@@ -109,32 +82,31 @@ p {
 }
 
 .campo_preenchimento {
-    font-family: 'acumin-pro-condensed', 'Verdana', 'Arial', sans-serif;
-    font-size: 16px;
-    color: #c8c8c8;
-    border-color: #1EA0D3;
-    margin: 0;
-    margin-right: 4px;
+  font-size: 16px;
+  color: #c8c8c8;
+  border-color: #1ea0d3;
+  margin: 0;
+  margin-right: 4px;
 }
 
 .campo_preenchimento.input50px {
-    width: 20px;
+  width: 20px;
 }
 
-.campo_preenchimento.input90px{
-    width: 90px;
+.campo_preenchimento.input90px {
+  width: 90px;
 }
 
 .campo_preenchimento.input135px {
-    width: 135px;
+  width: 135px;
 }
 
 .campo_preenchimento.input175px {
-    width: 175px;
+  width: 175px;
 }
 
 .campo_preenchimento.input175px.afastaTop14px {
-    margin-top: 14px;
+  margin-top: 14px;
 }
 
 .campo_preenchimento.UF {
@@ -143,71 +115,66 @@ p {
 }
 
 .campo_preenchimento.input272px {
-    width: 272px;
-    height: 30px;
+  width: 272px;
+  height: 30px;
 }
 
-.campo_preenchimento.input272pxMiddle{
-    width: 272px;
-    height: 30px;
-    margin-left: 48px;
+.campo_preenchimento.input272pxMiddle {
+  width: 272px;
+  height: 30px;
+  margin-left: 48px;
 }
 
 .campo_preenchimento.Microarea {
-    width: 63px;
+  width: 63px;
 }
 
 .campo_preenchimento.Residencial {
-    width: 153px;
+  width: 153px;
 }
 
 .afastado_metade {
-    padding-left: 48px;
+  padding-left: 48px;
 }
 
 .campo_preenchimento.SNum {
-    transform: scale(1.5);
-    width: 20px;
-    height: 20px;
-    margin: 0;
-    margin-top: 5px;
-    margin-right: 4px;
-    padding: 0;
+  transform: scale(1.5);
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  margin-top: 5px;
+  margin-right: 4px;
+  padding: 0;
 }
 
-.campo_preenchimento.PtoRef{
-    width: 405px;
+.campo_preenchimento.PtoRef {
+  width: 405px;
 }
 
-.pto_ref{
-    margin-left: 6px;
+.pto_ref {
+  margin-left: 6px;
 }
-
 
 /* || Telefone Contato */
 
 .campo_preenchimento.Residencial {
-  display: inline-block; 
+  display: inline-block;
   width: 130px;
 }
 
 /* || Animais no domicílio */
 
 .campo_preenchimento.Animais {
-  display: block;; 
+  display: block;
   width: 153px;
 }
 
-
 /* || Famílias */
 
-.campo_preenchimento.Prontuario_familiar{
-    margin-right: 4px;
-    width: 125px;
+.campo_preenchimento.Prontuario_familiar {
+  margin-right: 4px;
+  width: 125px;
 }
-
-
-
 
 /* || Moradia */
 
@@ -217,21 +184,19 @@ p {
   margin-right: 4px;
 }
 
-
 .moradores_comodos {
   display: flex;
-  margin-top:34px;
+  margin-top: 34px;
   margin-right: 4px;
   padding-right: 10px;
   align-items: center;
   width: 100px;
 }
 
-
 .Energia {
   display: flex;
   width: 48%;
-  margin-top: 15px;;
+  margin-top: 15px;
 }
 
 .acesso_domicilio {
@@ -245,7 +210,6 @@ p {
 }
 */
 
-
 /* || Animais no domicílio */
 .animais_domicilio {
   display: flex;
@@ -253,13 +217,13 @@ p {
 }
 
 .linha_bloco.Animais {
-    display: flex; /* Enables Flexbox */
-    flex-wrap: wrap; /* Allows wrapping if elements don't fit in one row */
-    align-items: center; /* Aligns items vertically */
-    gap: 4px; /* Adds spacing between elements */
+  display: flex; /* Enables Flexbox */
+  flex-wrap: wrap; /* Allows wrapping if elements don't fit in one row */
+  align-items: center; /* Aligns items vertically */
+  gap: 4px; /* Adds spacing between elements */
 }
 
 .campo_preenchimento.Quantos_animais {
-    width: 20px;
-    margin-right: 4px;
+  width: 20px;
+  margin-right: 4px;
 }
