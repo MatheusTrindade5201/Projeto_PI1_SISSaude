@@ -1,0 +1,152 @@
+.formulario-wrapper {
+    padding: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.main-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.section-wrapper {
+    margin-bottom: 24px;
+}
+
+.section-wrapper h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 8px 0;
+    text-align: left;
+}
+
+.form-section-card {
+    background-color: #dbdbdb;
+    border-radius: 8px;
+    padding: 24px;
+    border: 1px solid #ccc;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    align-items: flex-end;
+}
+
+.flex-container:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 8px;
+    flex: 1 1 150px;
+}
+
+.form-group label,
+.form-group-title,
+.checkbox-group-title {
+    font-size: 14px;
+    color: #333 !important;
+    font-weight: 500;
+    margin: 0;
+}
+
+.form-section-card .campo_preenchimento,
+.form-section-card .select-input select {
+    background-color: #FFFFFF !important;
+    border: 1px solid #ccc !important;
+    border-radius: 6px !important;
+    padding: 8px 12px !important;
+    font-size: 14px !important;
+}
+
+.form-group .select-input label {
+    display: none;
+}
+
+.checkbox-column-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.checkbox-group-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    align-items: center;
+}
+
+.checkbox-group-horizontal .input-group {
+    width: auto !important;
+    margin-bottom: 0 !important;
+}
+
+.title-and-checkboxes-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.title-and-checkboxes-group .checkbox-group-horizontal {
+    padding-left: 0;
+}
+
+.flex-item-30 {
+    flex-basis: calc(30% - 16px);
+}
+
+.flex-item-33 {
+    flex-basis: calc(33.33% - 16px);
+}
+
+.flex-item-70 {
+    flex-basis: calc(70% - 12px);
+}
+
+.sub-section {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.sub-section .flex-container {
+    margin-bottom: 0;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+.btn-salvar {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .flex-container.responsive-columns {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+.flex-container.align-baseline {
+    align-items: center;
+}
