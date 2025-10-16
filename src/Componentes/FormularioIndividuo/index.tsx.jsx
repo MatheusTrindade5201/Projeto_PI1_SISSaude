@@ -5,6 +5,7 @@ import EndLocaldepermanencia from "./Componentes/EndLocaldepermanencia";
 import Telefonecontato from "./Componentes/Telefonecontato";
 import AnimaisDomicilio from "./Componentes/AnimaisDomicilio";
 import CondMoradia from "./Componentes/CondMoradia";
+import Familia from "./Componentes/Familia.jsx";
 import "../../styles/styleFormularioIndividuo.css";
 import { FiSave, FiTrash } from "react-icons/fi";
 
@@ -63,20 +64,30 @@ function TabsWrapper({ residence }) {
         />
       </div>
 
+
+
       <CondMoradia
         formData={residenceFormData}
         setFormData={setResidenceFormData}
       />
+      
+      {residenceID && (
+        <Familia/>
+        )}
 
       <div className="form-actions">
+        {/* botão de envio */}
         <button
           onClick={() => submitForm(residenceFormData)}
           disabled={isLoading || isLoadingDelete}
         >
           {isLoading ? "Enviando..." : "Enviar"} <FiSave />
         </button>
+
+
+        {/* botão de envio */}
         {residenceID && (
-          <button
+        <button
             onClick={() => {
               if (
                 window.confirm("Tem certeza que deseja deletar este domicílio?")
