@@ -9,6 +9,7 @@ function TextInput({
   placeholder = "",
   error = "",
   className = "",
+  name,
 }) {
   const hasError = Boolean(error);
 
@@ -23,6 +24,7 @@ function TextInput({
         placeholder={placeholder}
         className="campo_preenchimento"
         aria-invalid={hasError}
+        name={name}
       />
       {hasError && <span className="error-message">{error}</span>}
     </div>

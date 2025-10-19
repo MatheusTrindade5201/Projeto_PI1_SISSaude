@@ -22,14 +22,53 @@ import "../../../styles/styleAnimaisDomicilio.css";
 import "../../../styles/styleFormularioIndividuo.css";
 import "../../../styles/styleFamilia.css";
 import { BsDisplay } from "react-icons/bs";
+import TabelaDinamica from "./tabela.jsx";
 
-
-function Familia({ formData, setFormData }) {
+function Familia() {
   const[modal,setModal] = useState(false);
 
   const toggleModal = ()  => {
     setModal(!modal)
-  }
+  };
+  const [formData, setFormData] = useState({
+    Individuo: '',
+    Responsavel: false,
+    Data_Resid: '',
+    Mudou: false,
+    Renda_Familiar: '',
+    N_Membros: ''
+  });// Estado para armazenar as linhas da tabela (uma lista de objetos)
+    const [dadosTabela, setDadosTabela] = useState([]);
+  
+    // Função para lidar com a mudança nos campos do formulário
+    // const handleChange = (e) => {
+    //   const { name, value } = e.target;
+    //   setFormData({ ...formData, [name]: value });
+    // };
+    const handleChange = (e) => {
+      const { name, value, type, checked } = e.target;
+      const newValue = type === 'checkbox' ? checked : value;
+      setFormData({ ...formData, [name]: newValue });
+    };
+
+    // Função para lidar com o envio do formulário
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      if (formData.Individuo && formData.Data_Resid && formData.Renda_Familiar && formData.N_Membros) {
+        setDadosTabela([...dadosTabela, formData]);
+        setFormData({ Individuo: '', Responsavel: false, Data_Resid: '', Mudou: false, Renda_Familiar: '', N_Membros: '' });
+        setModal(false);
+      } else {
+          alert('Preencha todos os campos obrigatórios.');
+      }
+    };
+
+    const handleDelete = (index) => {
+      if (window.confirm("Tem certeza que deseja deletar esta família?")) {
+        const novosDadosTabela = dadosTabela.filter((_, i) => i !== index);
+        setDadosTabela(novosDadosTabela);
+      }
+    };
 
   return (
       // Box do Menu suspenso para adicionar as famílias
@@ -40,10 +79,7 @@ function Familia({ formData, setFormData }) {
           <button
           type="button"   
           // Atualizar os dados do on click para familia
-          onClick={()  => {
-              setModal(!modal)
-              }
-          }
+          onClick={toggleModal}
           className="btn-adicionar"
           // Criar um label para adicionar familia e trocar o texto de animal para familia
           aria-label="Adicionar animal"
@@ -54,14 +90,67 @@ function Familia({ formData, setFormData }) {
         </div>
         {/* Menu suspenso para adicionar as famílias*/}
 
-        
-
         <div className="">
+    <div>
+      {/* Tabela para exibir os dados */}
+      <table>
+        <thead>
+          <tr>
+            <th>Indivíduo</th>
+            <th>Data de Residência</th>
+            <th>Nº Membros familia</th>
+            <th>Renda Familiar (9M)</th>
+            <th>Responável</th>
+            <th>Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+          {/* Mapeia o array de dados para renderizar as linhas */}
+          {dadosTabela.map((item, index) => (
+            <tr key={index}>
+              <td>{item.Individuo}</td>
+              <td>{item.Data_Resid}</td>
+              <td>{item.N_Membros}</td>
+              <td>{item.Renda_Familiar}</td>
+              <td>{item.Responsavel}</td>
+              <td><button
+          type="button"   
+          // Atualizar os dados do on click para familia
+          onClick={() =>
+            setFormData({
+              ...formData,
+              animais: [...formData.animais, { animal: "", quantidade: 0 }],
+            })
+          }
+          className="edit-btn" // Criar um label para adicionar familia e trocar o texto de animal para familia
+          aria-label="Adicionar animal"
+          >
+            <FiEdit /> {/* Ícone de + na imagem */}
+          </button>
+          <button
+          type="button"   
+          // Atualizar os dados do on click para familia
+          onClick={() => handleDelete(index)}
+          className="btn-remover-simples"
+          // Criar um label para adicionar familia e trocar o texto de animal para familia
+          aria-label="Adicionar animal"
+          >
+            {/* Ícone de + na imagem */}
+            <FiTrash2 />
+          </button></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
 
           {/* Se modal for TRUE, então ele exibe o que estiver abaixo dentro de parenteses */}
+   
+    
     {modal && (
-      <div className="overlay">
-        <div>
+      <form onSubmit={handleSubmit} className="overlay"> 
+
+        <div style={{ display: 'flex' }}>
           <h3>Novo Membro Família</h3>
           <button
             onClick={toggleModal}>
@@ -69,82 +158,60 @@ function Familia({ formData, setFormData }) {
           </button>
         </div>
         <TextInput
-                id=""
+                id="Responsavel"
                 label="Indivíduo"
-                value=""
+                value={formData.Individuo}
                 placeholder="Buscar pelo nome no CNIS"  
-                onChange={(e) =>
-                  handleDataChange(
-                    formData,
-                    setFormData,
-                    "animais",
-                    e.target.value,
-                    index,
-                    "quantidade"
-                  )
-                }
+                onChange={handleChange}
+                name="Individuo"
+                type="text"
         />
         <div>
           <Checkbox
-            id="energia-eletrica"
+            id="Responsavel"
             label="Responsável?"
+            // checked={formData.Responsavel}
+            // name="Responsavel"
+            // onChange={handleChange}
             />
         </div>
 
                 <TextInput
-                id=""
-                label="Data Residência"
-                value=""
-                placeholder="12/10/2024"
-                onChange={(e) =>
-                  handleDataChange(
-                    formData,
-                    setFormData,
-                    "animais",
-                    e.target.value,
-                    index,
-                    "quantidade"
-                  )
-                }
-        />
-            <Checkbox
-            id="energia-eletrica"
-            label="Mudou-se??"
+                  id="Data_Resid"
+                  label="Data Residência"
+                  value={formData.Data_Resid}
+                  placeholder="DD/MM/AAAA"
+                  name="Data_Resid"
+                  onChange={handleChange}
+                  type="date"
+                />
+           <Checkbox
+              id="Mudou"
+              label="Mudou-se??"
+              // checked={formData.Mudou}
+              // onChange={handleChange}
+              // name="Responsavel"
             />
 
         <TextInput
-                id=""
+                id="Renda_Familiar"
                 label="Renda Familiar (SM)"
-                value=""
+                value={formData.Renda_Familiar}
                 placeholder="0.000.000 R$"
-                onChange={(e) =>
-                  handleDataChange(
-                    formData,
-                    setFormData,
-                    "animais",
-                    e.target.value,
-                    index,
-                    "quantidade"
-                  )
-                }
+                name="Renda_Familiar"
+                onChange={handleChange}
+                type="number"
         />
         <TextInput
-                id=""
+                id="N_Membros"
                 label="N Membros Familia"
-                value=""
+                value={formData.N_Membros}
                 placeholder="00"
-                onChange={(e) =>
-                  handleDataChange(
-                    formData,
-                    setFormData,
-                    "animais",
-                    e.target.value,
-                    index,
-                    "quantidade"
-                  )
-                }
+                name="N_Membros"
+                onChange={handleChange}
+                type="number"
         />
-      <div className="">
+        <div className="" style={{ display: 'flex' }}>
           <button
           type="button"   
           // Atualizar os dados do on click para familia
@@ -160,114 +227,25 @@ function Familia({ formData, setFormData }) {
           Cancelar
           </button>
           <button
-          type="button"   
+          type="submit"   
           // Atualizar os dados do on click para familia
-          onClick={() =>
-            setFormData({
-              ...formData,
-              animais: [...formData.animais, { animal: "", quantidade: 0 }],
-            })
-          }
+          // onClick={() =>
+          //   setFormData({
+          //     ...formData,
+          //     animais: [...formData.animais, { animal: "", quantidade: 0 }],
+          //   })
+          // }
           className="btn-adicionar"
           // Criar um label para adicionar familia e trocar o texto de animal para familia
-          aria-label="Adicionar animal"
+          // aria-label="Adicionar animal"
           >
             {/* Ícone de + na imagem */}
           Salvar
           </button>
       </div>
-      </div>
+      </form>
     )
     }
-        </div>
-        <div>
-             {/* Usando tabelas React --> https://v4.mui.com/pt/components/tables/ */}
-      <table>
-        <thead>
-          <td>Nome</td> 
-          <td>Data de Residência</td> 
-          <td>Nº Membros familia</td> 
-          <td>Renda Familiar (9M)</td> 
-          <td>Responável</td> 
-          <td>Opções</td> 
-        </thead>
-        <tbody>
-        <tr>
-          <td>Célula 1</td> 
-          <td>Célula 2</td>
-          <td>Célula 1</td> 
-          <td>Célula 2</td>
-          <td>Célula 1</td> 
-          <td><button
-          type="button"   
-          // Atualizar os dados do on click para familia
-          onClick={() =>
-            setFormData({
-              ...formData,
-              animais: [...formData.animais, { animal: "", quantidade: 0 }],
-            })
-          }
-          className="edit-btn"
-          // Criar um label para adicionar familia e trocar o texto de animal para familia
-          aria-label="Adicionar animal"
-          >
-            {/* Ícone de + na imagem */}
-            <FiEdit />
-          </button>
-          <button
-          type="button"   
-          // Atualizar os dados do on click para familia
-          onClick={() =>
-            window.confirm("Tem certeza que deseja deletar esta família?")
-          }
-          className="btn-remover-simples"
-          // Criar um label para adicionar familia e trocar o texto de animal para familia
-          aria-label="Adicionar animal"
-          >
-            {/* Ícone de + na imagem */}
-            <FiTrash2 />
-          </button>
-          </td>
-        </tr>
-        <tr>
-          <td>Célula 3</td>
-          <td>Célula 4</td>
-          <td>Célula 1</td> 
-          <td>Célula 2</td>
-          <td>Célula 1</td> 
-          <td><button
-          type="button"   
-          // Atualizar os dados do on click para familia
-          onClick={() =>
-            setFormData({
-              ...formData,
-              animais: [...formData.animais, { animal: "", quantidade: 0 }],
-            })
-          }
-          className="edit-btn"
-          // Criar um label para adicionar familia e trocar o texto de animal para familia
-          aria-label="Adicionar animal"
-          >
-            {/* Ícone de + na imagem */}
-            <FiEdit />
-          </button>
-          <button
-          type="button"   
-          // Atualizar os dados do on click para familia
-          onClick={() =>
-            window.confirm("Tem certeza que deseja deletar esta família?")
-          }
-          className="btn-remover-simples"
-          // Criar um label para adicionar familia e trocar o texto de animal para familia
-          aria-label="Adicionar animal"
-          >
-            {/* Ícone de + na imagem */}
-            <FiTrash2 />
-          </button>
-          </td>
-        </tr>
-        </tbody>
-      </table>
         </div>
       </div>
   );
