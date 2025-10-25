@@ -9,15 +9,27 @@ function OutrasCondicoes({ formData, setFormData }) {
                 <div className="flex-container">
                     <div className="form-group flex-item-33">
                         <label>1 - Qual?</label>
-                        <TextInput value={formData.outras_condicoes_1} onChange={(e) => handleDataChange(formData, setFormData, "outras_condicoes_1", e.target.value)} />
+                        <TextInput
+                            value={formData._outras_condicoes_1 || ''}
+                            onChange={(e) => handleDataChange(formData, setFormData, "_outras_condicoes_1", e.target.value)}
+                            maxLength={60}
+                        />
                     </div>
                     <div className="form-group flex-item-33">
                         <label>2 - Qual?</label>
-                        <TextInput value={formData.outras_condicoes_2} onChange={(e) => handleDataChange(formData, setFormData, "outras_condicoes_2", e.target.value)} />
+                        <TextInput
+                            value={formData._outras_condicoes_2 || ''}
+                            onChange={(e) => handleDataChange(formData, setFormData, "_outras_condicoes_2", e.target.value)}
+                            maxLength={60}
+                        />
                     </div>
                     <div className="form-group flex-item-33">
                         <label>3 - Qual?</label>
-                        <TextInput value={formData.outras_condicoes_3} onChange={(e) => handleDataChange(formData, setFormData, "outras_condicoes_3", e.target.value)} />
+                        <TextInput
+                            value={formData._outras_condicoes_3 || ''}
+                            onChange={(e) => handleDataChange(formData, setFormData, "_outras_condicoes_3", e.target.value)}
+                            maxLength={60}
+                        />
                     </div>
                 </div>
             </div>
