@@ -1,21 +1,30 @@
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../styles/styleResidenceList.css";
 import { useGetResidences } from "../Hooks/useGetResidences";
 import { NavLink } from "react-router";
+import SearchBar from "../Componentes/Inputs/SearchBar";
 
 const ResidenceList = () => {
   const { residences, loading, fetchResidences } = useGetResidences();
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
-    fetchResidences();
-  }, []);
+    fetchResidences(query);
+  }, [query]);
 
   return (
     <div className="residence-list-container">
       <h2 className="residence-title">Lista de Domicílios</h2>
 
+      <SearchBar
+        placeholder="Buscar por endereço, bairro ou município..."
+        onSearch={setQuery}
+      />
+
       {loading ? (
-        <p role="status" aria-live="polite" className="loader">Carregando...</p>
+        <p role="status" aria-live="polite" className="loader">
+          Carregando...
+        </p>
       ) : residences.length === 0 ? (
         <p className="loader">Nenhum domicílio encontrado.</p>
       ) : (

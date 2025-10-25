@@ -9,10 +9,10 @@ export const useGetResidences = () => {
 
   const { handleError } = useAlert();
 
-  const fetchResidences = async () => {
+  const fetchResidences = async (query) => {
     try {
       setLoading(true);
-      const response = await getDomicilio();
+      const response = await getDomicilio(query);
 
       setResidences(response);
     } catch (error) {
