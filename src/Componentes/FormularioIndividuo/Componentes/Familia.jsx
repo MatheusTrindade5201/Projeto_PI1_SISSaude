@@ -57,6 +57,11 @@ function Familia() {
     setFormData({ ...formData, [name]: newValue });
   };
 
+  // Nova função: alterna explicitamente o boolean do checkbox
+  const handleCheckboxToggle = (name) => {
+    setFormData(prev => ({ ...prev, [name]: !prev[name] }));
+  };
+
   const handleEdit = (index) => {
     const itemToEdit = dadosTabela[index];
     setFormData(itemToEdit);
@@ -156,7 +161,11 @@ function Familia() {
           <form onSubmit={handleAddOrUpdate} className="modal-content">
             <div className="modal-header" style={{ display: 'flex' }}>
               <h3>{isEditing ? 'Editar Membro Família' : 'Novo Membro Família'}</h3>
-              <button type="button" onClick={toggleModal}>
+              <button
+                type="button"
+                className="close-btn" 
+                onClick={toggleModal}
+              >
                 <FiX />
               </button>
             </div>
@@ -174,7 +183,8 @@ function Familia() {
                 label="Responsável?"
                 checked={formData.Responsavel}
                 name="Responsavel"
-                onChange={handleChange}
+                // agora alterna explicitamente o boolean
+                onChange={() => handleCheckboxToggle('Responsavel')}
               />
               <TextInput
                 id="Data_Resid"
@@ -190,7 +200,7 @@ function Familia() {
                 label="Mudou-se?"
                 checked={formData.Mudou}
                 name="Mudou"
-                onChange={handleChange}
+                onChange={() => handleCheckboxToggle('Mudou')}
               />
               <TextInput
                 id="Renda_Familiar"

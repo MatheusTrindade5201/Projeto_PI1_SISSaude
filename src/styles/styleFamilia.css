@@ -2,6 +2,7 @@
       position: fixed;
       left: 50%;
       top: 50%;
+      width: 50%;
       transform: translate(-50%, -50%);
       background-color: white; /* Example background */
       padding: 20px; /* Example padding */
@@ -43,3 +44,7 @@ table {
   color: #e53e3e; /* vermelho */
 }
 
+.close-btn {
+  background-color: rgba(255, 255, 0, 0); /* amarelo */
+  color: rgba(255, 219, 57, 0.977);
+}
