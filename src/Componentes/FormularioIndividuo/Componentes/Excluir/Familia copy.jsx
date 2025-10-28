@@ -1,14 +1,50 @@
 import { useState } from "react";
-import TextInput from "../../Inputs/TextInput";
-import Checkbox from "../../Inputs/Checkbox";
+import { handleDataChange } from "../../../../Helpers/handleDataChange.js";
+import {
+  abastecimentoAgua,
+  acessoDomicilio,
+  aguaConsumo,
+  destinoLixo,
+  formaEscoamento,
+  localizacao,
+  materialPredominante,
+  posseTerra,
+  situacaoMoradia,
+  tipoDomicilio,
+} from "../../../../Utils/constants.js";
+import SelectInput from "../../../Inputs/SelectInput/index.jsx";
+import "../../../styles/styleFormularioIndividuo.css";
+import TextInput from "../../../Inputs/TextInput/index.jsx";
+import Checkbox from "../../../Inputs/Checkbox/index.jsx";
+import "../../../styles/styleCondMoradia.css";
+import { FiPlus, FiTrash2, FiEdit, FiX } from "react-icons/fi";
+import "../../../styles/styleAnimaisDomicilio.css";
+import "../../../styles/styleFormularioIndividuo.css";
+import "../../../styles/styleFamilia.css";
+import { BsDisplay } from "react-icons/bs";
+import TabelaDinamica from "../tabela.jsx";
+
+
+
+import { useState } from "react";
+import TextInput from "../../../Inputs/TextInput/index.jsx";
+import Checkbox from "../../../Inputs/Checkbox/index.jsx";
 import { FiPlus, FiTrash2, FiEdit, FiX } from "react-icons/fi";
 import "../../../styles/styleFamilia.css";
 
 function Familia() {
   const [modal, setModal] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
+  const [editingIndex, setEditingIndex] = useState(null);
 
   const toggleModal = () => {
     setModal(!modal);
+    if (!modal) {
+      // Limpa o formulário e reseta o estado de edição ao abrir o modal
+      setFormData({ Individuo: '', Responsavel: false, Data_Resid: '', Mudou: false, Renda_Familiar: '', N_Membros: '' });
+      setIsEditing(false);
+      setEditingIndex(null);
+    }
   };
 
   const [formData, setFormData] = useState({
@@ -28,14 +64,32 @@ function Familia() {
     setFormData({ ...formData, [name]: newValue });
   };
 
-  const handleSubmit = (e) => {
+  const handleEdit = (index) => {
+    const itemToEdit = dadosTabela[index];
+    setFormData(itemToEdit);
+    setEditingIndex(index);
+    setIsEditing(true);
+    setModal(true);
+  };
+
+  const handleAddOrUpdate = (e) => {
     e.preventDefault();
     if (formData.Individuo && formData.Data_Resid && formData.Renda_Familiar && formData.N_Membros) {
-      setDadosTabela([...dadosTabela, formData]);
-      setFormData({ Individuo: '', Responsavel: false, Data_Resid: '', Mudou: false, Renda_Familiar: '', N_Membros: '' });
+      if (isEditing) {
+        // Atualiza item existente
+        const novosDadosTabela = [...dadosTabela];
+        novosDadosTabela[editingIndex] = formData;
+        setDadosTabela(novosDadosTabela);
+      } else {
+        // Adiciona novo item
+        setDadosTabela([...dadosTabela, formData]);
+      }
       setModal(false);
+      setFormData({ Individuo: '', Responsavel: false, Data_Resid: '', Mudou: false, Renda_Familiar: '', N_Membros: '' });
+      setIsEditing(false);
+      setEditingIndex(null);
     } else {
-        alert('Preencha todos os campos obrigatórios.');
+      alert('Preencha todos os campos obrigatórios.');
     }
   };
 
@@ -47,21 +101,24 @@ function Familia() {
   };
 
   return (
+    // Box do Menu suspenso para adicionar as famílias
     <div className="secao-form-container">
       <div className="header-secao">
         <h3 className="titulos-secoes">Familias</h3>
         <button
           type="button"
+          // Atualizar os dados do on click para familia
           onClick={toggleModal}
           className="btn-adicionar"
+          // Criar um label para adicionar familia e trocar o texto de animal para familia
           aria-label="Adicionar familia"
-        >
-          <FiPlus />
+        > {/* Botão de para adicionar família */}
+          <FiPlus />{/* Ícone de + na imagem */}
         </button>
       </div>
 
       <div>
-        <table>
+        <table> {/* Tabela para exibir os dados */}
           <thead>
             <tr>
               <th>Indivíduo</th>
@@ -74,6 +131,7 @@ function Familia() {
             </tr>
           </thead>
           <tbody>
+            {/* Mapeia o array de dados para renderizar as linhas */}
             {dadosTabela.map((item, index) => (
               <tr key={index}>
                 <td>{item.Individuo}</td>
@@ -83,13 +141,19 @@ function Familia() {
                 <td>{item.Responsavel ? 'Sim' : 'Não'}</td>
                 <td>{item.Mudou ? 'Sim' : 'Não'}</td>
                 <td>
-                  <button type="button" className="edit-btn">
+                  {/* chama a função handleEdit com o index */}
+                  <button type="button"
+                  onClick={() =>
+                  handleEdit(index)}
+                  className="edit-btn" // Criar um label para adicionar familia e trocar o texto de animal para familia
+                  > 
                     <FiEdit />
                   </button>
                   <button
                     type="button"
                     onClick={() => handleDelete(index)}
                     className="btn-remover-simples"
+                    // Criar um label para adicionar familia e trocar o texto de animal para familia
                   >
                     <FiTrash2 />
                   </button>
@@ -99,12 +163,13 @@ function Familia() {
           </tbody>
         </table>
       </div>
-
+        
+      {/* Se modal for TRUE, então ele exibe o que estiver abaixo dentro de parenteses */}
       {modal && (
         <div className="overlay">
-          <form onSubmit={handleSubmit} className="modal-content">
+          <form onSubmit={handleAddOrUpdate} className="modal-content">
             <div className="modal-header">
-              <h3>Novo Membro Família</h3>
+              <h3>{isEditing ? 'Editar Membro Família' : 'Novo Membro Família'}</h3>
               <button type="button" onClick={toggleModal}>
                 <FiX />
               </button>
@@ -122,7 +187,7 @@ function Familia() {
                 id="Responsavel"
                 label="Responsável?"
                 checked={formData.Responsavel}
-                name="Responsavel" // Adicionado o 'name'
+                name="Responsavel"
                 onChange={handleChange}
               />
               <TextInput
@@ -138,7 +203,7 @@ function Familia() {
                 id="Mudou"
                 label="Mudou-se?"
                 checked={formData.Mudou}
-                name="Mudou" // Adicionado o 'name'
+                name="Mudou"
                 onChange={handleChange}
               />
               <TextInput
@@ -165,6 +230,8 @@ function Familia() {
                 onClick={() => {
                   if (window.confirm("Tem certeza que deseja perder as informações?")) {
                     setModal(false);
+                    setIsEditing(false);
+                    setEditingIndex(null);
                     setFormData({ Individuo: '', Responsavel: false, Data_Resid: '', Mudou: false, Renda_Familiar: '', N_Membros: '' });
                   }
                 }}
@@ -173,7 +240,7 @@ function Familia() {
                 Cancelar
               </button>
               <button type="submit" className="btn-salvar">
-                Salvar
+                {isEditing ? 'Atualizar' : 'Salvar'}
               </button>
             </div>
           </form>
