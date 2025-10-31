@@ -1,27 +1,36 @@
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../styles/styleResidenceList.css";
 import { useGetResidences } from "../Hooks/useGetResidences";
 import { NavLink } from "react-router";
+import SearchBar from "../Componentes/Inputs/SearchBar";
 
 const ResidenceList = () => {
   const { residences, loading, fetchResidences } = useGetResidences();
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
-    fetchResidences();
-  }, []);
+    fetchResidences(query);
+  }, [query]);
 
   return (
     <div className="residence-list-container">
       <h2 className="residence-title">Lista de Domicílios</h2>
 
+      <SearchBar
+        placeholder="Buscar por endereço, bairro ou município..."
+        onSearch={setQuery}
+      />
+
       {loading ? (
-        <div className="loader">Carregando...</div>
+        <p role="status" aria-live="polite" className="loader">
+          Carregando...
+        </p>
       ) : residences.length === 0 ? (
-        <div className="loader">Nenhum domicílio encontrado.</div>
+        <p className="loader">Nenhum domicílio encontrado.</p>
       ) : (
-        <div className="residence-cards">
+        <ul className="residence-cards">
           {residences.map((res) => (
-            <div className="residence-card" key={res.id}>
+            <li className="residence-card" key={res.id}>
               <h3 className="residence-address">
                 {res.tipo_logradouro} {res.nome_logradouro}, {res.numero}
               </h3>
@@ -43,12 +52,13 @@ const ResidenceList = () => {
               <NavLink
                 className="details-button"
                 to={`/domicilios/editar/${res.id}`}
+                aria-label={`Ver detalhes de ${res.tipo_logradouro} ${res.nome_logradouro}, ${res.numero}`}
               >
                 Ver detalhes
               </NavLink>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
     </div>
   );
