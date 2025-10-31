@@ -97,7 +97,53 @@ export const deleteCidadaoById = (cidadaoId) => {
     return Promise.resolve({ message: "Cidadão deletado (mock)" });
   }
 
-  // Se não estiver em modo dev, envia o comando REAL para a API
-
   return apiClient.delete(`individual/${cidadaoId}`).then((res) => res.data);
+};
+
+export const associateCidadaoDomicilio = (payload) => {
+  if (isDevMode()) {
+    console.log("Mock associateCidadaoDomicilio:", payload);
+    return Promise.resolve({
+      ...payload,
+      id: Date.now(),
+      message: "Associação criada (mock)",
+    });
+  }
+
+  return apiClient
+    .post("individual/domicilio/associate", payload)
+    .then((res) => res.data);
+};
+
+export const updateCidadaoDomicilio = (cidadaoId, domicilioId, payload) => {
+  if (isDevMode()) {
+    console.log("Mock updateCidadaoDomicilio:", {
+      cidadaoId,
+      domicilioId,
+      payload,
+    });
+    return Promise.resolve({
+      id: domicilioId,
+      cidadao_id: cidadaoId,
+      ...payload,
+      message: "Associação atualizada (mock)",
+    });
+  }
+
+  return apiClient
+    .patch(`individual/${cidadaoId}/domicilio/${domicilioId}`, payload)
+    .then((res) => res.data);
+};
+
+export const deleteCidadaoDomicilio = (cidadaoId, domicilioId) => {
+  if (isDevMode()) {
+    console.log("Mock deleteCidadaoDomicilio:", { cidadaoId, domicilioId });
+    return Promise.resolve({
+      message: "Associação removida (mock)",
+    });
+  }
+
+  return apiClient
+    .delete(`individual/${cidadaoId}/domicilio/${domicilioId}`)
+    .then((res) => res.data);
 };

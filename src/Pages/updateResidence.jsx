@@ -20,7 +20,10 @@ function UpdateResidence() {
         <div className="loader">Nenhum domicílio encontrado.</div>
       ) : (
         <div>
-          <TabsWrapper residence={residence} />
+          <TabsWrapper
+            residence={residence}
+            fetchResidence={fetchResidenceById}
+          />
         </div>
       )}
     </>
