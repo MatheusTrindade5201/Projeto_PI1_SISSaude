@@ -19,7 +19,7 @@ export const updateCidadao = (payload, cidadaoId) => {
   }
 
   return apiClient
-    .patch(`individual/${cidadaoId}`, payload)
+    .patch(`individual/${cidadaoId}/`, payload)
     .then((res) => res.data);
 };
 
@@ -68,7 +68,7 @@ export const getCidadaos = (query) => {
     return Promise.resolve(mockData);
   }
 
-  let path = "individual";
+  let path = "individual/";
   if (query) {
     path += `?search=${encodeURIComponent(query)}`;
   }
@@ -88,7 +88,7 @@ export const getCidadaoById = (cidadaoId) => {
   }
 
   // Se não estiver em modo dev, busca o dado REAL da API
-  return apiClient.get(`individual/${cidadaoId}`).then((res) => res.data); // A API está em /individual/{id} conforme routers/individual.py
+  return apiClient.get(`individual/${cidadaoId}/`).then((res) => res.data); // A API está em /individual/{id} conforme routers/individual.py
 };
 
 export const deleteCidadaoById = (cidadaoId) => {
@@ -97,7 +97,7 @@ export const deleteCidadaoById = (cidadaoId) => {
     return Promise.resolve({ message: "Cidadão deletado (mock)" });
   }
 
-  return apiClient.delete(`individual/${cidadaoId}`).then((res) => res.data);
+  return apiClient.delete(`individual/${cidadaoId}/`).then((res) => res.data);
 };
 
 export const associateCidadaoDomicilio = (payload) => {
@@ -111,7 +111,7 @@ export const associateCidadaoDomicilio = (payload) => {
   }
 
   return apiClient
-    .post("individual/domicilio/associate", payload)
+    .post("individual/domicilio/associate/", payload)
     .then((res) => res.data);
 };
 
@@ -131,7 +131,7 @@ export const updateCidadaoDomicilio = (cidadaoId, domicilioId, payload) => {
   }
 
   return apiClient
-    .patch(`individual/${cidadaoId}/domicilio/${domicilioId}`, payload)
+    .patch(`individual/${cidadaoId}/domicilio/${domicilioId}/`, payload)
     .then((res) => res.data);
 };
 
@@ -144,6 +144,6 @@ export const deleteCidadaoDomicilio = (cidadaoId, domicilioId) => {
   }
 
   return apiClient
-    .delete(`individual/${cidadaoId}/domicilio/${domicilioId}`)
+    .delete(`individual/${cidadaoId}/domicilio/${domicilioId}/`)
     .then((res) => res.data);
 };

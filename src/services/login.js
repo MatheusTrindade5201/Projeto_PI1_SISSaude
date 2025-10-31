@@ -11,6 +11,6 @@ export const login = (username, password) => {
   }
 
   return apiClient
-    .post("login", { username, password })
+    .post("login/", { username, password })
     .then((res) => res.data);
 };

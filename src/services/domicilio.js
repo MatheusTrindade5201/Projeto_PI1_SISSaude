@@ -49,7 +49,7 @@ export const addDomicilio = (payload) => {
     });
   }
 
-  return apiClient.post("residence", payload).then((res) => res.data);
+  return apiClient.post("residence/", payload).then((res) => res.data);
 };
 
 export const updateDomicilio = (payload, domicilioId) => {
@@ -101,7 +101,7 @@ export const updateDomicilio = (payload, domicilioId) => {
   }
 
   return apiClient
-    .patch(`residence/${domicilioId}`, payload)
+    .patch(`residence/${domicilioId}/`, payload)
     .then((res) => res.data);
 };
 
@@ -111,7 +111,7 @@ export const deleteDomicilioById = (domicilioId) => {
     return Promise.resolve({ success: true });
   }
 
-  return apiClient.delete(`residence/${domicilioId}`).then((res) => res.data);
+  return apiClient.delete(`residence/${domicilioId}/`).then((res) => res.data);
 };
 
 export const getDomicilio = (query) => {
@@ -247,7 +247,7 @@ export const getDomicilio = (query) => {
     return Promise.resolve(filtered);
   }
 
-  let path = "residence";
+  let path = "residence/";
   if (query) {
     path += `?search=${encodeURIComponent(query)}`;
   }
@@ -338,5 +338,5 @@ export const getDomicilioById = (residenceId) => {
     });
   }
 
-  return apiClient.get(`residence/${residenceId}`).then((res) => res.data);
+  return apiClient.get(`residence/${residenceId}/`).then((res) => res.data);
 };
