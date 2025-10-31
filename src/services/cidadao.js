@@ -12,28 +12,68 @@ export const addCidadao = (payload) => {
   return apiClient.post("individual/", payload).then((res) => res.data);
 };
 
-
 export const updateCidadao = (payload, cidadaoId) => {
   if (isDevMode()) {
     console.log("Mock updateCidadao:", cidadaoId, payload);
     return Promise.resolve({ ...payload, id: cidadaoId });
   }
 
-  return apiClient.patch(`individual/${cidadaoId}`, payload).then((res) => res.data);
+  return apiClient
+    .patch(`individual/${cidadaoId}`, payload)
+    .then((res) => res.data);
 };
 
-export const getCidadaos = () => {
-  // Mantém a lógica de mock se isDevMode() for true
+export const getCidadaos = (query) => {
   if (isDevMode()) {
-    return Promise.resolve([
-      { id: 101, nome: "Carlos Pereira Mock", cpf: "000.111.222-33", data_nascimento: "1985-07-11", celular: "85988885555" },
-      { id: 102, nome: "Maria Luísa Mock", cpf: "111.222.333-44", data_nascimento: "2012-03-18", celular: "11987654321" },
-      { id: 103, nome: "João Alberto Mock", cpf: "222.333.444-55", data_nascimento: "1990-01-25", celular: "21999998888" },
-    ]);
+    const mockData = [
+      {
+        id: 101,
+        nome: "Carlos Pereira Mock",
+        cpf: "000.111.222-33",
+        data_nascimento: "1985-07-11",
+        celular: "85988885555",
+      },
+      {
+        id: 102,
+        nome: "Maria Luísa Mock",
+        cpf: "111.222.333-44",
+        data_nascimento: "2012-03-18",
+        celular: "11987654321",
+      },
+      {
+        id: 103,
+        nome: "João Alberto Mock",
+        cpf: "222.333.444-55",
+        data_nascimento: "1990-01-25",
+        celular: "21999998888",
+      },
+    ];
+
+    if (query && query.trim()) {
+      const normalizedQuery = query.trim().toLowerCase();
+
+      const filtered = mockData.filter((c) => {
+        const nome = (c.nome || "").toLowerCase();
+        const cpf = (c.cpf || "").replace(/\D/g, ""); // remove pontos e traços
+        const queryNumeric = normalizedQuery.replace(/\D/g, "");
+
+        return (
+          nome.includes(normalizedQuery) || (cpf && cpf.includes(queryNumeric))
+        );
+      });
+
+      return Promise.resolve(filtered);
+    }
+
+    return Promise.resolve(mockData);
   }
 
-  // Se não estiver em modo dev, busca os dados REAIS da API
-  return apiClient.get("individual/").then((res) => res.data);
+  let path = "individual";
+  if (query) {
+    path += `?search=${encodeURIComponent(query)}`;
+  }
+
+  return apiClient.get(path).then((res) => res.data);
 };
 
 export const getCidadaoById = (cidadaoId) => {
@@ -44,14 +84,12 @@ export const getCidadaoById = (cidadaoId) => {
       cpf: "000.111.222-33",
       data_nascimento: "1985-07-11",
       celular: "85988885555",
-
     });
   }
 
   // Se não estiver em modo dev, busca o dado REAL da API
   return apiClient.get(`individual/${cidadaoId}`).then((res) => res.data); // A API está em /individual/{id} conforme routers/individual.py
 };
-
 
 export const deleteCidadaoById = (cidadaoId) => {
   if (isDevMode()) {
