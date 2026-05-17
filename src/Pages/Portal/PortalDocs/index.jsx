@@ -3,7 +3,7 @@ import "swagger-ui-react/swagger-ui.css";
 import { useNavigate } from "react-router";
 import "../../../styles/stylePortal.css";
 
-const API_BASE = import.meta.env.VITE_BASE_URL || "http://localhost:8000/";
+const API_BASE = (import.meta.env.VITE_BASE_URL || "http://localhost:8000/").replace(/\/?$/, "/");
 
 function PortalDocs() {
   const navigate = useNavigate();
