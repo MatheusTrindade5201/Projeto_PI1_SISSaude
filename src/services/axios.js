@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_LOCAL_URL = import.meta.env.VITE_BASE_URL;
+const BASE_LOCAL_URL = (import.meta.env.VITE_BASE_URL ?? "").replace(/\/?$/, "/");
 const TOKEN_STORAGE_KEY = import.meta.env.TOKEN_STORAGE_KEY;
 
 export const apiClient = axios.create({
