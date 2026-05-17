@@ -97,3 +97,18 @@ a {
   height: 1px;
   overflow: hidden;
 }
+
+.portal-link-container {
+  text-align: center;
+}
+
+.portal-link {
+  font-size: 13px;
+  color: #9ca3a3;
+  text-decoration: none;
+}
+
+.portal-link:hover {
+  color: #1ea0d3;
+  text-decoration: underline;
+}

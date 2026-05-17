@@ -1,0 +1,364 @@
+/* ── Portal layout ──────────────────────────────────────────────── */
+
+.portal-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f7fa;
+  padding: 2rem 1rem;
+}
+
+.portal-page-wide {
+  align-items: flex-start;
+  padding-top: 3rem;
+}
+
+.portal-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 480px;
+}
+
+.portal-card-wide {
+  max-width: 900px;
+}
+
+.portal-logo {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.portal-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 0.75rem 0;
+  text-align: center;
+}
+
+.portal-subtitle {
+  color: #555;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.portal-subtitle-small {
+  color: #777;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────── */
+
+.portal-button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.portal-btn {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.portal-btn-primary {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.portal-btn-primary:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.portal-btn-secondary {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.portal-btn-secondary:hover:not(:disabled) {
+  background-color: #1976d2;
+}
+
+.portal-btn-danger {
+  background-color: #e53935;
+  color: #fff;
+}
+
+.portal-btn-danger:hover:not(:disabled) {
+  background-color: #c62828;
+}
+
+.portal-btn-ghost {
+  background-color: transparent;
+  color: #555;
+  border: 1px solid #ccc;
+}
+
+.portal-btn-ghost:hover {
+  background-color: #f0f0f0;
+}
+
+.portal-btn-sm {
+  width: auto;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+}
+
+.portal-btn-xs {
+  width: auto;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+}
+
+.portal-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Links ───────────────────────────────────────────────────────── */
+
+.portal-links {
+  text-align: center;
+}
+
+.portal-link {
+  background: none;
+  border: none;
+  color: #2196f3;
+  cursor: pointer;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.portal-link:hover {
+  color: #1976d2;
+}
+
+.portal-back {
+  background: none;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  padding: 0;
+  display: block;
+}
+
+.portal-back:hover {
+  color: #1a1a2e;
+}
+
+/* ── Form ────────────────────────────────────────────────────────── */
+
+.portal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.portal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.portal-field label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.portal-input {
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.portal-input:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* ── Feedback ────────────────────────────────────────────────────── */
+
+.portal-error {
+  color: #c62828;
+  background-color: #fce4ec;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+.portal-hint {
+  color: #777;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0.75rem;
+}
+
+.portal-success-icon {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.portal-error-icon {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #e53935;
+}
+
+/* ── API Key display ─────────────────────────────────────────────── */
+
+.portal-key-warning {
+  background-color: #fff3e0;
+  border: 1px solid #ff9800;
+  border-radius: 6px;
+  padding: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  color: #e65100;
+  margin-bottom: 1rem;
+}
+
+.portal-key-box {
+  background-color: #f4f4f4;
+  border-radius: 6px;
+  padding: 1rem;
+  word-break: break-all;
+  font-family: monospace;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #ddd;
+}
+
+.portal-inline-code {
+  background-color: #f4f4f4;
+  border-radius: 3px;
+  padding: 0.1rem 0.4rem;
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+
+/* ── Keys table ──────────────────────────────────────────────────── */
+
+.portal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.portal-header-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.portal-table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.portal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.portal-table th,
+.portal-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.portal-table th {
+  background-color: #f5f7fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.portal-prefix {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.portal-badge {
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.portal-badge-active {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.portal-badge-revoked {
+  background-color: #fce4ec;
+  color: #c62828;
+}
+
+.portal-confirm {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.portal-footer-hint {
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+/* ── Docs page ───────────────────────────────────────────────────── */
+
+.portal-docs-page {
+  min-height: 100vh;
+  background-color: #fafafa;
+}
+
+.portal-docs-topbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
+}
+
+.portal-docs-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin: 0;
+  flex: 1;
+}
+
+.portal-docs-key-hint {
+  font-size: 0.85rem;
+  color: #777;
+}
