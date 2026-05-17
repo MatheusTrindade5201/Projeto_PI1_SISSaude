@@ -4,12 +4,14 @@ import "./App.css";
 import { useAuth } from "./Context/AuthContext.jsx";
 import PrivateRoutes from "./Routes/privateRoutes.jsx";
 import CommonRoutes from "./Routes/commonRoutes.jsx";
+import PortalRoutes from "./Routes/portalRoutes.jsx";
 import { BrowserRouter } from "react-router";
 
 function AppRoutes() {
   const { isAuthenticated } = useAuth();
   return (
     <BrowserRouter>
+      <PortalRoutes />
       {isAuthenticated ? <PrivateRoutes /> : <CommonRoutes />}
     </BrowserRouter>
   );

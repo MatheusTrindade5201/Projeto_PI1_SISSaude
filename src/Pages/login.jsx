@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router";
 import "../styles/styleLogin.css";
 import { useAlert } from "../Context/AlertContext.jsx";
 import { useAuth } from "../Context/AuthContext.jsx";
@@ -79,6 +80,12 @@ function Login() {
             >
               {isLoading ? "Entrando..." : "Login"}
             </button>
+          </div>
+
+          <div className="portal-link-container">
+            <NavLink to="/portal" className="portal-link">
+              Portal do Desenvolvedor
+            </NavLink>
           </div>
         </div>
       </form>
